@@ -29,10 +29,9 @@ router.post('/login', function (req, res) {
   var companyCode = req.headers['companycode'];
   var query = mysql.format('select * from account where shopID = (select shopID from shop where shopCode = ?) and userName = ? and password = ?',[companyCode, userName, password]);
   console.log(query);
-  mysql.query(query, function (err, row, result) {
-    if (!err) {
+  mysql.query(query, function (err, row) {
+    if (!err && (row.length > 0)) {
       var user = {};
-      user.error = 0;
       user['data'] = 'User registered successfully!';
       jwt.sign({row:row[0]}, 'secretkey', function (err, token) {
         user['token'] = token;
@@ -43,6 +42,7 @@ router.post('/login', function (req, res) {
         user['email'] = row[0].email;
         user['tel'] = row[0].tel;
         user['role'] = row[0].role;
+        user['tokenType'] = token.type;
         res.status(200).json(user);
         var decode = jwt.decode(token, {complete: true});
         //parser token
@@ -51,17 +51,49 @@ router.post('/login', function (req, res) {
     } else {
       var user = {};
       user['data'] = 'Error Occured!';
-      res.status(400).json(user);
+      res.status(500).json(user);
     }
   });
 });
 
 //API lấy tất cả model
 router.get ('/get_all_model', function (req, res) {
-  console.log(req.headers);
-  var token = req.headers['token'];
-  console.log(token);
-  //res.status(200).json(jwt.decode(req.body.authorization['row']));
+  var token = req.headers.authorization;
+  try {
+    var json = jwt.verify(token, 'secretkey');
+    json = json['row'];
+    var query = mysql.format('select * from model where shopID = ?',[json['shopID']]);
+    mysql.query(query, function (error, row) {
+      if (!error) {
+        res.status(200).json(row);
+      } else {
+        var result;
+        result['data'] = 'Error Occured!'
+        res.status(500).json(result);
+      }
+    });
+  } catch (e) {
+    console.log('error token');
+    res.status(500).json({error:'token expire'});
+  } finally {
+
+  }
+});
+
+//API lấy lại mật khẩu
+router.post('/get_password', function (req, res) {
+  var shopCode = req.body.companyCode;
+  var userName = req.body.userName;
+  console.log(shopCode);
+  var query = mysql.format('select password from account where shopID = (select shopID from shop where shopCode = ?) and userName = ?', [shopCode, userName]);
+  console.log(query);
+  mysql.query(query, function (error, result) {
+    if (!error && result.length > 0) {
+      res.status(400).json({password: result[0].password});
+    } else {
+      res.status(500).json({message: 'error infor'});
+    }
+  });
 });
 
 function verifyToken(token){
