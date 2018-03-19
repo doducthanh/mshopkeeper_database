@@ -133,9 +133,9 @@ router.get('/detail_item', function (req, res) {
 })
 
 //API lấy lại mật khẩu
-router.post('/get_password', function (req, res) {
-  var shopCode = req.body.companyCode;
-  var userName = req.body.userName;
+router.get('/get_password', function (req, res) {
+  var shopCode = req.headers.companycode;
+  var userName = req.headers.username;
   console.log(shopCode);
   var query = mysql.format('select password from account where shopID = (select shopID from shop where shopCode = ?) and userName = ?', [shopCode, userName]);
   console.log(query);
