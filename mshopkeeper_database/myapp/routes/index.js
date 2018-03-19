@@ -80,6 +80,58 @@ router.get ('/get_all_model', function (req, res) {
   }
 });
 
+// API lấy model theo thời gian
+
+// API lấy model bán chạy
+
+// API lấy chi tiết sản phẩm
+router.get('/detail_item', function (req, res) {
+  var token = req.headers.authorization;
+  var modelID = req.headers.modelid;
+  try {
+    var json = jwt.verify(token, 'secretkey');
+    var query = mysql.format('select * from item where modelID = ?', [modelID]);
+    console.log(query);
+    mysql.query(query, function (error, row) {
+      if (!error) {
+        var result = {};
+        var address = {};
+        var arrayColor = new Set();
+        var arraySize = new Set();
+        var arrayAddressShop = new Set();
+        var arrayAddressStock = new Set();
+        //lấy dữ liẹu mảng về size và color
+        for (var i = 0; i < row.length; i++) {
+          arrayColor.add(row[i]['color']);
+          arraySize.add(row[i]['size']);
+          arrayAddressShop.add(row[i]['shopID']);
+          arrayAddressStock.add(row[i]['stockID']);
+        }
+        var arrayAddress = [...arrayAddressShop];
+        for (var i = 0; i < arrayAddress.length; i++) {
+          mysql.query('select address from shop where shopID = ?', arrayAddress[i], function (err, row) {
+            address[arrayAddress[i]] = row;
+          });
+        }
+        result['address'] = address;
+        result['arrayColor'] = [...arrayColor];
+        result['arraySize'] = [...arraySize];
+        result['row'] = row;
+        res.status(200).json(result);
+      } else {
+        var result;
+        result['data'] = 'Error Occured!';
+        res.status(500).json(result)
+      }
+    });
+  } catch (e) {
+    console.log('error token');
+    res.status(500).json({error:'token expire'});
+  } finally {
+
+  }
+})
+
 //API lấy lại mật khẩu
 router.post('/get_password', function (req, res) {
   var shopCode = req.body.companyCode;
