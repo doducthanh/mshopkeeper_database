@@ -81,7 +81,7 @@ router.get ('/get_all_model', function (req, res) {
 });
 
 // API lấy model theo thời gian
-router.get ('/get_model_best_sale', function (req, res) {
+router.get ('/get_model_for_time', function (req, res) {
   var token = req.headers.authorization;
   try {
     var json = jwt.verify(token, 'secretkey');
@@ -128,6 +128,55 @@ router.get ('/get_model_best_sale', function (req, res) {
   }
 });
 
+//API lấy model khuyến mại
+router.get('/get_model_promotion', function (req, res) {
+  var token = req.headers.authorization;
+  try {
+    var json = jwt.verify(token, 'secretkey');
+    json = json['row'];
+    var query = mysql.format('select * from model where shopID = ? and isPromotion = yes',[json['shopID']]);
+    mysql.query(query, function (error, row) {
+      if (!error) {
+        res.status(200).json(row);
+      } else {
+        var result;
+        result['data'] = 'Error Occured!'
+        res.status(500).json(result);
+      }
+    });
+  } catch (e) {
+    console.log('error token');
+    res.status(500).json({error:'token expire'});
+  } finally {
+
+  }
+});
+
+//API search model theo key
+router.post('/search_model', function (req, res) {
+  var token = req.headers.authorization;
+  var keyWord = req.body.keyword;
+  try {
+    var json = jwt.verify(token, 'secretkey');
+    json = json['row'];
+    var query = mysql.format("select * from model where shopID = 3 and modelName like '%"+keyWord+"%'");
+    console.log(query);
+    mysql.query(query, function (error, row) {
+      if (!error) {
+        res.status(200).json(row);
+      } else {
+        var result;
+        res.status(500).json({eror: "error"});
+      }
+    });
+  } catch (e) {
+    console.log('error token');
+    res.status(500).json({error:'token expire'});
+  } finally {
+
+  }
+});
+
 // API lấy chi tiết sản phẩm
 router.get('/detail_item', function (req, res) {
   var token = req.headers.authorization;
@@ -164,6 +213,43 @@ router.get('/detail_item', function (req, res) {
 
   }
 })
+
+//API thay đổi mật khẩu
+router.post('/change_password', function (req, res) {
+  var token = req.headers.authorization;
+  var newPass = req.body.newpassword;
+  try {
+    var json = jwt.verify(token, 'secretkey');
+    json = json['row'];
+    var query = mysql.format('update account set password = ? where shopID = ? and userID = ?', [newPass, json['shopID'], json['userID']]);
+    console.log(query);
+    mysql.query(query, function (error, row) {
+      if (!error) {
+        var result = {};
+        var arrayColor = new Set();
+        var arraySize = new Set();
+        //lấy dữ liẹu mảng về size và color
+        for (var i = 0; i < row.length; i++) {
+          arrayColor.add(row[i]['color']);
+          arraySize.add(row[i]['size']);
+        }
+        result['arrayColor'] = [...arrayColor];
+        result['arraySize'] = [...arraySize];
+        result['row'] = row;
+        res.status(200).json(result);
+      } else {
+        var result;
+        result['data'] = 'Error Occured!';
+        res.status(500).json(result);
+      }
+    });
+  } catch (e) {
+    console.log('error token');
+    res.status(500).json({error:'token expire'});
+  } finally {
+
+  }
+});
 
 //API lấy lại mật khẩu
 router.get('/get_password', function (req, res) {
