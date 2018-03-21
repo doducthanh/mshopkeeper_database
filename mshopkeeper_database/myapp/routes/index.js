@@ -28,12 +28,12 @@ router.post('/login', function (req, res) {
   var password = req.body.password;
   var companyCode = req.headers['companycode'];
   var query = mysql.format('select * from account where shopID = (select shopID from shop where shopCode = ?) and userName = ? and password = ?',[companyCode, userName, password]);
-  console.log(query);
+  //console.log(query);
   mysql.query(query, function (err, row) {
     if (!err && (row.length > 0)) {
       var user = {};
       user['data'] = 'User registered successfully!';
-      jwt.sign({row:row[0]}, 'secretkey', function (err, token) {
+      jwt.sign({exp: Math.floor(Date.now() / 1000) + 60*60 , row:row[0]}, 'secretkey', function (err, token) {
         user['token'] = token;
         user['userID'] = row[0].userID;
         user['userName'] = row[0].userName;
@@ -46,35 +46,58 @@ router.post('/login', function (req, res) {
         res.status(200).json(user);
         var decode = jwt.decode(token, {complete: true});
         //parser token
-        console.log(decode.payload['row']['userName']);
+        //console.log(decode.payload['row']['userName']);
       });
     } else {
       var user = {};
       user['data'] = 'Error Occured!';
-      res.status(500).json(user);
+      res.status(204).json(user);
     }
   });
+});
+
+router.get('/login_token', function (req, res) {
+  var token = req.headers.authorization;
+  try {
+    var json = jwt.verify(token, 'secretkey');
+    json = json['row'];
+    var query = mysql.format('select userID from account where userID = ?', [json['userID']]);
+    mysql.query(query, function (err, row) {
+      if (!err && row.length > 0) {
+        res.status(200).json({result: 'success'});
+      } else {
+        res.status(201).json({result:'error'});
+      }
+    });
+  } catch (e) {
+    res.status(401).json({error:'token expire'})
+  } finally {
+
+  }
 });
 
 //API lấy tất cả model
 router.get ('/get_all_model', function (req, res) {
   var token = req.headers.authorization;
+  var start = parseInt(req.headers.startindex);
+  var end = parseInt(req.headers.endindex);
   try {
     var json = jwt.verify(token, 'secretkey');
     json = json['row'];
-    var query = mysql.format('select * from model where shopID = ?',[json['shopID']]);
+    var query = mysql.format('select * from model where shopID = ? limit ?, ?',[json['shopID'], start, end]);
+    //console.log(query);
     mysql.query(query, function (error, row) {
       if (!error) {
         res.status(200).json(row);
       } else {
         var result;
         result['data'] = 'Error Occured!'
-        res.status(500).json(result);
+        res.status(500).json(row);
       }
     });
   } catch (e) {
-    console.log('error token');
-    res.status(500).json({error:'token expire'});
+    //console.log('error token');
+    res.status(401).json({error:'token expire'});
   } finally {
 
   }
@@ -88,8 +111,10 @@ router.get ('/get_model_for_time', function (req, res) {
     json = json['row'];
     var query = mysql.format('select * from model where shopID = ? order by dateOfEntry DESC limit 100',[json['shopID']]);
     mysql.query(query, function (error, row) {
-      if (!error) {
+      if (!error && row.length > 0) {
         res.status(200).json(row);
+      } else if (!error && row.length == 0){
+        res.status(204).json({data:""})
       } else {
         var result;
         result['data'] = 'Error Occured!'
@@ -97,7 +122,7 @@ router.get ('/get_model_for_time', function (req, res) {
       }
     });
   } catch (e) {
-    console.log('error token');
+    //console.log('error token');
     res.status(500).json({error:'token expire'});
   } finally {
 
@@ -121,7 +146,7 @@ router.get ('/get_model_best_sale', function (req, res) {
       }
     });
   } catch (e) {
-    console.log('error token');
+    //console.log('error token');
     res.status(500).json({error:'token expire'});
   } finally {
 
@@ -134,7 +159,8 @@ router.get('/get_model_promotion', function (req, res) {
   try {
     var json = jwt.verify(token, 'secretkey');
     json = json['row'];
-    var query = mysql.format('select * from model where shopID = ? and isPromotion = yes',[json['shopID']]);
+    var query = mysql.format('select * from model where shopID = ? and isPromotion = 1',[json['shopID']]);
+    //console.log(query);
     mysql.query(query, function (error, row) {
       if (!error) {
         res.status(200).json(row);
@@ -145,7 +171,7 @@ router.get('/get_model_promotion', function (req, res) {
       }
     });
   } catch (e) {
-    console.log('error token');
+    //console.log('error token');
     res.status(500).json({error:'token expire'});
   } finally {
 
@@ -160,7 +186,7 @@ router.post('/search_model', function (req, res) {
     var json = jwt.verify(token, 'secretkey');
     json = json['row'];
     var query = mysql.format("select * from model where shopID = 3 and modelName like '%"+keyWord+"%'");
-    console.log(query);
+    //console.log(query);
     mysql.query(query, function (error, row) {
       if (!error) {
         res.status(200).json(row);
@@ -170,7 +196,7 @@ router.post('/search_model', function (req, res) {
       }
     });
   } catch (e) {
-    console.log('error token');
+    //console.log('error token');
     res.status(500).json({error:'token expire'});
   } finally {
 
@@ -181,7 +207,7 @@ router.post('/search_model', function (req, res) {
 router.get('/detail_item', function (req, res) {
   var token = req.headers.authorization;
   var modelID = req.headers.modelid;
-  console.log(modelID);
+  //console.log(modelID);
   try {
     var json = jwt.verify(token, 'secretkey');
     var query = mysql.format('select * from item, shop where modelID = ? and item.shopID = shop.shopID', [modelID]);
@@ -222,7 +248,7 @@ router.post('/change_password', function (req, res) {
     var json = jwt.verify(token, 'secretkey');
     json = json['row'];
     var query = mysql.format('update account set password = ? where shopID = ? and userID = ?', [newPass, json['shopID'], json['userID']]);
-    console.log(query);
+    //console.log(query);
     mysql.query(query, function (error, row) {
       if (!error) {
         var result = {};
@@ -244,7 +270,7 @@ router.post('/change_password', function (req, res) {
       }
     });
   } catch (e) {
-    console.log('error token');
+    //console.log('error token');
     res.status(500).json({error:'token expire'});
   } finally {
 
@@ -255,9 +281,9 @@ router.post('/change_password', function (req, res) {
 router.get('/get_password', function (req, res) {
   var shopCode = req.headers.companycode;
   var userName = req.headers.username;
-  console.log(shopCode);
+  //console.log(shopCode);
   var query = mysql.format('select password from account where shopID = (select shopID from shop where shopCode = ?) and userName = ?', [shopCode, userName]);
-  console.log(query);
+  //console.log(query);
   mysql.query(query, function (error, result) {
     if (!error && result.length > 0) {
       res.status(400).json({password: result[0].password});
@@ -269,7 +295,7 @@ router.get('/get_password', function (req, res) {
 
 function verifyToken(token){
   jwt.verify(token, 'verify', function (err, decode) {
-    console.log(decode);
+    //console.log(decode);
   });
 };
 module.exports = router;
