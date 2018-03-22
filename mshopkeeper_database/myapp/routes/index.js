@@ -33,7 +33,7 @@ router.post('/login', function (req, res) {
     if (!err && (row.length > 0)) {
       var user = {};
       user['data'] = 'User registered successfully!';
-      jwt.sign({exp: Math.floor(Date.now() / 1000) + 60*60 , row:row[0]}, 'secretkey', function (err, token) {
+      jwt.sign({exp: Math.floor(Date.now() / 1000) + 60*60*24 , row:row[0]}, 'secretkey', function (err, token) {
         user['token'] = token;
         user['userID'] = row[0].userID;
         user['userName'] = row[0].userName;
