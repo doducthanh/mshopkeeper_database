@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  MShopKeeper
+
+  Created by ddthanh on 3/14/18.
+  Copyright © 2018 ddthanh. All rights reserved.
+*/
+
+"login" = "Login";
+"forgot_password" = "Forgot password";
+"logout" = "Logout";
+"do_you_want_logout?" = "Do you want logout?";
+"yes" = "Yes";
+"no" = "No";
+"all" = "All";
+"help" = "Help";
+"recommend_to_friends" = "Recommend to friends";
+"reviews_app" = "Reviews app";
+"product_information" = "Product information";
+"change_password" = "Change password";
+"password_empty" = "Password can not be empty";
+"password_short" = "Password must be greater than 6 characters";
+"password_not_match" = "passwords do not match";
+"ok" = "OK";
+"aler_title" = "Bạn đã hết phiên, vui lòng đăng nhập lại để sử dụng";
+"change_pass_success" = "";
+
+

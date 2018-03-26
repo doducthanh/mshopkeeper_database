@@ -1,0 +1,6 @@
+framework module Pods_MShopKeeperUITests {
+  umbrella header "Pods-MShopKeeperUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

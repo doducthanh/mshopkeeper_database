@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SortView" customModule="MShopKeeper" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="dKr-Yk-7pZ" id="vjl-uE-Yzg"/>
+                <outlet property="viewBackground" destination="thh-82-JPk" id="TIK-CW-Uax"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dKr-Yk-7pZ">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thh-82-JPk" userLabel="ViewBackGround">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnc-aD-kVj" userLabel="ViewContent">
+                    <rect key="frame" x="37.5" y="208" width="300" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sắp xếp theo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvg-Us-6b8">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="41.5"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dff-OK-SPU">
+                            <rect key="frame" x="0.0" y="208.5" width="300" height="41.5"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <state key="normal" title="Đóng"/>
+                            <state key="highlighted" backgroundImage="tap_dang_nhap.png"/>
+                            <connections>
+                                <action selector="onClickClose:" destination="-1" eventType="touchUpInside" id="8Kw-bf-Yx8"/>
+                            </connections>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tUG-fR-Xpp">
+                            <rect key="frame" x="0.0" y="41.5" width="300" height="167"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="9xx-AD-OVy"/>
+                                <outlet property="delegate" destination="-1" id="9Au-xT-DaW"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="450" id="08Y-Dt-XDQ"/>
+                        <constraint firstAttribute="height" constant="300" id="1Uw-G3-VC8"/>
+                        <constraint firstItem="tUG-fR-Xpp" firstAttribute="leading" secondItem="cnc-aD-kVj" secondAttribute="leading" id="5dd-uM-LMO"/>
+                        <constraint firstItem="dff-OK-SPU" firstAttribute="top" secondItem="tUG-fR-Xpp" secondAttribute="bottom" id="8ct-N4-YWc"/>
+                        <constraint firstItem="cvg-Us-6b8" firstAttribute="top" secondItem="cnc-aD-kVj" secondAttribute="top" id="8vU-6f-SO2"/>
+                        <constraint firstAttribute="width" constant="300" id="BZK-lX-ulo"/>
+                        <constraint firstAttribute="trailing" secondItem="dff-OK-SPU" secondAttribute="trailing" id="OQl-qS-uHH"/>
+                        <constraint firstItem="cvg-Us-6b8" firstAttribute="leading" secondItem="cnc-aD-kVj" secondAttribute="leading" id="V9e-J8-okF"/>
+                        <constraint firstItem="dff-OK-SPU" firstAttribute="height" secondItem="cnc-aD-kVj" secondAttribute="height" multiplier="1:6" id="VQH-pt-Ple"/>
+                        <constraint firstItem="dff-OK-SPU" firstAttribute="leading" secondItem="cnc-aD-kVj" secondAttribute="leading" id="WqL-EZ-gO7"/>
+                        <constraint firstItem="cvg-Us-6b8" firstAttribute="height" secondItem="cnc-aD-kVj" secondAttribute="height" multiplier="1:6" id="c2b-fF-vut"/>
+                        <constraint firstAttribute="bottom" secondItem="dff-OK-SPU" secondAttribute="bottom" id="fzm-vX-2Fr"/>
+                        <constraint firstItem="tUG-fR-Xpp" firstAttribute="top" secondItem="cvg-Us-6b8" secondAttribute="bottom" id="h2y-uh-HJO"/>
+                        <constraint firstAttribute="trailing" secondItem="cvg-Us-6b8" secondAttribute="trailing" id="imV-Wm-aZA"/>
+                        <constraint firstAttribute="height" constant="250" id="jRo-6S-VHs"/>
+                        <constraint firstAttribute="trailing" secondItem="tUG-fR-Xpp" secondAttribute="trailing" id="xFD-FL-dr8"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="08Y-Dt-XDQ"/>
+                            <exclude reference="1Uw-G3-VC8"/>
+                            <exclude reference="BZK-lX-ulo"/>
+                            <exclude reference="jRo-6S-VHs"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="BZK-lX-ulo"/>
+                            <include reference="jRo-6S-VHs"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="08Y-Dt-XDQ"/>
+                            <include reference="1Uw-G3-VC8"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="thh-82-JPk" secondAttribute="bottom" id="5s8-a3-Yvw"/>
+                <constraint firstAttribute="trailing" secondItem="thh-82-JPk" secondAttribute="trailing" id="JQE-X1-efC"/>
+                <constraint firstItem="thh-82-JPk" firstAttribute="leading" secondItem="dKr-Yk-7pZ" secondAttribute="leading" id="TTd-oM-vzS"/>
+                <constraint firstItem="thh-82-JPk" firstAttribute="top" secondItem="dKr-Yk-7pZ" secondAttribute="top" id="ag7-6n-ytn"/>
+                <constraint firstItem="cnc-aD-kVj" firstAttribute="centerY" secondItem="thh-82-JPk" secondAttribute="centerY" id="eWS-r0-g7G"/>
+                <constraint firstItem="cnc-aD-kVj" firstAttribute="centerX" secondItem="thh-82-JPk" secondAttribute="centerX" id="nBQ-Kz-cEa"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tap_dang_nhap.png" width="225" height="225"/>
+    </resources>
+</document>

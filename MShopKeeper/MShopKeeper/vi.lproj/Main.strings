@@ -1,0 +1,114 @@
+
+/* Class = "UILabel"; text = "Đơn giá:"; ObjectID = "0SY-c6-Ct1"; */
+"0SY-c6-Ct1.text" = "Đơn giá:";
+
+/* Class = "UIButton"; normalTitle = "ĐỔI MẬT KHẨU"; ObjectID = "1bG-sW-v3T"; */
+"1bG-sW-v3T.normalTitle" = "ĐỔI MẬT KHẨU";
+
+/* Class = "UILabel"; text = "Giới thiệu cho bạn bè"; ObjectID = "2cG-Aq-7v0"; */
+"2cG-Aq-7v0.text" = "Giới thiệu cho bạn bè";
+
+/* Class = "UILabel"; text = "Mã SKU:"; ObjectID = "9VP-4C-ccT"; */
+"9VP-4C-ccT.text" = "Mã SKU:";
+
+/* Class = "UITextField"; text = "liemqv"; ObjectID = "AI7-np-klZ"; */
+"AI7-np-klZ.text" = "liemqv";
+
+/* Class = "UILabel"; text = "Quàng Văn Liêm"; ObjectID = "AQD-TE-3PO"; */
+"AQD-TE-3PO.text" = "Quàng Văn Liêm";
+
+/* Class = "UILabel"; text = " TƯ VẤN THEO"; ObjectID = "BVS-co-8aq"; */
+"BVS-co-8aq.text" = " TƯ VẤN THEO";
+
+/* Class = "UILabel"; text = "MÀU SẮC"; ObjectID = "FZ5-dh-NzJ"; */
+"FZ5-dh-NzJ.text" = "MÀU SẮC";
+
+/* Class = "UILabel"; text = "Tên đăng nhập"; ObjectID = "HFb-RC-Vfm"; */
+"HFb-RC-Vfm.text" = "Tên đăng nhập";
+
+/* Class = "UITextField"; placeholder = "Tên đăng nhập"; ObjectID = "Hkg-wy-QeI"; */
+"Hkg-wy-QeI.placeholder" = "Tên đăng nhập";
+
+/* Class = "UILabel"; text = "SIZE"; ObjectID = "Htk-1N-rl1"; */
+"Htk-1N-rl1.text" = "SIZE";
+
+/* Class = "UILabel"; text = "Mật khẩu hiện tại"; ObjectID = "KGg-te-3j0"; */
+"KGg-te-3j0.text" = "Mật khẩu hiện tại";
+
+/* Class = "UILabel"; text = "Xác nhận mật khẩu"; ObjectID = "KKO-bs-9qE"; */
+"KKO-bs-9qE.text" = "Xác nhận mật khẩu";
+
+/* Class = "UITextField"; placeholder = "Mã cửa hàng.mshopkeeper.vn"; ObjectID = "NMn-WJ-Nr2"; */
+"NMn-WJ-Nr2.placeholder" = "Mã cửa hàng.mshopkeeper.vn";
+
+/* Class = "UILabel"; text = ".mshopkeeper.vn"; ObjectID = "PX2-Do-l8s"; */
+"PX2-Do-l8s.text" = ".mshopkeeper.vn";
+
+/* Class = "UILabel"; text = "350K"; ObjectID = "RFd-wy-hAM"; */
+"RFd-wy-hAM.text" = "350K";
+
+/* Class = "UILabel"; text = "Mật khẩu hiện tại không được để trống"; ObjectID = "SV9-UZ-KKF"; */
+"SV9-UZ-KKF.text" = "Mật khẩu hiện tại không được để trống";
+
+/* Class = "UIButton"; normalTitle = "Quên mật khẩu?"; ObjectID = "T8m-jZ-1u0"; */
+"T8m-jZ-1u0.normalTitle" = "Quên mật khẩu?";
+
+/* Class = "UISegmentedControl"; WZo-K5-JuV.segmentTitles[0] = "MÀU SẮC"; ObjectID = "WZo-K5-JuV"; */
+"WZo-K5-JuV.segmentTitles[0]" = "MÀU SẮC";
+
+/* Class = "UISegmentedControl"; WZo-K5-JuV.segmentTitles[1] = "SIZE"; ObjectID = "WZo-K5-JuV"; */
+"WZo-K5-JuV.segmentTitles[1]" = "SIZE";
+
+/* Class = "UILabel"; text = "Quên mật khẩu"; ObjectID = "Xd1-mz-amM"; */
+"Xd1-mz-amM.text" = "Quên mật khẩu";
+
+/* Class = "UILabel"; text = "Áo phông MISA"; ObjectID = "YQ2-op-c1T"; */
+"YQ2-op-c1T.text" = "Áo phông MISA";
+
+/* Class = "UITextField"; placeholder = "Mật khẩu"; ObjectID = "Zvc-A3-tqB"; */
+"Zvc-A3-tqB.placeholder" = "Mật khẩu";
+
+/* Class = "UILabel"; text = "Mật khẩu mới không được để trống"; ObjectID = "afj-5R-AYe"; */
+"afj-5R-AYe.text" = "Mật khẩu mới không được để trống";
+
+/* Class = "UILabel"; text = "Tên đăng nhập không được để trống"; ObjectID = "bzR-v6-BCV"; */
+"bzR-v6-BCV.text" = "Tên đăng nhập không được để trống";
+
+/* Class = "UILabel"; text = "150K"; ObjectID = "e2H-hb-UPG"; */
+"e2H-hb-UPG.text" = "150K";
+
+/* Class = "UIButton"; normalTitle = "LẤY LẠI MẬT KHẨU"; ObjectID = "eMa-JI-xWM"; */
+"eMa-JI-xWM.normalTitle" = "LẤY LẠI MẬT KHẨU";
+
+/* Class = "UILabel"; text = "Mã cửa hàng"; ObjectID = "gB4-WT-sjz"; */
+"gB4-WT-sjz.text" = "Mã cửa hàng";
+
+/* Class = "UILabel"; text = "Dành cho tư vấn bán hàng"; ObjectID = "jAT-on-9tH"; */
+"jAT-on-9tH.text" = "Dành cho tư vấn bán hàng";
+
+/* Class = "UIButton"; normalTitle = "ĐĂNG NHẬP"; ObjectID = "jOg-mQ-iHE"; */
+"jOg-mQ-iHE.normalTitle" = "ĐĂNG NHẬP";
+
+/* Class = "UILabel"; text = "Dành cho tư vấn bán hàng"; ObjectID = "mAx-oz-0Nb"; */
+"mAx-oz-0Nb.text" = "Dành cho tư vấn bán hàng";
+
+/* Class = "UILabel"; text = "Mật khẩu mới"; ObjectID = "pJf-qa-Owm"; */
+"pJf-qa-Owm.text" = "Mật khẩu mới";
+
+/* Class = "UILabel"; text = "liemqv.mshopkeeper.vn"; ObjectID = "tbs-qi-fxd"; */
+"tbs-qi-fxd.text" = "liemqv.mshopkeeper.vn";
+
+/* Class = "UILabel"; text = "Đổi mật khẩu"; ObjectID = "vSf-vi-rGa"; */
+"vSf-vi-rGa.text" = "Đổi mật khẩu";
+
+/* Class = "UILabel"; text = "Thông tin sản phẩm"; ObjectID = "waL-T0-2Vu"; */
+"waL-T0-2Vu.text" = "Thông tin sản phẩm";
+
+/* Class = "UILabel"; text = "CHI-1234-JHJKDH"; ObjectID = "xN3-fV-nge"; */
+"xN3-fV-nge.text" = "CHI-1234-JHJKDH";
+
+/* Class = "UILabel"; text = "Xác nhận mật khẩu không được để trống"; ObjectID = "xlr-Ah-XYJ"; */
+"xlr-Ah-XYJ.text" = "Xác nhận mật khẩu không được để trống";
+
+/* Class = "UILabel"; text = "Trừ vào số lượng hàng hoá khách đặt vao tồn kho"; ObjectID = "xyG-pd-ew3"; */
+"xyG-pd-ew3.text" = "Trừ vào số lượng hàng hoá khách đặt vao tồn kho";

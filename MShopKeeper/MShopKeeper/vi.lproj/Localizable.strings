@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  MShopKeeper
+
+  Created by ddthanh on 3/14/18.
+  Copyright © 2018 ddthanh. All rights reserved.
+*/
+
+"login" = "Đăng nhập";
+"forgot_password" = "quên mật khẩu";
+"logout" = "Đăng xuất";
+"do_you_want_logout?" = "Bạn có muốn đăng xuất không?";
+"yes" = "Có";
+"no" = "Không";
+"all" = "Tất cả";
+"help" = "Trợ giúp";
+"recommend_to_friends" = "Giới thiệu cho bạn bè";
+"reviews_app" = "Đánh giá ứng dụng";
+"product_information" = "Thông tin sản phẩm";
+"change_password" = "Thay đổi mật khẩu";
+"password_empty" = "Password không được để trống";
+"password_short" = "Password phải lớn hơn 6 kí tự";
+"password_not_match" = "password không khớp";
+"ok" = "Xác nhận";
+"aler_title" = "Bạn đã hết phiên, vui lòng đăng nhập lại để sử dụng";
+"change_pass_success" = "đổi mật khẩu thành công, vui lòng đăng nhập lại để sử dụng";

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLG-yi-eaR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_login_user.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9rX-QZ-pLI">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo_text_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="yse-F7-75s">
+                                        <rect key="frame" x="62.5" y="269" width="194" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yse-F7-75s" secondAttribute="height" multiplier="484:75" id="760-QX-bly"/>
+                                            <constraint firstAttribute="height" constant="30" id="hQV-Ob-d0O"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo_full.png" translatesAutoresizingMaskIntoConstraints="NO" id="HSd-mq-i73">
+                                        <rect key="frame" x="124.5" y="189" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="VSK-Ny-Y0e"/>
+                                            <constraint firstAttribute="width" secondItem="HSd-mq-i73" secondAttribute="height" multiplier="1:1" id="Y1X-Xg-Irz"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9rX-QZ-pLI" secondAttribute="trailing" id="8JO-sL-ncE"/>
+                                    <constraint firstItem="9rX-QZ-pLI" firstAttribute="top" secondItem="bLG-yi-eaR" secondAttribute="top" id="NyN-m8-eoW"/>
+                                    <constraint firstItem="yse-F7-75s" firstAttribute="top" secondItem="HSd-mq-i73" secondAttribute="bottom" constant="10" id="Rmr-kd-p3k"/>
+                                    <constraint firstItem="9rX-QZ-pLI" firstAttribute="leading" secondItem="bLG-yi-eaR" secondAttribute="leading" id="YbR-ON-qCj"/>
+                                    <constraint firstItem="yse-F7-75s" firstAttribute="centerY" secondItem="9rX-QZ-pLI" secondAttribute="centerY" id="aaq-Q4-Wld"/>
+                                    <constraint firstItem="HSd-mq-i73" firstAttribute="centerX" secondItem="9rX-QZ-pLI" secondAttribute="centerX" id="gaf-Lh-W7v"/>
+                                    <constraint firstItem="yse-F7-75s" firstAttribute="centerX" secondItem="9rX-QZ-pLI" secondAttribute="centerX" id="hJB-My-EnM"/>
+                                    <constraint firstAttribute="bottom" secondItem="9rX-QZ-pLI" secondAttribute="bottom" id="nNe-eu-5YI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bLG-yi-eaR" secondAttribute="trailing" id="01h-Pp-3GJ"/>
+                            <constraint firstItem="bLG-yi-eaR" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="2Jj-0h-iN7"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="bLG-yi-eaR" secondAttribute="bottom" id="GyU-Dn-kcV"/>
+                            <constraint firstItem="bLG-yi-eaR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Zer-yI-jnz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_login_user.jpg" width="1080" height="1920"/>
+        <image name="ic_logo_full.png" width="126" height="126"/>
+        <image name="ic_logo_text_2.png" width="484" height="75"/>
+    </resources>
+</document>

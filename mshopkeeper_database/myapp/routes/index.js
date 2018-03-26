@@ -43,6 +43,7 @@ router.post('/login', function (req, res) {
         user['tel'] = row[0].tel;
         user['role'] = row[0].role;
         user['tokenType'] = token.type;
+        user['tokenStart'] = Math.floor(Date.now() / 1000);
         res.status(200).json(user);
         var decode = jwt.decode(token, {complete: true});
         //parser token
@@ -135,7 +136,7 @@ router.get ('/get_model_best_sale', function (req, res) {
   try {
     var json = jwt.verify(token, 'secretkey');
     json = json['row'];
-    var query = mysql.format('select * from model where shopID = ? order by saleCount DESC limit 2',[json['shopID']]);
+    var query = mysql.format('select * from model where shopID = ? order by saleCount DESC limit 10',[json['shopID']]);
     mysql.query(query, function (error, row) {
       if (!error) {
         res.status(200).json(row);
@@ -160,7 +161,7 @@ router.get('/get_model_promotion', function (req, res) {
     var json = jwt.verify(token, 'secretkey');
     json = json['row'];
     var query = mysql.format('select * from model where shopID = ? and isPromotion = 1',[json['shopID']]);
-    //console.log(query);
+    //sconsole.log(query);
     mysql.query(query, function (error, row) {
       if (!error) {
         res.status(200).json(row);

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewIntroduce" customModule="MShopKeeper" customModuleProvider="target">
+            <connections>
+                <outlet property="textview" destination="u5l-hN-wFG" id="iyi-oe-iuW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewBackground" destination="r4k-gy-Xdh" id="bYd-hq-wXs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4k-gy-Xdh" userLabel="ViewBackground">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2z-ns-KPI" userLabel="ViewContent">
+                    <rect key="frame" x="9.5" y="119" width="300" height="330"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới thiệu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbX-um-I0f">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="STv-8z-Osp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIq-cw-0Zs">
+                            <rect key="frame" x="0.0" y="285" width="300" height="45"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="cI7-H3-RMn"/>
+                            </constraints>
+                            <state key="normal" title="Đóng"/>
+                            <state key="highlighted" backgroundImage="tap_dang_nhap.png"/>
+                            <connections>
+                                <action selector="onClickClose:" destination="-1" eventType="touchUpInside" id="15n-D1-ym8"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5l-hN-wFG">
+                            <rect key="frame" x="10" y="45" width="280" height="240"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <attributedString key="attributedText">
+                                <fragment content="MSHOPKEEPER">
+                                    <attributes>
+                                        <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name="Arial-BoldMT"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment>
+                                    <string key="content"> là phần mềm giúp cửa hàng thời trang thực hiện các nghiệp vụ bán hàng và quản lí hoạt động kinh doanh.  Để sử dụng được sản phẩm này, cửa hàng thời trang của bạn cần đăng ký và sử dụng phần mềm Quản lí cửa hàng thời trang </string>
+                                    <attributes>
+                                        <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name=".SFNSText"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="MSHOPKEEPER">
+                                    <attributes>
+                                        <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name="Arial-BoldMT"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content=" tại  ">
+                                    <attributes>
+                                        <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name=".SFNSText"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="http://www.mshopkeeper.vn">
+                                    <attributes>
+                                        <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="NSColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name="ArialMT"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="  ">
+                                    <attributes>
+                                        <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name=".SFNSText"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="MSHOPKEEPER - Tư vấn bán hàng">
+                                    <attributes>
+                                        <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name="Arial-BoldMT"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content=" là một ứng dụng của phần mềm ">
+                                    <attributes>
+                                        <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name=".SFNSText"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="MHOPKEEPER">
+                                    <attributes>
+                                        <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name="Arial-BoldMT"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content=" giúp nhân viên bán hàng tra cứu tồn kho, tư vấn bán hàng. ">
+                                    <attributes>
+                                        <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name=".SFNSText"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="MIq-cw-0Zs" firstAttribute="top" secondItem="u5l-hN-wFG" secondAttribute="bottom" id="3eD-39-PIa"/>
+                        <constraint firstAttribute="width" constant="300" id="4Ah-BA-ve8"/>
+                        <constraint firstItem="FbX-um-I0f" firstAttribute="leading" secondItem="v2z-ns-KPI" secondAttribute="leading" id="CKG-NL-4RX"/>
+                        <constraint firstItem="MIq-cw-0Zs" firstAttribute="leading" secondItem="v2z-ns-KPI" secondAttribute="leading" id="Ifg-IE-UEB"/>
+                        <constraint firstAttribute="bottom" secondItem="MIq-cw-0Zs" secondAttribute="bottom" id="Lcv-Xn-vRF"/>
+                        <constraint firstItem="u5l-hN-wFG" firstAttribute="leading" secondItem="v2z-ns-KPI" secondAttribute="leading" constant="10" id="QC3-Gp-BsF"/>
+                        <constraint firstAttribute="trailing" secondItem="FbX-um-I0f" secondAttribute="trailing" id="ZGg-QY-ZBM"/>
+                        <constraint firstItem="FbX-um-I0f" firstAttribute="top" secondItem="v2z-ns-KPI" secondAttribute="top" id="f4G-TH-PdI"/>
+                        <constraint firstAttribute="trailing" secondItem="MIq-cw-0Zs" secondAttribute="trailing" id="iV8-oJ-SGE"/>
+                        <constraint firstAttribute="height" constant="330" id="kEf-jk-m1V"/>
+                        <constraint firstAttribute="trailing" secondItem="u5l-hN-wFG" secondAttribute="trailing" constant="10" id="qVa-pE-pWF"/>
+                        <constraint firstItem="u5l-hN-wFG" firstAttribute="top" secondItem="FbX-um-I0f" secondAttribute="bottom" id="z6h-YZ-fVc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="r4k-gy-Xdh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4Jd-4p-LS9"/>
+                <constraint firstItem="v2z-ns-KPI" firstAttribute="centerX" secondItem="r4k-gy-Xdh" secondAttribute="centerX" id="9s0-mT-sIB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r4k-gy-Xdh" secondAttribute="bottom" id="HjV-fQ-bT8"/>
+                <constraint firstItem="r4k-gy-Xdh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Lsn-Tk-495"/>
+                <constraint firstItem="v2z-ns-KPI" firstAttribute="centerY" secondItem="r4k-gy-Xdh" secondAttribute="centerY" id="U5R-nY-u1M"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r4k-gy-Xdh" secondAttribute="trailing" id="WJB-BJ-bFq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tap_dang_nhap.png" width="225" height="225"/>
+    </resources>
+</document>
