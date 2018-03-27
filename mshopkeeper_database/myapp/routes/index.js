@@ -179,6 +179,30 @@ router.get('/get_model_promotion', function (req, res) {
   }
 });
 
+//API lấy model theo barcode
+router.get('/search_barcode', function (req, res) {
+  var token = req.headers.authorization;
+  var barcode = req.headers.barcode
+  try {
+    var json = jwt.verify(token, 'secretkey');
+    json = json['row'];
+    var query = mysql.format("select * from model where modelID = (select modelID from item where barcode = ? limit 1) and shopID = ?",[barcode, json['shopID']]);
+    console.log(query);
+    mysql.query(query, function (error, row) {
+      if (!error) {
+        res.status(200).json(row);
+      } else {
+        var result;
+        res.status(500).json({eror: "error"});
+      }
+    });
+  } catch (e) {
+    res.status(500).json({error:'token expire'});
+  } finally {
+
+  };
+});
+
 //API search model theo key
 router.post('/search_model', function (req, res) {
   var token = req.headers.authorization;
@@ -207,7 +231,7 @@ router.post('/search_model', function (req, res) {
 // API lấy chi tiết sản phẩm
 router.get('/detail_item', function (req, res) {
   var token = req.headers.authorization;
-  var modelID = req.headers.modelid;
+  var modelID = parseInt(req.headers.modelid);
   //console.log(modelID);
   try {
     var json = jwt.verify(token, 'secretkey');
