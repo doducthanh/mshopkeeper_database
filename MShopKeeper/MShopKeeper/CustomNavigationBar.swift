@@ -53,7 +53,7 @@ class CustomNavigationBar: UIView {
         btBack = UIButton.init()
         btBack.frame = CGRect.init(x: 15, y: 0, width: heightBar, height: heightBar)
         btBack.addTarget(self, action: #selector(tapBackButton), for: .touchUpInside)
-        btBack.setImage(UIImage.init(named: "ic_previous_white"), for: .normal)
+        btBack.setImage(UIImage.init(named: "ic_previous"), for: .normal)
         self.addSubview(btBack)
         btBack.isHidden = true
         

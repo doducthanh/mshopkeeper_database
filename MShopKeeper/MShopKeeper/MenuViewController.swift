@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class MenuViewController: UIViewController {
     //MARK: property
@@ -59,6 +60,16 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            self.closeLeft()
+            let activity = UIActivityViewController.init(activityItems: ["www.google.co.in"], applicationActivities: nil)
+            activity.popoverPresentationController?.sourceView = self.view
+            self.present(activity, animated: true, completion: nil)
+        }
+        if indexPath.row == 1 {
+            self.closeLeft()
+            SKStoreReviewController.requestReview()
+        }
         if indexPath.row == 2 {
             self.closeLeft()
             let inforProduc = storyboard?.instantiateViewController(withIdentifier: "InforProductViewController")

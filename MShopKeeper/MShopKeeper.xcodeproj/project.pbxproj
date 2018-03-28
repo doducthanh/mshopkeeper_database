@@ -17,6 +17,10 @@
 		7704C348202AF15400227ADC /* ViewWaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7704C347202AF15400227ADC /* ViewWaiting.swift */; };
 		7713E7A4201B0B15006708A5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713E7A3201B0B15006708A5 /* HomeViewController.swift */; };
 		7713E7AE201B1091006708A5 /* SortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7713E7AC201B1091006708A5 /* SortView.xib */; };
+		7717D73C2069D32F00B8A578 /* scanCode.png in Resources */ = {isa = PBXBuildFile; fileRef = 7717D73B2069D32E00B8A578 /* scanCode.png */; };
+		7717D73E2069D71100B8A578 /* ic_previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 7717D73D2069D71100B8A578 /* ic_previous.png */; };
+		7717D7402069DB7B00B8A578 /* ic_sale.png in Resources */ = {isa = PBXBuildFile; fileRef = 7717D73F2069DB7A00B8A578 /* ic_sale.png */; };
+		7717D7422069EA5D00B8A578 /* ic_app.png in Resources */ = {isa = PBXBuildFile; fileRef = 7717D7412069EA5D00B8A578 /* ic_app.png */; };
 		773223D52015C529008D376B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773223D42015C529008D376B /* MenuTableViewCell.swift */; };
 		773223D82015DDE3008D376B /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773223D72015DDE3008D376B /* HomeCollectionViewCell.swift */; };
 		773364BE20244B7A00EEEA49 /* PopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773364BC20244B7A00EEEA49 /* PopupCell.swift */; };
@@ -255,6 +259,10 @@
 		7704C347202AF15400227ADC /* ViewWaiting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWaiting.swift; sourceTree = "<group>"; };
 		7713E7A3201B0B15006708A5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7713E7AC201B1091006708A5 /* SortView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SortView.xib; sourceTree = "<group>"; };
+		7717D73B2069D32E00B8A578 /* scanCode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scanCode.png; sourceTree = "<group>"; };
+		7717D73D2069D71100B8A578 /* ic_previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_previous.png; sourceTree = "<group>"; };
+		7717D73F2069DB7A00B8A578 /* ic_sale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sale.png; sourceTree = "<group>"; };
+		7717D7412069EA5D00B8A578 /* ic_app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_app.png; sourceTree = "<group>"; };
 		773223D42015C529008D376B /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		773223D72015DDE3008D376B /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		773364BC20244B7A00EEEA49 /* PopupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupCell.swift; sourceTree = "<group>"; };
@@ -678,6 +686,10 @@
 		776213A52011E421006F8186 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				7717D7412069EA5D00B8A578 /* ic_app.png */,
+				7717D73F2069DB7A00B8A578 /* ic_sale.png */,
+				7717D73D2069D71100B8A578 /* ic_previous.png */,
+				7717D73B2069D32E00B8A578 /* scanCode.png */,
 				77A42858203D280C00B50D96 /* ic_background_click.png */,
 				77A42856203D264100B50D96 /* backgroundClick.png */,
 				77C6B6B9202C2509007F8723 /* ic_previous_white.png */,
@@ -1100,6 +1112,7 @@
 				7750DD5920108D540065A397 /* abc_list_longpressed_holo.9.png in Resources */,
 				7750DD7820108D540065A397 /* common_google_signin_btn_icon_light_disabled.9.png in Resources */,
 				7750DDA820108D540065A397 /* ic_launcher.png in Resources */,
+				7717D73C2069D32F00B8A578 /* scanCode.png in Resources */,
 				77C6B6BA202C250A007F8723 /* ic_previous_white.png in Resources */,
 				7750DD9020108D540065A397 /* ic_btn_slidemenu.png in Resources */,
 				7750DD8820108D540065A397 /* ic_app_logo.png in Resources */,
@@ -1159,6 +1172,7 @@
 				7750DDC920108D540065A397 /* notification_bg_low_pressed.9.png in Resources */,
 				7750DD6320108D540065A397 /* abc_scrubber_primary_mtrl_alpha.9.png in Resources */,
 				7750DD8220108D540065A397 /* design_ic_visibility.png in Resources */,
+				7717D73E2069D71100B8A578 /* ic_previous.png in Resources */,
 				77A42859203D280C00B50D96 /* ic_background_click.png in Resources */,
 				7750DD4B20108D540065A397 /* abc_ic_commit_search_api_mtrl_alpha.png in Resources */,
 				7750DD6620108D540065A397 /* abc_switch_track_mtrl_alpha.9.png in Resources */,
@@ -1171,6 +1185,7 @@
 				7750DD9220108D540065A397 /* ic_cancel_grey600_36dp.png in Resources */,
 				7750DD6420108D540065A397 /* abc_scrubber_track_mtrl_alpha.9.png in Resources */,
 				7750DD9E20108D540065A397 /* ic_hamburger_menu_vector.png in Resources */,
+				7717D7422069EA5D00B8A578 /* ic_app.png in Resources */,
 				7750DD4F20108D540065A397 /* abc_ic_menu_selectall_mtrl_alpha.png in Resources */,
 				773364BF20244B7A00EEEA49 /* PopupCell.xib in Resources */,
 				7750DD4C20108D540065A397 /* abc_ic_menu_copy_mtrl_am_alpha.png in Resources */,
@@ -1209,6 +1224,7 @@
 				7750DDA320108D540065A397 /* ic_introduction2.png in Resources */,
 				7750DD7720108D540065A397 /* common_google_signin_btn_icon_dark_pressed.9.png in Resources */,
 				7750DD6020108D540065A397 /* abc_scrubber_control_off_mtrl_alpha.png in Resources */,
+				7717D7402069DB7B00B8A578 /* ic_sale.png in Resources */,
 				7750DD7120108D540065A397 /* abc_textfield_search_default_mtrl_alpha.9.png in Resources */,
 				7750DDB220108D540065A397 /* ic_menu_share.png in Resources */,
 				7750DD4720108D540065A397 /* abc_btn_radio_to_on_mtrl_015.png in Resources */,
@@ -1257,12 +1273,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MShopKeeper/Pods-MShopKeeper-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MTBBarcodeScanner/MTBBarcodeScanner.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MTBBarcodeScanner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

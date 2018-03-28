@@ -106,6 +106,9 @@ class RequestAPIModel {
         if index == 3 {
             url = CommonURL.URL_MODEL_PROMOTION
         }
+        if index == 4 {
+            url = CommonURL.URL_SEARCH_BARCODE
+        }
         let httpHeader: HTTPHeaders! = ["Content-Type":"application/x-www-form-urlencoded", "startindex": startIndex.description, "endindex": endIndex.description, "authorization": token]
         Alamofire.request(url, method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: httpHeader)
             .responseJSON { (response) in
@@ -170,7 +173,6 @@ class RequestAPIModel {
                     for i in 0..<array.count {
                         let model = Model()
                         let dic: Dictionary = array[i]
-                        print(dic)
                         model.modelID = dic["modelID"] as! Int
                         model.shopID = dic["shopID"] as! Int
                         model.modelName = String.init(describing: (dic["modelName"] as! String).utf8)
@@ -182,7 +184,6 @@ class RequestAPIModel {
                         model.percentPromtion = dic["percenPromotion"] as! Double
                         model.dateOfEntry = dic["dateOfEntry"] as! String
                         model.unitPrice = dic["unitPrice"] as! Int
-                        print(model.dateOfEntry)
                         arrayModel.append(model)
                     }
                     DispatchQueue.main.async {

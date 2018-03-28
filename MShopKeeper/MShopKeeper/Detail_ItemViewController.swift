@@ -41,6 +41,7 @@ class Detail_ItemViewController: UIViewController {
     var viewAddress: UIView!
     var heightViewScroll: CGFloat!
     
+    @IBOutlet weak var imgSale: UIImageView!
     @IBOutlet weak var imageItem: UIImageView!
     @IBOutlet weak var viewItem: UIView!
     @IBOutlet weak var viewColors: UIView!
@@ -128,7 +129,7 @@ class Detail_ItemViewController: UIViewController {
         let pictureLink = UserDefaults.standard.value(forKey: "pictureLink") as! String
         let resource = ImageResource.init(downloadURL: URL.init(string: pictureLink)!, cacheKey: pictureLink)
         self.imageItem.kf.setImage(with: resource)
-
+        
     }
     
     @objc func ScaleItem() {

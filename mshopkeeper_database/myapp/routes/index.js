@@ -307,11 +307,12 @@ router.get('/get_password', function (req, res) {
   var shopCode = req.headers.companycode;
   var userName = req.headers.username;
   //console.log(shopCode);
-  var query = mysql.format('select password from account where shopID = (select shopID from shop where shopCode = ?) and userName = ?', [shopCode, userName]);
-  //console.log(query);
+  var query = mysql.format('select password from account where shopID = (select shopID from shop where shopCode = ? limit 1) and userName = ?', [shopCode, userName]);
+  console.log(query);
   mysql.query(query, function (error, result) {
+    console.log(result[0].password);
     if (!error && result.length > 0) {
-      res.status(400).json({password: result[0].password});
+      res.status(200).json({password: result[0].password});
     } else {
       res.status(500).json({message: 'error infor'});
     }

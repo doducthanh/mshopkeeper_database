@@ -267,7 +267,9 @@ class HomeViewController: UIViewController, SlideMenuControllerDelegate {
 
 extension HomeViewController: CustomNavigationBarDelegate{
     func tapScanCode() {
-
+        let scanVC = storyboard?.instantiateViewController(withIdentifier: "ScanCodeViewController") as! ScanCodeViewController
+        scanVC.delegate = self
+        self.present(scanVC, animated: true, completion: nil)
     }
     
     func tapSlideMenu() {
@@ -323,7 +325,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        CommonVariable.isDisConnect = true
+//        CommonVariable.isDisConnect = true
         let cell: HomeCollectionViewCell = collectionView.cellForItem(at: indexPath) as! HomeCollectionViewCell
         cell.delegate = self as HomeCollectionViewCellDelegate
         cell.arrayModel = self.arrayModel
@@ -433,5 +435,17 @@ extension HomeViewController: DisConnectInternet {
     func disConect() {
         CommonVariable.isDisConnect = true
     }
+}
+
+extension HomeViewController: ScanCodeDelegate {
+    func searchBarCode(barcode: String) {
+        let token = UserDefaults.standard.value(forKey: "token") as! String
+        self.requestAPI.getAllModel(token: token, index: 4, startIndex: startIndex, endIndex: endIndex) { (array) in
+            self.arrayModel = array
+            self.myCollection.reloadData()
+        }
+    }
+    
+    
 }
 

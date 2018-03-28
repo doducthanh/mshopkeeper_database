@@ -90,7 +90,6 @@ class DatabaseModel {
         if let models: AnySequence<Row> = Item_SQLite.share.queryDataForKey(key: modelID) {
             _ = models.map{ row in
                 let model = Item()
-                print(row)
                 model.itemId = row[Expression<Int>("itemID")]
                 model.modelID = row[Expression<Int>("modelID")]
                 model.decription = row[Expression<String>("decription")]

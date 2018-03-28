@@ -8,45 +8,50 @@
 
 import UIKit
 import AVFoundation
+import MTBBarcodeScanner
 
 class ScanCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
 
-    var video = AVCaptureVideoPreviewLayer()
+    var scanner: MTBBarcodeScanner?
+    var delegate: ScanCodeDelegate!
     override func viewDidLoad() {
         super.viewDidLoad()
-        ScanCode()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        scanner = MTBBarcodeScanner(previewView: self.view)
     }
     
-    //MARK:
-    func ScanCode(){
-        let session = AVCaptureSession()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        let captureDevice = AVCaptureDevice.default(for: .video)
-        
-        do {
-            let input = try AVCaptureDeviceInput(device: captureDevice!)
-            session.addInput(input)
-        } catch  {
-            print("ERROR")
-        }
-        
-        let output = AVCaptureMetadataOutput()
-        session.addOutput(output)
-        
-        output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-        output.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
-        
-        video = AVCaptureVideoPreviewLayer(session: session)
-        video.frame = view.layer.bounds
-        view.layer.addSublayer(video)
-        session.startRunning()
+        MTBBarcodeScanner.requestCameraPermission(success: { success in
+            if success {
+                do {
+                    try self.scanner?.startScanning(resultBlock: { codes in
+                        if let codes = codes {
+                            for code in codes {
+                                let stringValue = code.stringValue!
+                                self.delegate.searchBarCode(barcode: stringValue)
+                                self.dismiss(animated: true, completion: nil)
+                                break
+                            }
+                        }
+                    })
+                } catch {
+                    NSLog("Unable to start scanning")
+                }
+            } else {
+                print("error")
+            }
+        })
         
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.scanner?.stopScanning()
+        super.viewWillDisappear(animated)
+    }
+}
 
+protocol ScanCodeDelegate {
+    func searchBarCode(barcode: String)
 }

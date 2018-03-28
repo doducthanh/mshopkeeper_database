@@ -16,6 +16,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var labelItem: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
+    @IBOutlet weak var imgSale: UIImageView!
     @IBOutlet weak var viewBackground: UIView!
     var arrayModel: [Model]!
     
@@ -34,6 +35,11 @@ class HomeCollectionViewCell: UICollectionViewCell {
                 self.img.image = UIImage.init(data: model.dataImage!)
             } else {
                 self.img.kf.setImage(with: resource)  
+            }
+            if model.isPromtion {
+                self.imgSale.isHidden = false
+            } else {
+                self.imgSale.isHidden = true
             }
             
             self.labelItem.text = model.modelName

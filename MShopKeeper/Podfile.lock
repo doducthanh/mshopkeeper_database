@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.0)
   - Kingfisher (4.6.4)
+  - MTBBarcodeScanner (5.0.5)
   - SQLite.swift (0.11.4):
     - SQLite.swift/standard (= 0.11.4)
   - SQLite.swift/standard (0.11.4)
@@ -8,13 +9,15 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - Kingfisher (~> 4.0)
+  - MTBBarcodeScanner
   - SQLite.swift (~> 0.11.4)
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
+  MTBBarcodeScanner: 3ac7b553d6bf740e7dc281d9a547962f7aea7abc
   SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
 
-PODFILE CHECKSUM: e4f6c47b00365595489b4c6d74422334ecfda145
+PODFILE CHECKSUM: ba4723fc367cea159fff85d72319b0e29c6c9bb2
 
 COCOAPODS: 1.4.0

@@ -22,4 +22,5 @@ class CommonURL {
     public static let URL_MODEL_PROMOTION = "http://localhost:3000/get_model_promotion"
     public static let URL_CHANGE_PASSWORD = "http://localhost:3000/change_password"
     public static let URL_SEARCH_MODEL = "http://localhost:3000/search_model"
+    public static let URL_SEARCH_BARCODE = "http://localhost:3000/search_barcode"
 }
