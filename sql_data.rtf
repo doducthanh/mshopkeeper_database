@@ -1,0 +1,324 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 -- phpMyAdmin SQL Dump\
+-- version 4.7.7\
+-- https://www.phpmyadmin.net/\
+--\
+-- Host: localhost:3306\
+-- Generation Time: Apr 02, 2018 at 10:00 AM\
+-- Server version: 5.6.38\
+-- PHP Version: 7.2.1\
+\
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";\
+SET time_zone = "+00:00";\
+\
+--\
+-- Database: `mshopkeeper_database`\
+--\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `account`\
+--\
+\
+CREATE TABLE `account` (\
+  `userID` int(8) NOT NULL,\
+  `shopID` int(8) NOT NULL,\
+  `userName` varchar(128) NOT NULL,\
+  `fullName` varchar(128) NOT NULL,\
+  `password` char(8) NOT NULL,\
+  `email` varchar(128) NOT NULL,\
+  `tel` varchar(16) NOT NULL,\
+  `dateOfBirth` date NOT NULL,\
+  `role` int(1) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+--\
+-- Dumping data for table `account`\
+--\
+\
+INSERT INTO `account` (`userID`, `shopID`, `userName`, `fullName`, `password`, `email`, `tel`, `dateOfBirth`, `role`) VALUES\
+(1, 3, 'ddthanh', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(3, 1, 'ddthanh1', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(4, 1, 'ddthanh2', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(5, 1, 'ddthanh3', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(6, 3, 'ddthanh5', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(7, 1, 'ddthanh6', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(8, 1, 'ddthanh7', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(9, 1, 'ddthanh8', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(10, 3, 'ddthanh9', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(11, 1, 'ddthanh10', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(12, 1, 'ddthanh11', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(13, 1, 'ddthanh12', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(14, 3, 'ddthanh13', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(15, 1, 'ddthanh6', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(16, 1, 'ddthanh14', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(17, 1, 'ddthanh15', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(18, 3, 'ddthanh16', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(19, 1, 'ddthanh17', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(20, 1, 'ddthanh18', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(21, 1, 'ddthanh19', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(22, 3, 'ddthanh20', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(23, 1, 'ddthanh21', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(24, 1, 'ddthanh22', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(25, 1, 'ddthanh23', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(26, 3, 'ddthanh24', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(27, 1, 'ddthanh25', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(28, 1, 'ddthanh26', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(29, 1, 'ddthanh27', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(30, 3, 'ddthanh28', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(31, 1, 'ddthanh29', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(32, 1, 'ddthanh30', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0),\
+(33, 1, 'ddthanh15', '\uc0\u273 \u7895  \u273 \u7913 c thanh', '123456', 'ddthanh@gmail.com', '01655817975', '2018-03-04', 0);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `item`\
+--\
+\
+CREATE TABLE `item` (\
+  `itemID` int(8) NOT NULL,\
+  `modelID` int(8) NOT NULL,\
+  `SKUCode` char(8) NOT NULL,\
+  `decription` varchar(128) NOT NULL,\
+  `color` varchar(128) NOT NULL,\
+  `size` varchar(128) NOT NULL,\
+  `unitPrice` int(16) NOT NULL,\
+  `isDisplayPrice` int(1) NOT NULL,\
+  `dateOfEntry` date NOT NULL,\
+  `isPromotion` int(1) NOT NULL,\
+  `percenPromotion` float NOT NULL,\
+  `barCode` varchar(32) NOT NULL,\
+  `shopID` int(8) NOT NULL,\
+  `stockID` int(8) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+--\
+-- Dumping data for table `item`\
+--\
+\
+INSERT INTO `item` (`itemID`, `modelID`, `SKUCode`, `decription`, `color`, `size`, `unitPrice`, `isDisplayPrice`, `dateOfEntry`, `isPromotion`, `percenPromotion`, `barCode`, `shopID`, `stockID`) VALUES\
+(1, 1, 'CKT-34', '', 'red', 'M', 150, 0, '2018-03-04', 0, 0.1, '123645874', 1, 0),\
+(2, 1, 'CKT-34', '', 'red', 'L', 150, 0, '2018-03-04', 0, 0.1, '123645874', 2, 0),\
+(3, 1, 'CKT-34', '', 'black', 'L', 150, 0, '2018-03-04', 1, 0.1, '123645874', 1, 0),\
+(4, 1, 'CKT-34', '', 'red', 'M', 150, 0, '2018-03-04', 0, 0.1, '123645874', 3, 0),\
+(5, 1, 'CKT-34', '', 'red', 'L', 150, 0, '2018-03-04', 0, 0.1, '123645874', 11, 0),\
+(6, 1, 'CKT-34', '', 'black', 'L', 150, 0, '2018-03-04', 0, 0.1, '123645874', 3, 0),\
+(7, 1, 'CKT-34', '', 'red', 'M', 150, 0, '2018-03-04', 0, 0.1, '123645874', 1, 0),\
+(8, 2, 'CKT-34', '', 'red', 'L', 150, 0, '2018-03-04', 0, 0.1, '123645874', 2, 0),\
+(9, 2, 'CKT-34', '', 'black', 'L', 150, 0, '2018-03-04', 0, 0.1, '123645874', 1, 0),\
+(10, 1, 'CKT-34', '', 'red', 'M', 150, 0, '2018-03-04', 0, 0.1, '123645874', 3, 0),\
+(11, 3, 'CKT-34', '', 'red', 'L', 150, 0, '2018-03-04', 1, 0.1, '123645874', 11, 0),\
+(12, 1, 'CKT-34', '', 'black', 'L', 150, 0, '2018-03-04', 0, 0.1, '123645874', 3, 0),\
+(13, 1, 'CGT-34', '', 'blue', 'XXL', 199, 0, '2018-03-20', 0, 0, '123645874', 1, 0),\
+(14, 1, 'CTT-34', '', 'tim', 'L', 150, 0, '2018-03-19', 0, 0.1, '123645874', 2, 0),\
+(15, 1, 'CMT-34', '', 'black', 'XL', 150, 0, '2018-03-04', 0, 0, '123645874', 1, 0),\
+(16, 1, 'CKT-35', '', 'origin', 'M', 150, 0, '2018-03-18', 0, 0.1, '123645874', 1, 0),\
+(17, 1, 'CKT-39', '', 'red', 'L', 150, 0, '2018-03-04', 0, 0.1, '123645874', 11, 0),\
+(18, 1, 'CKT-40', '', 'black', 'L', 150, 0, '2018-03-20', 0, 0.1, '123645874', 3, 0),\
+(19, 2, 'CUT-34', '', 'red', 'M', 150, 0, '2018-03-04', 0, 0.1, '123645874', 1, 0),\
+(20, 2, 'CKT-07', '', 'red', 'L', 150, 0, '2018-03-04', 0, 0.1, '123645874', 2, 0),\
+(21, 2, 'CKT-06', '', 'black', 'L', 150, 0, '2018-03-04', 0, 0.1, '123645874', 1, 0),\
+(22, 1, 'CKT-34', '', 'red', 'M', 150, 0, '2018-03-04', 0, 0.1, '123645874', 3, 0),\
+(23, 3, 'CKT-05', '', 'red', 'L', 150, 0, '2018-03-04', 1, 0.1, '123645874', 11, 0),\
+(24, 1, 'CKT-04', '', 'gray', 'L', 150, 0, '2018-03-04', 0, 0.1, '123645874', 3, 0);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `model`\
+--\
+\
+CREATE TABLE `model` (\
+  `modelID` int(8) NOT NULL,\
+  `shopID` int(8) NOT NULL,\
+  `modelName` varchar(128) NOT NULL,\
+  `modeType` int(1) NOT NULL,\
+  `decription` varchar(128) NOT NULL,\
+  `pictureLink` varchar(128) NOT NULL,\
+  `pictureType` int(1) NOT NULL,\
+  `unitPrice` int(8) NOT NULL,\
+  `isDisplayPrice` int(1) NOT NULL,\
+  `dateOfEntry` date NOT NULL,\
+  `isPromotion` int(1) NOT NULL,\
+  `percenPromotion` float NOT NULL,\
+  `saleCount` int(16) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+--\
+-- Dumping data for table `model`\
+--\
+\
+INSERT INTO `model` (`modelID`, `shopID`, `modelName`, `modeType`, `decription`, `pictureLink`, `pictureType`, `unitPrice`, `isDisplayPrice`, `dateOfEntry`, `isPromotion`, `percenPromotion`, `saleCount`) VALUES\
+(1, 3, 'Ao phong', 1, 'ao phong MISA', 'http://www.tikitakasport.com/image/cache/catalog/aocaulacbo/ao-thi-dau-chelsea-san-nha-2016-2017-01-500x500.png', 1, 150, 0, '2018-03-13', 0, 0.1, 100),\
+(2, 3, 'ao dai tay', 1, 'ao phong MISA', 'http://aobongda.net/pic/Product/arsenal-t_636332238386690522_HasThumb.png.ashx', 1, 120, 0, '2018-03-04', 1, 0.1, 150),\
+(3, 3, '\'e1o c\'f4ng s\uc0\u7903 ', 1, 'ao phong MISA', 'https://lonisport.com/contents/images/products/dat-do-doi/mau-clb-phap/psg-14-15-home-kit-6.png', 1, 150, 0, '2018-03-04', 0, 0.1, 100),\
+(4, 3, 'ao MISA', 1, 'ao phong MISA', 'http://aothethao24h.com/wp-content/uploads/2014/12/11111.gif', 1, 120, 0, '2018-03-04', 0, 0.1, 1000),\
+(5, 3, 'b\uc0\u7897  th\u7875  thao', 1, 'ao phong MISA', 'http://www.tikitakasport.com/image/cache/catalog/aocaulacbo/ao-thi-dau-chelsea-san-nha-2016-2017-01-500x500.png', 1, 120, 0, '2018-03-06', 1, 0.1, 600),\
+(6, 3, 'qu\uc0\u7847 n ao m\u7899 i', 1, 'ao phong MISA', 'http://s1.storage.5giay.vn/image/2014/05/20140512_b5770e8109d03067a71ab6f9dfdcb263_1399886905.PNG', 1, 120, 0, '2018-03-04', 0, 0.1, 180),\
+(7, 3, 'qu\uc0\u7847 n \'e2u', 1, 'qu\u7847 n \'e2u\\r\\n', 'http://karan.vn/images/products/quan-jeans-nam-xuat-khau-replay-krqjn137.png', 1, 120, 0, '2018-03-04', 0, 0.1, 100),\
+(8, 3, 'ao MISA', 1, 'ao phong MISA', 'http://aothethao24h.com/wp-content/uploads/2014/12/11111.gif', 1, 120, 0, '2018-03-04', 1, 0.1, 1000),\
+(9, 3, 'b\uc0\u7897  th\u7875  thao', 1, 'ao phong MISA', 'http://www.tikitakasport.com/image/cache/catalog/aocaulacbo/ao-thi-dau-chelsea-san-nha-2016-2017-01-500x500.png', 1, 120, 0, '2018-03-06', 0, 0.1, 600),\
+(10, 3, 'qu\uc0\u7847 n ao m\u7899 i', 1, 'ao phong MISA', 'http://s1.storage.5giay.vn/image/2014/05/20140512_b5770e8109d03067a71ab6f9dfdcb263_1399886905.PNG', 1, 120, 0, '2018-03-04', 0, 0.1, 180),\
+(11, 3, 'qu\uc0\u7847 n \'e2u', 1, 'qu\u7847 n \'e2u\\r\\n', 'http://karan.vn/images/products/quan-jeans-nam-xuat-khau-replay-krqjn137.png', 1, 120, 0, '2018-03-04', 0, 0.1, 100),\
+(12, 3, 'ao phong', 1, 'ao phong MISA', 'http://www.tikitakasport.com/image/cache/catalog/aocaulacbo/ao-thi-dau-chelsea-san-nha-2016-2017-01-500x500.png', 1, 150, 0, '2018-03-13', 0, 0.1, 100),\
+(13, 3, 'ao dai tay', 1, 'ao phong MISA', 'http://aobongda.net/pic/Product/arsenal-t_636332238386690522_HasThumb.png.ashx', 1, 120, 0, '2018-03-04', 1, 0.1, 150),\
+(14, 3, '\'e1o c\'f4ng s\uc0\u7903 ', 1, 'ao phong MISA', 'https://lonisport.com/contents/images/products/dat-do-doi/mau-clb-phap/psg-14-15-home-kit-6.png', 1, 150, 0, '2018-03-04', 0, 0.1, 100),\
+(15, 3, 'ao MISA', 1, 'ao phong MISA', 'http://aothethao24h.com/wp-content/uploads/2014/12/11111.gif', 1, 120, 0, '2018-03-04', 0, 0.1, 1000),\
+(16, 3, 'b\uc0\u7897  th\u7875  thao', 1, 'ao phong MISA', 'http://www.tikitakasport.com/image/cache/catalog/aocaulacbo/ao-thi-dau-chelsea-san-nha-2016-2017-01-500x500.png', 1, 120, 0, '2018-03-06', 1, 0.1, 600),\
+(17, 3, 'qu\uc0\u7847 n ao m\u7899 i', 1, 'ao phong MISA', 'http://s1.storage.5giay.vn/image/2014/05/20140512_b5770e8109d03067a71ab6f9dfdcb263_1399886905.PNG', 1, 120, 0, '2018-03-04', 0, 0.1, 180),\
+(18, 3, 'qu\uc0\u7847 n \'e2u', 1, 'qu\u7847 n \'e2u\\r\\n', 'http://karan.vn/images/products/quan-jeans-nam-xuat-khau-replay-krqjn137.png', 1, 120, 0, '2018-03-04', 0, 0.1, 100),\
+(19, 3, 'ao MISA', 1, 'ao phong MISA', 'http://aothethao24h.com/wp-content/uploads/2014/12/11111.gif', 1, 120, 0, '2018-03-04', 1, 0.1, 1000),\
+(20, 3, 'b\uc0\u7897  th\u7875  thao', 1, 'ao phong MISA', 'http://www.tikitakasport.com/image/cache/catalog/aocaulacbo/ao-thi-dau-chelsea-san-nha-2016-2017-01-500x500.png', 1, 120, 0, '2018-03-06', 0, 0.1, 600),\
+(21, 3, 'qu\uc0\u7847 n ao m\u7899 i', 1, 'ao phong MISA', 'http://s1.storage.5giay.vn/image/2014/05/20140512_b5770e8109d03067a71ab6f9dfdcb263_1399886905.PNG', 1, 120, 0, '2018-03-04', 0, 0.1, 180),\
+(22, 3, 'qu\uc0\u7847 n \'e2u', 1, 'qu\u7847 n \'e2u\\r\\n', 'http://karan.vn/images/products/quan-jeans-nam-xuat-khau-replay-krqjn137.png', 1, 120, 0, '2018-03-04', 0, 0.1, 100),\
+(23, 3, '\uc0\u272 \u7891  c\'f4ng s\u7903 ', 1, '', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQarW9ARuZT7lM8qdQfF8G1T9aR1ifu9xoiOKnlXszDjGHdlQjXlA', 1, 300, 1, '2018-03-26', 0, 0, 0),\
+(24, 3, '\'c1o d\'e0i', 0, '', 'https://media3.scdn.vn/img2/2018/1_12/JKVYuW_simg_b5529c_250x250_maxb.png', 0, 0, 0, '0000-00-00', 0, 0, 0),\
+(25, 1, '\'c1o d\'e0i', 0, '', 'https://media3.scdn.vn/img2/2018/1_12/JKVYuW_simg_b5529c_250x250_maxb.png', 0, 0, 0, '0000-00-00', 0, 0, 0);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `shop`\
+--\
+\
+CREATE TABLE `shop` (\
+  `shopID` int(8) NOT NULL,\
+  `parentShopID` int(8) DEFAULT NULL,\
+  `shopCode` varchar(128) NOT NULL,\
+  `shopName` varchar(128) NOT NULL,\
+  `contactName` varchar(128) NOT NULL,\
+  `tel` varchar(16) NOT NULL,\
+  `email` varchar(128) NOT NULL,\
+  `addressShop` varchar(128) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+--\
+-- Dumping data for table `shop`\
+--\
+\
+INSERT INTO `shop` (`shopID`, `parentShopID`, `shopCode`, `shopName`, `contactName`, `tel`, `email`, `addressShop`) VALUES\
+(1, NULL, 'liemqv', 'liemqv', 'liemqv', '0123654789', 'liemqv@gmail.com', 'c\uc0\u7847 u gi\u7845 y, h\'e0 n\u7897 i'),\
+(3, 1, 'ddthanh', 'ddthanh', 'ddthanh', '01655871797', 'ddthanh@gmail.com', '21, ho\'e0ng mai, h\'e0 n\uc0\u7897 i'),\
+(6, NULL, 'liemqv1', 'liemqv', 'liemqv', '0123654789', 'liemqv@gmail.com', '13, c\uc0\u7847 u gi\u7845 y, h\'e0 n\u7897 i'),\
+(7, NULL, 'ddthanh1', 'ddthanh', 'ddthanh', '01655871797', 'ddthanh@gmail.com', '22, ho\'e0ng mai, h\'e0 n\uc0\u7897 i'),\
+(8, NULL, 'liemqv2', 'liemqv', 'liemqv', '0123654789', 'liemqv@gmail.com', '10, c\uc0\u7847 u gi\u7845 y, h\'e0 n\u7897 i'),\
+(9, 1, 'ddthanh2', 'ddthanh', 'ddthanh', '01655871797', 'ddthanh@gmail.com', '1, ho\'e0ng mai, h\'e0 n\uc0\u7897 i'),\
+(10, NULL, 'liemqv3', 'liemqv', 'liemqv', '0123654789', 'liemqv@gmail.com', '98, c\uc0\u7847 u gi\u7845 y, h\'e0 n\u7897 i'),\
+(11, NULL, 'ddthanh3', 'ddthanh', 'ddthanh', '01655871797', 'ddthanh@gmail.com', '21B, ho\'e0ng mai, h\'e0 n\uc0\u7897 i'),\
+(37, 1, 'ddthanh4', 'ddthanh4', 'ddthanh4', '013245687', 'ddthanh4@gmail.com', '111, Ho\'e0ng Hoa Th\'e1m, H\'e0 N\uc0\u7897 i');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `stock`\
+--\
+\
+CREATE TABLE `stock` (\
+  `stockID` int(8) NOT NULL,\
+  `shopID` int(8) NOT NULL,\
+  `stockName` varchar(128) NOT NULL,\
+  `address` varchar(128) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `supplier`\
+--\
+\
+CREATE TABLE `supplier` (\
+  `supplierID` int(8) NOT NULL,\
+  `itemID` int(8) NOT NULL,\
+  `supplierName` varchar(128) NOT NULL,\
+  `address` varchar(128) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+--\
+-- Indexes for dumped tables\
+--\
+\
+--\
+-- Indexes for table `account`\
+--\
+ALTER TABLE `account`\
+  ADD PRIMARY KEY (`userID`),\
+  ADD KEY `shopID` (`shopID`);\
+\
+--\
+-- Indexes for table `item`\
+--\
+ALTER TABLE `item`\
+  ADD PRIMARY KEY (`itemID`),\
+  ADD KEY `modelID` (`modelID`);\
+\
+--\
+-- Indexes for table `model`\
+--\
+ALTER TABLE `model`\
+  ADD PRIMARY KEY (`modelID`),\
+  ADD KEY `shopID` (`shopID`);\
+\
+--\
+-- Indexes for table `shop`\
+--\
+ALTER TABLE `shop`\
+  ADD PRIMARY KEY (`shopID`),\
+  ADD UNIQUE KEY `shopCode_2` (`shopCode`),\
+  ADD KEY `shopCode` (`shopCode`);\
+\
+--\
+-- Indexes for table `stock`\
+--\
+ALTER TABLE `stock`\
+  ADD PRIMARY KEY (`stockID`),\
+  ADD KEY `shopID` (`shopID`);\
+\
+--\
+-- Indexes for table `supplier`\
+--\
+ALTER TABLE `supplier`\
+  ADD PRIMARY KEY (`supplierID`),\
+  ADD KEY `itemID` (`itemID`);\
+\
+--\
+-- AUTO_INCREMENT for dumped tables\
+--\
+\
+--\
+-- AUTO_INCREMENT for table `account`\
+--\
+ALTER TABLE `account`\
+  MODIFY `userID` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;\
+\
+--\
+-- AUTO_INCREMENT for table `item`\
+--\
+ALTER TABLE `item`\
+  MODIFY `itemID` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;\
+\
+--\
+-- AUTO_INCREMENT for table `model`\
+--\
+ALTER TABLE `model`\
+  MODIFY `modelID` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;\
+\
+--\
+-- AUTO_INCREMENT for table `shop`\
+--\
+ALTER TABLE `shop`\
+  MODIFY `shopID` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;\
+\
+--\
+-- AUTO_INCREMENT for table `stock`\
+--\
+ALTER TABLE `stock`\
+  MODIFY `stockID` int(8) NOT NULL AUTO_INCREMENT;\
+}
