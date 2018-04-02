@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// class hiển thị danh sách sản phẩm
 class CatalogItem: UIViewController {
 
     @IBOutlet weak var table: UITableView!

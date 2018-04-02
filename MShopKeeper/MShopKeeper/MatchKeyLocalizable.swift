@@ -27,4 +27,7 @@ public class MatchKeyLocalizable {
     public static let kTextOK = "ok"
     public static let kAlerTitle = "aler_title"
     public static let kChangePassSuccess = "change_pass_success"
+    public static let kDisInternet = "dis_internet"
+    public static let kToastDisInternet = "toast_dis_internet"
+    public static let kToastSuccesDisInter = "toast_succes_dis_internet"
 }

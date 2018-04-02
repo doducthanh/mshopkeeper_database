@@ -834,7 +834,7 @@
                                                                 <color key="onTintColor" red="0.25094205141067505" green="0.49873995780944824" blue="0.68173062801361084" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trừ vào số lượng hàng hoá khách đặt vao tồn kho" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyG-pd-ew3">
-                                                                <rect key="frame" x="55" y="59.5" width="270" height="50"/>
+                                                                <rect key="frame" x="55" y="60" width="270" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1145,7 +1145,7 @@
                                             <constraint firstAttribute="width" constant="30" id="qOe-5X-fla"/>
                                             <constraint firstAttribute="height" constant="30" id="w0B-7Q-9lN"/>
                                         </constraints>
-                                        <state key="normal" image="ic_previous.png"/>
+                                        <state key="normal" image="ic_back"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="IkV-X2-bxc"/>
@@ -1621,7 +1621,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="G9j-2w-dbJ" secondAttribute="height" multiplier="1:1" id="Wv2-ro-qu7"/>
                                         </constraints>
-                                        <state key="normal" image="ic_previous.png"/>
+                                        <state key="normal" image="ic_back"/>
                                         <connections>
                                             <action selector="onClickBack:" destination="eDK-Rf-ex9" eventType="touchUpInside" id="5z8-2Q-2ew"/>
                                         </connections>
@@ -1701,7 +1701,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="c2d-DW-0od" secondAttribute="height" multiplier="1:1" id="bLm-C2-zwA"/>
                                         </constraints>
-                                        <state key="normal" image="ic_previous.png"/>
+                                        <state key="normal" image="ic_back"/>
                                         <connections>
                                             <action selector="onClickBack:" destination="eDK-Rf-ex9" eventType="touchUpInside" id="KZn-eI-1uv"/>
                                             <action selector="onClickBack:" destination="oix-cj-Vwa" eventType="touchUpInside" id="ZMP-28-ZJ0"/>
@@ -1789,7 +1789,7 @@
                                 <rect key="frame" x="42.5" y="290" width="290" height="40"/>
                                 <color key="backgroundColor" red="0.25094205141067505" green="0.49873995780944824" blue="0.68173062801361084" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="3On-hl-nyz"/>
+                                    <constraint firstAttribute="width" constant="290" id="3On-hl-nyz"/>
                                     <constraint firstAttribute="height" constant="40" id="bcc-8B-Hd8"/>
                                 </constraints>
                                 <state key="normal" title="LẤY LẠI MẬT KHẨU">
@@ -1859,11 +1859,11 @@
         <image name="bg_login_user.jpg" width="1080" height="1920"/>
         <image name="ic_about.png" width="48" height="48"/>
         <image name="ic_app_logo.png" width="720" height="316"/>
+        <image name="ic_back" width="16" height="16"/>
         <image name="ic_background_click" width="16" height="16"/>
         <image name="ic_domain_20dp.png" width="45" height="45"/>
         <image name="ic_menu_share.png" width="60" height="66"/>
         <image name="ic_password_30dp.png" width="45" height="45"/>
-        <image name="ic_previous.png" width="400" height="400"/>
         <image name="ic_sale.png" width="512" height="512"/>
         <image name="ic_user_30dp.png" width="45" height="45"/>
         <image name="icon_person.png" width="48" height="48"/>

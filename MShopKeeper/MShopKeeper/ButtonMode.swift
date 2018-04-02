@@ -10,7 +10,7 @@ import UIKit
 
 // quản lí điều khiển các sự kiện của button custom
 class ButtonMode {
-    
+//    khai báo thuộc tính
     var delegate: ButtonModeProtocol!
     var arrayButton:[CustomButton] = [CustomButton]()
     let heighButton = 50
@@ -18,11 +18,18 @@ class ButtonMode {
     var color = ""
     var size = ""
     
-    //ve nhieu button
+    /// hàm vẽ group button
+    ///
+    /// - Parameters:
+    ///   - number: kích thước mảng tên button
+    ///   - viewSub: view lưạ chọn để thêm group button
+    ///   - array: mảng tên các button
+    ///   - tag: tag của nhóm button này
+    ///   - complete: callback sau khi thực hiện
     func drawButtons(number: Int, viewSub: UIView, array: [String], tag: Int, complete: (Int) -> Void) {
-        //lấy ra số cột tối đa vẽ dc trên màn hình
+//        lấy ra số cột tối đa vẽ dc trên màn hình
         var countCollum: Int = Int(viewSub.frame.size.width / CGFloat(widthButton + 15))
-        //lây ra số hàng tối đa vẽ được
+//        lây ra số hàng tối đa vẽ được
         var countRow: Int = Int(number / countCollum)
         let cm_countCollum = countCollum
         if countRow == 0 {
@@ -30,6 +37,7 @@ class ButtonMode {
         }else if (number % countCollum) != 0{
             countRow += 1
         }
+//        vẽ các button
         for row in 0..<countRow {
             if row == (countRow - 1){
                 countCollum = number - row * countCollum
@@ -49,7 +57,7 @@ class ButtonMode {
                 arrayButton.append(bt)
             }
         }
-        // nếu chỉ có 1 button thì cho hiển thị sang luôn
+//         nếu chỉ có 1 button thì cho hiển thị sang luôn
         if array.count == 1 && array.count == 1 {
             for bt in arrayButton {
                 bt.setButtonOnClick()
@@ -58,7 +66,9 @@ class ButtonMode {
         complete(countRow)
     }
     
-    // set do alpha cho cac button trong cung 1 group
+    /// set độ mờ của các button
+    ///
+    /// - Parameter tag: kiểu button lựa chọn.
     func setAlphaButton(tag: Int) {
         for bt in arrayButton {
             bt.layer.cornerRadius = 5
@@ -76,11 +86,19 @@ class ButtonMode {
         }
     }
     
+    /// hàm bắt sự kiện click vào button
+    ///
+    /// - Parameter bt: button
     @objc func onclicButton(bt: CustomButton) {
         delegate.onClickButton(bt: bt)
     }
     
-    // su kien khi click vao 1 button
+    /// hàm thực hiện công việc khi click vào button
+    /// set lại trạng thai cho các button
+    /// - Parameters:
+    ///   - bt: button
+    ///   - selectSwitch: trạng thái của switch
+    ///   - isButtonSelect: biến kiểm tra xem button đã chọn chưa
     func setOnClickButton(bt: CustomButton, selectSwitch: Int, isButtonSelect: inout Bool ) {
         if bt.tag == 0 {
             color = (bt.titleLabel?.text!)!
@@ -93,7 +111,7 @@ class ButtonMode {
             bt.setButtonOnClick()
             return
         }
-        // nếu đang chọn theo color
+//         nếu đang chọn theo color
         if selectSwitch == 0{
             if bt.tag == 1 && !isButtonSelect{
                 return
@@ -110,7 +128,7 @@ class ButtonMode {
                 isButtonSelect = true
             }
         }
-        // nếu đang chọn theo size
+//         nếu đang chọn theo size
         if selectSwitch == 1{
             if bt.tag == 0  && !isButtonSelect{
                 return
@@ -134,6 +152,7 @@ class ButtonMode {
 
 }
 
+/// protocol cho custom button.
 protocol ButtonModeProtocol {
     func onClickButton(bt: CustomButton)
     

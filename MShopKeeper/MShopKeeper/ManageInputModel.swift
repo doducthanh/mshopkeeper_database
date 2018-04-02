@@ -8,16 +8,20 @@
 
 import Foundation
 
-//định nghĩa các erorr
+/// định nghĩa các erorr
 enum ErorrValidate {
     case textShort  // do dai ki tu < 6
     case invalid
 }
 
-// quản lí các dữ liệu nhập của người dùng
+/// quản lí các dữ liệu nhập của người dùng
 class ManageInputModel {
     
-    //kiểm tra các trường dữ liệu > 6 kí tự
+
+    /// hàm kiểm tra dữ liệu text nhập vào
+    ///
+    /// - Parameter text: nội dung text
+    /// - Returns: lỗi
     func checkValidateText(text: String) -> ErorrValidate {
         if text.count < 6 {
             return ErorrValidate.textShort
@@ -25,7 +29,13 @@ class ManageInputModel {
         return ErorrValidate.invalid
     }
     
-    //hàm so sánh password và repassword
+
+    /// hàm so sánh 2 password
+    ///
+    /// - Parameters:
+    ///   - pass: pass
+    ///   - rePass: pass được nhập lại
+    /// - Returns: true/false.
     func compairPassword(pass: String, rePass: String) -> Bool {
         if pass == rePass {
             return true

@@ -11,7 +11,7 @@ import Alamofire
 
 class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDelegate {
     //MARK: properties
-    
+//    các thuộc tính kéo tư Storyboard
     @IBOutlet weak var viewInput: UIView!
     @IBOutlet weak var textfieldStore: UITextField!
     @IBOutlet weak var textfieldUser: UITextField!
@@ -22,7 +22,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     @IBOutlet weak var contraintViewInputX: NSLayoutConstraint!
     
     var viewWait: ViewWaiting!
-    
+//    các biến view model
     var userModel: UserModel!
     var requestAPI: RequestAPIModel!
     //quản lí animation waiting
@@ -76,6 +76,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         // Dispose of any resources that can be recreated.
     }
     
+    /// hàm vẽ giao diên
     func initUI() {
         viewInput.layer.cornerRadius = 5
         viewInput.layer.masksToBounds = true
@@ -86,6 +87,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         viewWaitingModel = ViewWaitingModel.init(frame: self.view.frame, supperview: self)
     }
     
+    /// hàm khởi tạo các paramester ban đầu.
     func initParam(){
         textfieldStore.delegate = self
         textfieldUser.delegate = self
@@ -105,17 +107,18 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     }
     
     //MARK: private func
-    //hàm cho phép chuyển man hình nếu token còn hiệu lực
+    /// hàm chuyển sang màn hình home nếu token còn hiệu lực
     func autoMoveScreen() {
         viewWaitingModel.startAnimatonWaiting()
         requestAPI = RequestAPIModel()
         let token = UserDefaults.standard.value(forKey: "token") as? String
-        if token == nil {
+        if token == nil || token == ""{
             viewWaitingModel.endAnimationWaiting()
             return
         }
         requestAPI.requestLoginToken(token: token!) { (status) in
             if status == 200 {
+//                chuyển từ màn login sang màn home
                 let main = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
                 let left = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
                 let navigation = UINavigationController.init(rootViewController: main!)
@@ -131,7 +134,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
             }
         }
     }
-    // cho phép scroll view hiên tại không
+
+    /// hàm điểu khiển scroll màn hình kh
     @objc func hindenBoard() {
         textfieldStore.resignFirstResponder()
         textfieldUser.resignFirstResponder()
@@ -147,23 +151,30 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
             }
         }
     }
-    
+    /// khi click vào trươngf tên cửa hàng
     @objc func tapTextFieldStore() {
         scrollview.setContentOffset(textfieldStore.frame.origin, animated: true)
     }
-    
+    /// khi click vào trường tên người dùng
     @objc func tapTextFieldUser() {
         scrollview.setContentOffset(textfieldUser.frame.origin, animated: true)
     }
-    
+    /// khi click vào trươngf password
     @objc func tapTextFieldPass() {
         scrollview.setContentOffset(textfieldPass.frame.origin, animated: true)
     }
+    /// hàm show giao diện khi mất kết nối.
+    func showDisInternet() {
+        let aler = UIAlertController.init(title: "Mat ket noi", message: "Vui long kiem tra lai tinh trang mang", preferredStyle: .alert)
+        let action = UIAlertAction.init(title: "OK", style: .cancel, handler: nil)
+        aler.addAction(action)
+        self.present(aler, animated: true, completion: nil)
+    }
     
     //MARK: action
-    // sự kiện khi click vào button login
+    /// sự kiện khi click vào button login
     @IBAction func onClickLogin(_ sender: Any) {
-        //check empty textfield
+//         kiểm tra các trường nhập dữ liệu
         if (textfieldStore.text?.isEmpty)! {
             textfieldStore.becomeFirstResponder()
             return
@@ -174,14 +185,18 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
             textfieldPass.becomeFirstResponder()
             return
         }
-        //hindden keyboard
+//        ẩn bàn phím
         contraintHeightView.constant = view.frame.size.height
         textfieldStore.resignFirstResponder()
         textfieldUser.resignFirstResponder()
         textfieldPass.resignFirstResponder()
         
         self.viewWaitingModel.startAnimatonWaiting()
+//        gửi yêu cầu đăng nhập
         requestAPI.requestLogin(companyCode: textfieldStore.text!, username: textfieldUser.text!, password: textfieldPass.text!) { (value, error) in
+            if (value as? Int) == 404 {
+                self.showDisInternet()
+            }
             if (value as? Int) == ConnectStatus.sucess.rawValue {
                 //set lai userName va NameStore trong UserDefault
                 let dic = ["Name_Store":self.textfieldStore.text, "User_Name":self.textfieldUser.text, "Pass":self.textfieldPass.text]
@@ -204,7 +219,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         }
     }
     
-    // sự kiện khi click vào button giới thiệu
+    /// sự kiện khi click vào button giới thiệu
     @IBAction func onClickIntroduce(_ sender: Any) {
         let viewIntro = ViewIntroduce.init(nibName: "ViewIntroduce", bundle: nil)
         self.addChildViewController(viewIntro)
@@ -213,7 +228,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         self.view.addSubview(viewIntro.view)
     }
     
-    // sự kiện khi click vào button quên mật khẩu
+    /// sự kiện khi click vào button quên mật khẩu
     @IBAction func onClickForgetPass(_ sender: Any) {
         let forgetVC = storyboard?.instantiateViewController(withIdentifier: "ForgetPassViewController")
         self.present(forgetVC!, animated: true, completion: nil)

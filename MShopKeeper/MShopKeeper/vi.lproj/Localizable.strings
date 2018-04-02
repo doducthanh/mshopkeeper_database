@@ -24,3 +24,6 @@
 "ok" = "Xác nhận";
 "aler_title" = "Bạn đã hết phiên, vui lòng đăng nhập lại để sử dụng";
 "change_pass_success" = "đổi mật khẩu thành công, vui lòng đăng nhập lại để sử dụng";
+"dis_internet" = "Mất kết nối";
+"toast_dis_internet" = "bạn có muốn sử dụng dữ liệu local không";
+"toast_succes_dis_internet" = "đã chuyển sang dùng dữ liệu local, tiếp tục tra cứu";

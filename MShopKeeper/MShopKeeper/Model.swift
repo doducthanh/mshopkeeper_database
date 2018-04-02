@@ -9,6 +9,7 @@
 import Foundation
 
 class Model {
+//    khai báo các thuộc tính của đối tượng model
     var modelID = 0
     var shopID = 0
     var modelName = ""

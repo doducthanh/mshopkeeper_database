@@ -15,7 +15,9 @@ public class Database {
     public let connection: Connection?
     public let databaseName = "mshopkeeper.sqlite"
     
+    /// khởi tạo mặc định
     private init () {
+//        khai báo đường dẫn lưu trữ database trên thiết bị.
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first as String!
         do {
             connection = try Connection("\(path!)/(databaseName)")

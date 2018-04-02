@@ -9,7 +9,7 @@
 import Foundation
 
 class Account {
-    
+//   khai báo các thuộc tính của đối tượng account
     var username: String = ""
     var password: String = ""
     var userId: Int = 0

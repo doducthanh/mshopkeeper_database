@@ -30,6 +30,7 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    /// hàm khởi tạo giao diện cần thiết
     func initUI() {
         imageAvatar.layer.cornerRadius = imageAvatar.frame.size.height/2
         table.tag = 1
@@ -37,7 +38,7 @@ class MenuViewController: UIViewController {
     }
     
     func initParam() {
-        lbFullName.text = UserDefaults.standard.value(forKey: "fullName") as! String
+        lbFullName.text = UserDefaults.standard.value(forKey: "fullName") as! String!
         lbNameShop.text = (UserDefaults.standard.value(forKey: "userName") as! String) + ".mshopkeeper.vn"
     }
 }
@@ -60,28 +61,31 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        click vào button chia sẻ app
         if indexPath.row == 0 {
             self.closeLeft()
             let activity = UIActivityViewController.init(activityItems: ["www.google.co.in"], applicationActivities: nil)
             activity.popoverPresentationController?.sourceView = self.view
             self.present(activity, animated: true, completion: nil)
         }
+//        click vào button đánh giá app
         if indexPath.row == 1 {
             self.closeLeft()
             SKStoreReviewController.requestReview()
         }
+//        click vào button giới thiệu
         if indexPath.row == 2 {
             self.closeLeft()
             let inforProduc = storyboard?.instantiateViewController(withIdentifier: "InforProductViewController")
             self.present(inforProduc!, animated: true, completion: nil)
         }
-        
+//        click vào button thay đổi mật khẩu
         if indexPath.row == 3 {
             self.closeLeft()
             let changeVC = storyboard?.instantiateViewController(withIdentifier: "ChangePassViewController")
             self.present(changeVC!, animated: true, completion: nil)
         }
-        
+//        click vào button đăng xuất
         if indexPath.row == 4 {
             self.closeLeft()
             let aler = UIAlertController.init(title: NSLocalizedString(MatchKeyLocalizable.kTextLogout, comment: ""), message: NSLocalizedString(MatchKeyLocalizable.kTextQuestionLogin, comment: ""), preferredStyle: .alert)

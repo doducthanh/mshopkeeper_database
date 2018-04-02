@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//class hiển thị lọc dữ liệu
 class SortView: UIViewController {
 
     @IBOutlet weak var viewBackground: UIView!

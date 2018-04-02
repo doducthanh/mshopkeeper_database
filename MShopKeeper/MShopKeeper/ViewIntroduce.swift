@@ -16,7 +16,8 @@ class ViewIntroduce: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textview.returnKeyType = .done
-        // Do any additional setup after loading the view.
+
+//        gán sự kiện close khi chạm màn hình
         let tap: UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(tapView))
         textview.isUserInteractionEnabled = true
         viewBackground.addGestureRecognizer(tap)
@@ -26,7 +27,7 @@ class ViewIntroduce: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //sử lí khi chạm màn ình
     @objc func tapView() {
         textview.resignFirstResponder()
         delegate.returnKeyBoard()

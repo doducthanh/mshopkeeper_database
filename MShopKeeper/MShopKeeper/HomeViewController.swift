@@ -37,13 +37,14 @@ class HomeViewController: UIViewController, SlideMenuControllerDelegate {
     var arrayModel: [Model]!
     var requestAPI: RequestAPIModel!
     var dataModel: DatabaseModel!
-    
     var viewWait: ViewWaitingModel!
     
     var spiner: UIActivityIndicatorView! = nil
+//    các chỉ số để giới hạn giá trị request trả về từ server
     var startIndex = 0
     var endIndex = 100
     
+    var reachability = Reachability()
     //public let homeVC: HomeViewControlle
     public static var viewHeader: CustomNavigationBar!
     
@@ -59,11 +60,11 @@ class HomeViewController: UIViewController, SlideMenuControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUserInterface()
         viewWait = ViewWaitingModel(frame: self.view.frame, supperview: self)
         viewWait.startAnimatonWaiting()
         initUI()
         initParam()
+        checkInternetConnect()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -77,40 +78,31 @@ class HomeViewController: UIViewController, SlideMenuControllerDelegate {
     }
     
     //MARK: Private function
+    //hàm kiểm tra khi mất kết nối
     func checkInternetConnect() {
-        NotificationCenter.default.addObserver(self, selector: #selector(statusManager), name: .flagsChanged, object: Network.reachability)
-        updateUserInterface()
-    }
-    
-    func updateUserInterface() {
-        guard let status = Network.reachability?.status else {
-            print("mat ket noi")
-            CommonVariable.isDisConnect = true
-            return
+        NotificationCenter.default.addObserver(self, selector: #selector(statusManager), name: Notification.Name.reachabilityChanged,  object: reachability)
+        do {
+            try reachability?.startNotifier()
+        } catch  {
+            
         }
-        CommonVariable.isDisConnect = false
-        switch status {
-        case .unreachable:
-//            view.backgroundColor = .red
-            break
-        case .wifi:
-            view.backgroundColor = .green
-            break
-        case .wwan:
-            view.backgroundColor = .yellow
-            break
-        }
-        print("Reachability Summary")
-        print("Status:", status)
-        print("HostName:", Network.reachability?.hostname ?? "nil")
-        print("Reachable:", Network.reachability?.isReachable ?? "nil")
-        print("Wifi:", Network.reachability?.isReachableViaWiFi ?? "nil")
     }
     
     @objc func statusManager(_ notification: Notification) {
-        updateUserInterface()
+        let reachabitily = notification.object as! Reachability
+        reachabitily.whenReachable = { reacha in
+            if reacha.connection != .wifi {
+                CommonVariable.isDisConnect = true
+            }
+            CommonVariable.isDisConnect = false
+        }
+        
+        reachabitily.whenUnreachable = { _ in
+            CommonVariable.isDisConnect = true
+            Constant.share.disConnection(supperView: self)
+        }
     }
-    
+    //khởi tạo giao diện
     func initUI() {
         heightBar = self.navigationController?.navigationBar.frame.size.height
         self.navigationController?.navigationBar.barTintColor = MyColors.BLUE
@@ -127,6 +119,7 @@ class HomeViewController: UIViewController, SlideMenuControllerDelegate {
         }
     }
     
+    /// gán một sô paramester ban đầu
     func initParam() {
         //Model_SQLite.init()
         // custom các button trên màn hình
@@ -163,6 +156,7 @@ class HomeViewController: UIViewController, SlideMenuControllerDelegate {
         btProduct.addTarget(self, action: #selector(onClickButtonTenMau), for: .touchUpInside)
         setUpCollectionView()
         
+//        lấy dữ liệu từ server
         arrayModel = [Model]()
         let token = UserDefaults.standard.value(forKey: "token") as! String
         requestAPI = RequestAPIModel()
@@ -171,17 +165,20 @@ class HomeViewController: UIViewController, SlideMenuControllerDelegate {
         requestAPI.getAllModel(token: token, index: 0, startIndex: startIndex, endIndex: endIndex) { (array) in
             self.arrayModel = array
             self.myCollection.reloadData()
-            self.dataModel.insertRowModel(arrayModels: array)
-            for model in self.arrayModel {
-                self.requestAPI.getItemDetal(token: token, modelID: model.modelID, complete: { (arrayColor, arraySize, arrayItem) in
-                    self.dataModel.insertRowItem(arrayItems: arrayItem)
-                })
+            if array.count > 0 {
+//                lưu dữ liệu lấy về vào database local
+                self.dataModel.insertRowModel(arrayModels: array)
+                for model in self.arrayModel {
+                    self.requestAPI.getItemDetal(token: token, modelID: model.modelID, complete: { (arrayColor, arraySize, arrayItem) in
+                        self.dataModel.insertRowItem(arrayItems: arrayItem)
+                    })
+                }
             }
             self.viewWait.endAnimationWaiting()
         }
     }
     
-    // cấu hình lại kích thươc và vị trí cho cell trong CollectionView
+    /// cấu hình lại kích thươc và vị trí cho cell trong CollectionView
     func setUpCollectionView() {
         let refreshControl = UIRefreshControl.init()
         refreshControl.tintColor = .white
@@ -231,6 +228,7 @@ class HomeViewController: UIViewController, SlideMenuControllerDelegate {
 //        }
     }
     
+    /// load lại dữ liệu
     @objc func reloadData() {
         let token = UserDefaults.standard.value(forKey: "token") as! String
         requestAPI = RequestAPIModel()
@@ -243,7 +241,7 @@ class HomeViewController: UIViewController, SlideMenuControllerDelegate {
     }
     
     //MARK: OnClick
-    // sự kiện click vào button tên mẫu
+    /// sự kiện click vào button tên mẫu
     @objc func onClickButtonTenMau() {
         let sort = SortView.init(nibName: "SortView", bundle: nil)
         sort.view.frame = view.frame
@@ -253,7 +251,7 @@ class HomeViewController: UIViewController, SlideMenuControllerDelegate {
         HomeViewController.viewHeader.textfieldSearch.resignFirstResponder()
     }
     
-    // sự kiện click vào button tất cả
+    /// sự kiện click vào button tất cả
     @objc func onClickButtonTatCa() {
         let catalogItem = CatalogItem.init(nibName: "CatalogItem", bundle: nil)
         catalogItem.view.frame = view.frame
@@ -266,17 +264,19 @@ class HomeViewController: UIViewController, SlideMenuControllerDelegate {
 }
 
 extension HomeViewController: CustomNavigationBarDelegate{
+    /// khi có sự kiện click vào button scan code
     func tapScanCode() {
         let scanVC = storyboard?.instantiateViewController(withIdentifier: "ScanCodeViewController") as! ScanCodeViewController
         scanVC.delegate = self
         self.present(scanVC, animated: true, completion: nil)
     }
     
+    /// khi click vào button menu trên màn hình
     func tapSlideMenu() {
         openLeft()
     }
     
-    // khi click vào button back
+    /// khi click vào button back
     func tapBackButton() {
         HomeViewController.viewHeader.lbTitle.isHidden = false
         HomeViewController.viewHeader.btMenu.isHidden = false
@@ -286,7 +286,7 @@ extension HomeViewController: CustomNavigationBarDelegate{
         HomeViewController.viewHeader.textfieldSearch.resignFirstResponder()
     }
     
-    // click vào button search 
+    /// click vào button search
     func tapSearchButton() {
         HomeViewController.viewHeader.textfieldSearch.becomeFirstResponder()
         HomeViewController.viewHeader.lbTitle.isHidden = true
@@ -389,27 +389,52 @@ extension HomeViewController: UITextFieldDelegate{
 }
 
 extension HomeViewController: SortViewDelegate{
+    /// hàm hiển thị lọc sản phẩm theo từ khoá
+    ///
+    /// - Parameters:
+    ///   - text: tên sản phẩm hiển thị
+    ///   - index: chỉ số để xác định hàng nào đã được chọn
     func onClickCellSort(text: String, index: Int) {
         lbProduct.text = text
+        if CommonVariable.isDisConnect {
+            return
+        }
         //gọi model request API tương ứng
         let token = UserDefaults.standard.value(forKey: "token") as! String
         requestAPI.getAllModel(token: token, index: index, startIndex: 0, endIndex: 30) { (array) in
             self.arrayModel = array
             self.myCollection.reloadData()
+            self.myCollection.contentOffset = CGPoint.init(x: 0, y: 0)
         }
     }
 }
 
 extension HomeViewController: CatalogItemDelegate{
+    /// hàm hiển thị danh sách sản phẩm khi chọn catalog
+    ///
+    /// - Parameters:
+    ///   - model: mang các model
+    ///   - title: tên của model
     func onClickCellItem(model: [Model], title: String) {
         lbAllItem.text = title
         self.arrayModel = model
         self.myCollection.reloadData()
+        self.myCollection.contentOffset = CGPoint.init(x: 0, y: 0)
         //gọi model request API tương ứng.
     }
 }
 
 extension HomeViewController: HomeCollectionViewCellDelegate {
+    func disconnectOnCell() {
+        Constant.share.disConnection(supperView: self)
+    }
+    
+    /// hàm do cell trả về khi chọn sản phẩm
+    ///
+    /// - Parameters:
+    ///   - arrayColor: mảng các color
+    ///   - arraySize: mảng kích thuước
+    ///   - arrayItem: mảng sản phẩm
     func onClickCell(arrayColor: [String], arraySize: [String], arrayItem: [Item]) {
         let detailItem = storyboard?.instantiateViewController(withIdentifier: "Detail_ItemViewController") as? Detail_ItemViewController
         detailItem?.isHaveProduct = true
@@ -429,15 +454,13 @@ extension HomeViewController: HomeCollectionViewCellDelegate {
         HomeViewController.viewHeader.btSearch.isHidden = false
         HomeViewController.viewHeader.lbTitle.isHidden = false
     }
-}
-
-extension HomeViewController: DisConnectInternet {
-    func disConect() {
-        CommonVariable.isDisConnect = true
-    }
+    
 }
 
 extension HomeViewController: ScanCodeDelegate {
+    /// hàm do VC ScanCode trả về khi scan đươc mã
+    ///
+    /// - Parameter barcode: barcode
     func searchBarCode(barcode: String) {
         let token = UserDefaults.standard.value(forKey: "token") as! String
         self.requestAPI.getAllModel(token: token, index: 4, startIndex: startIndex, endIndex: endIndex) { (array) in
@@ -445,7 +468,11 @@ extension HomeViewController: ScanCodeDelegate {
             self.myCollection.reloadData()
         }
     }
-    
-    
+}
+
+extension HomeViewController: DisConnectInternet {
+    func disConect() {
+        
+    }
 }
 

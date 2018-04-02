@@ -10,7 +10,7 @@ import Foundation
 import SQLite
 
 class Item_SQLite {
-    //khai báo các thuộc tính.
+//    khai báo các thuộc tính.
     private let tblItem = Table.init("tblItem")
     private let itemID = Expression<Int>("itemID")
     private var modelID = Expression<Int>("modelID")
@@ -26,6 +26,7 @@ class Item_SQLite {
     private let barCode = Expression<String>("barCode")
     static let share = Item_SQLite()
     
+//    khởi tạo bảng
     private init() {
         do {
             try Database.share.connection?.run(tblItem.create(temporary: false, ifNotExists: true, withoutRowid: false, block: { (table) in
@@ -48,7 +49,10 @@ class Item_SQLite {
         }
     }
     
-    //hàm insert 1 row vào bảng.
+    /// insert 1 row vào bảng item
+    ///
+    /// - Parameter item: Item
+    /// - Returns: Int64
     func insertRow(item: Item) -> Int64? {
         do{
             let insert = self.tblItem.insert(self.itemID <- item.itemId,
@@ -72,7 +76,10 @@ class Item_SQLite {
         }
     }
     
-    //hàm lấy ra tất cả các bản ghi.
+
+    /// trả về các bản ghi của bảng
+    ///
+    /// - Returns: dạng mảng
     func getAllRow() -> AnySequence<Row>? {
         do {
             return try Database.share.connection?.prepare(self.tblItem)
@@ -82,7 +89,10 @@ class Item_SQLite {
         }
     }
     
-    //hàm query dữ liệu.
+    /// hàm query dữ liệu theo modelID
+    ///
+    /// - Parameter key: modelID
+    /// - Returns: dạng mảng
     func queryDataForKey(key: Int) -> AnySequence<Row>? {
         //var arrayModel: [Model]
         do {
@@ -93,13 +103,32 @@ class Item_SQLite {
             return nil
         }
     }
-    //hàm update bản ghi
+   
+    /// hàm update dữ liệu 1 bản ghi trong bảng
+    ///
+    /// - Returns: true/false
     func updateRow() -> Bool {
         return true
     }
     
-    // hàm show ra dữ liệu
+    
+    /// show dữ liệu bảng
+    ///
+    /// - Parameter department: row
     func toString(department: Row) {
         print("modelID:\(department[self.itemID]), modelName:\(department[self.SKUCode]), unitPrice:\(department[self.unitPrice])")
+    }
+    
+   
+    /// hàm xoá dữ liệu trên bảng.
+    func deleteAllRow() {
+        do {
+            if let connect = Database.share.connection {
+                try connect.run(self.tblItem.delete())
+            }
+        } catch {
+            print("delete error")
+            return
+        }
     }
 }

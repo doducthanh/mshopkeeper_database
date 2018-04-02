@@ -23,7 +23,9 @@ class InforProductViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /// vẽ giao diện.
     func initUI(){
+//        vẽ button website
         let imgWeb = UIImageView.init()
         imgWeb.image = UIImage.init(named: "ic_browser")
         imgWeb.frame = CGRect.init(x: 10, y: btWebsite.frame.height/4, width: btWebsite.frame.height/2, height: btWebsite.frame.height/2)
@@ -42,6 +44,7 @@ class InforProductViewController: UIViewController {
         lbWeb.attributedText = multiAttribute
         btWebsite.addSubview(lbWeb)
         
+//        vẽ button trợ giúp
         let imgHelp = UIImageView.init()
         imgHelp.image = UIImage.init(named: "ic_help_gray")
         imgHelp.frame = CGRect.init(x: 10, y: btHelp.frame.height/4, width: btHelp.frame.height/2, height: btHelp.frame.height/2)
@@ -57,10 +60,12 @@ class InforProductViewController: UIViewController {
         
     }
     
+    /// sự kiên khi click butotn website
     @objc func onClickButtonWebsite() {
         UIApplication.shared.open(URL.init(string: "https://www.mshopkeeper.vn")!, options: [:], completionHandler: nil)
     }
     
+    /// sự kiên khi click button help
     @objc func onClickButtonHelp () {
         UIApplication.shared.open(URL.init(string: "https://mhelp.mshopkeeper.vn/")!, options: [:], completionHandler: nil)
     }
@@ -76,6 +81,9 @@ class InforProductViewController: UIViewController {
     
     //MARK: action
 
+    /// sự kiên khi click button back
+    ///
+    /// - Parameter sender: 
     @IBAction func onClickBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

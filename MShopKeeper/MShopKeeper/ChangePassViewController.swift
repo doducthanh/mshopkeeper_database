@@ -44,6 +44,7 @@ class ChangePassViewController: UIViewController {
         btChangePass.layer.masksToBounds = true
     }
     
+    /// set giá trị cuả tham số ban đầu
     func initParam(){
         textfieldCurrentPass.delegate = self
         textfieldNewPass.delegate = self
@@ -54,11 +55,18 @@ class ChangePassViewController: UIViewController {
     }
     
     //MARK: action
+    /// sự kiện khi click vào button back
+    ///
+    /// - Parameter sender:
     @IBAction func onClickBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    /// sự kiện khi click vào button đổi password
+    ///
+    /// - Parameter sender:
     @IBAction func onClickChangePass(_ sender: Any) {
+//        kiểm tra các trường dữ liệu
         if (textfieldCurrentPass.text?.isEmpty)! {
             textfieldCurrentPass.becomeFirstResponder()
             return
@@ -77,6 +85,7 @@ class ChangePassViewController: UIViewController {
         //do something.
         let token = UserDefaults.standard.value(forKey: "token") as! String
         requestAPI.changePassword(token: token, newPass: textfieldNewPass.text!) { (status) in
+//            ẩn bàn phím
             self.textfieldNewPass.resignFirstResponder()
             self.textfieldConfirmPass.resignFirstResponder()
             self.textfieldCurrentPass.resignFirstResponder()

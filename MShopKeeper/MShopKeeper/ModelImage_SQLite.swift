@@ -10,12 +10,13 @@ import Foundation
 import SQLite
 
 class ModelImage_SQLite {
-    
+//    khai báo thuộc tính và bảng
     private let tblImage = Table.init("tblImage")
     private let modelID = Expression<Int>("modelID")
     private let data = Expression<Data>("data")
     static let share = ModelImage_SQLite()
     
+//    hàm khởi tạo
     private init(){
         do {
             if let connection = Database.share.connection {
@@ -29,7 +30,12 @@ class ModelImage_SQLite {
         }
     }
     
-    //hàm insert 1 row vào bảng.
+    /// hàm insert dữ liệu vào bảng
+    ///
+    /// - Parameters:
+    ///   - modelID: mã modelID
+    ///   - data: data của avatar
+    /// - Returns: Int64
     func insert(modelID: Int, data: Data) -> Int64? {
         do {
             let insert = tblImage.insert(self.modelID <- modelID,
@@ -38,12 +44,14 @@ class ModelImage_SQLite {
             print("insert image success")
             return insertID
         } catch {
-            print("insert error")
+            print("insert image error")
             return nil
         }
     }
     
-    //hàm lấy ra tất cả các bản ghi.
+    /// hàm lấy ra tất cả dữ liệu trong bảng
+    ///
+    /// - Returns: dạng mảng
     func getAllRow() -> AnySequence<Row>? {
         do {
             return try Database.share.connection!.prepare(tblImage)
@@ -52,6 +60,11 @@ class ModelImage_SQLite {
         }
     }
     
+    
+    /// hàm lấy ra data image
+    ///
+    /// - Parameter key: modelID
+    /// - Returns: data ảnh
     func getDataForKey(key: Int) -> Data? {
         do {
             let query = (self.modelID == key)
@@ -65,8 +78,19 @@ class ModelImage_SQLite {
         }
     }
     
-    //hàm update bản ghi
+    /// hàm update bản ghi
     func updateRow() -> Bool {
         return true
+    }
+    
+    /// hàm xoá dữ liệu local
+    func deleteAllRow() {
+        do {
+            if let connect = Database.share.connection {
+                try connect.run(self.tblImage.delete())
+            }
+        } catch {
+            return
+        }
     }
 }

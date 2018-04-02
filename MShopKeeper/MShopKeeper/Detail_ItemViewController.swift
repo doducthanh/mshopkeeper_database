@@ -41,6 +41,9 @@ class Detail_ItemViewController: UIViewController {
     var viewAddress: UIView!
     var heightViewScroll: CGFloat!
     
+    var color = ""
+    var size = ""
+    
     @IBOutlet weak var imgSale: UIImageView!
     @IBOutlet weak var imageItem: UIImageView!
     @IBOutlet weak var viewItem: UIView!
@@ -83,6 +86,8 @@ class Detail_ItemViewController: UIViewController {
     }
     
     //MARK: private func
+    
+    /// khởi tao các thành phần cần thiết trên màn hình
     func initUI() {
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
@@ -92,7 +97,7 @@ class Detail_ItemViewController: UIViewController {
         HomeViewController.viewHeader.lbTitle.text = title
         HomeViewController.viewHeader.delegate = self
 
-        //check view
+//        kiểm tra để hiển thị view có sản phẩm hoặc không.
         if isHaveProduct {
             resetUILayout()
         } else {
@@ -103,6 +108,7 @@ class Detail_ItemViewController: UIViewController {
         }
     }
     
+    /// vẽ lại giao diện group button khi có dữ liệu
     func resetUILayout() {
         // draw buttons color
         buttonMode = ButtonMode.init()
@@ -122,6 +128,7 @@ class Detail_ItemViewController: UIViewController {
         buttonMode.setAlphaButton(tag: 1)
     }
 
+    /// khởi tạo các giá trị thsm số ban đầu
     func initParam() {
         isTapItem = false
         let tapItem = UITapGestureRecognizer.init(target: self, action: #selector(ScaleItem))
@@ -132,6 +139,7 @@ class Detail_ItemViewController: UIViewController {
         
     }
     
+    /// hàm dùng khi click vào ảnh sản phẩm
     @objc func ScaleItem() {
         if !isTapItem {
             UIView.animate(withDuration: 1, animations: {
@@ -147,7 +155,7 @@ class Detail_ItemViewController: UIViewController {
             })
         }
     }
-    
+    /// khi click vào segment
     @IBAction func onSegentChange(_ sender: Any) {
         selectSwitch = segment.selectedSegmentIndex
         isButtonSelect = false
@@ -176,6 +184,7 @@ extension Detail_ItemViewController: CustomNavigationBarDelegate {
         
     }
     
+    /// hàm thực hiện khi click vào button back
     func tapBackButton() {
         self.navigationController?.popViewController(animated: true)
         HomeViewController.viewHeader.btBack.isHidden = true
@@ -183,6 +192,7 @@ extension Detail_ItemViewController: CustomNavigationBarDelegate {
         HomeViewController.viewHeader.lbTitle.text = "Tư vấn bán hàng"
     }
     
+    /// hàm thực hiện khi click vào button search
     func tapSearchButton() {
         self.navigationController?.popViewController(animated: true)
         HomeViewController.viewHeader.btBack.isHidden = false
@@ -204,25 +214,46 @@ extension Detail_ItemViewController: ButtonModeProtocol {
         self.buttonMode.setOnClickButton(bt: bt, selectSwitch: selectSwitch, isButtonSelect: &isButtonSelect)
     }
     
+    /// hàm vẽ lại giao diện khi có button được lựa chọn
+    ///
+    /// - Parameters:
+    ///   - color: tên màu
+    ///   - size: tên kích thuước
     func setUI(color: String, size: String) {
+        self.color = color
+        self.size = size
         let itemMode = ItemModel()
+        itemMode.delegate = self
         itemMode.arrayItem = self.arrayItem
         itemMode.color = color
         itemMode.size = size
         HomeViewController.viewHeader.lbTitle.text! = (UserDefaults.standard.value(forKey: "modelName") as! String) + "-" + color + "-" + size
         lbPrice.text = itemMode.getPrice(color: color, size: size)
         lbSKU.text = itemMode.getSKUCode(color: color, size: size)
+//        thực hiện thêm view địa chỉ vào màn hình và set lại contraint
         let height = CGFloat(620 + Int(viewSize.frame.height) + Int(viewColors.frame.height))
-        let array = itemMode.getAllAddress(color: color, size: size)
-        let frame = CGRect.init(x: 30, y: Int(height), width: Int(self.view.frame.width - 60), height: 70 + array.count * 30)
+        let array = itemMode.getArrayItemSelect(color: color, size: size)
+        let frame = CGRect.init(x: 30, y: Int(height), width: Int(self.view.frame.width - 60), height: 70 + array.count * 40)
         if self.viewAddress != nil {
             self.viewAddress.removeFromSuperview()
         }
+
         viewAddress = itemMode.addViewAddress(array: array, frame: frame)
-        self.viewAddress.isHidden = false
-        self.viewScroll.addSubview(viewAddress)
-        self.contraintHeightScrollView.constant = CGFloat(620 + Int(viewSize.frame.height) + Int(viewColors.frame.height) + (30*array.count + 70))
-        self.contraintBotViewResult.constant = CGFloat(30*array.count + 70)
-        
+        let count = CommonVariable.numberRowAddress
+        if count > 0 {
+            self.viewAddress.isHidden = false
+            self.viewScroll.addSubview(viewAddress)
+            self.contraintHeightScrollView.constant = CGFloat(620 + Int(viewSize.frame.height) + Int(viewColors.frame.height) + (40*count + 120))
+            self.contraintBotViewResult.constant = CGFloat(40*count + 120)
+        } else {
+            self.contraintHeightScrollView.constant = CGFloat(620 + Int(viewSize.frame.height) + Int(viewColors.frame.height) + 20)
+            self.contraintBotViewResult.constant = CGFloat(30)
+        }
+    }
+}
+
+extension Detail_ItemViewController: ItemModelDelegate {
+    func segmentChangeValue(index: Int) {
+        setUI(color: self.color, size: self.size)
     }
 }

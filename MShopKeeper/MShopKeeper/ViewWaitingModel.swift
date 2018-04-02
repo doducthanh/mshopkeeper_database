@@ -14,6 +14,11 @@ class ViewWaitingModel {
     
     var viewWaiting: ViewWaiting!
     
+    /// hàm khởi tạo view animation
+    ///
+    /// - Parameters:
+    ///   - frame: toạ độ, kích thước của view
+    ///   - supperview: nơi mà view animation đươc add vào
     init(frame: CGRect, supperview: UIViewController) {
         viewWaiting = ViewWaiting.init(frame: frame)
         supperview.view.addSubview(viewWaiting)
@@ -26,10 +31,12 @@ class ViewWaitingModel {
         viewWaiting.isHidden = true
     }
     
+    /// hàm bắt đầu thực hiện animation
     func startAnimatonWaiting() {
         viewWaiting.isHidden = false
     }
     
+    /// hàm kết thúc animation.
     func endAnimationWaiting() {
         viewWaiting.isHidden = true
     }

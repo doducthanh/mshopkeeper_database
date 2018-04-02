@@ -24,18 +24,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         //check internet
-        do {
-            Network.reachability = try Reachability(hostname: "www.google.com")
-            do {
-                try Network.reachability?.start()
-            } catch let error as Network.Error {
-                print(error)
-            } catch {
-                print(error)
-            }
-        } catch {
-            print(error)
-        }
+//        do {
+//            Network.reachability = try Reachability(hostname: "www.google.com")
+//            do {
+//                try Network.reachability?.start()
+//            } catch let error as Network.Error {
+//                print(error)
+//            } catch {
+//                print(error)
+//            }
+//        } catch {
+//            print(error)
+//        }
         return true
     }
 

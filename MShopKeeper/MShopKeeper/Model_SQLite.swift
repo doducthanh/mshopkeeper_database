@@ -12,7 +12,7 @@ import Kingfisher
 import Alamofire
 
 public class Model_SQLite {
-    // khai bao thuoc tinh
+//    khai bao thuoc tinh
     private let tblModel = Table.init("tblModel")
     
     private let modelID = Expression<Int>("modelID")
@@ -56,7 +56,10 @@ public class Model_SQLite {
         }
     }
     
-    //hàm insert 1 row vào bảng.
+    /// thêm row vào bàng
+    ///
+    /// - Parameter model: Model
+    /// - Returns: Int64
     func insert(model: Model) -> Int64? {
         do {
             //var data: Data = Data()
@@ -80,7 +83,9 @@ public class Model_SQLite {
         }
     }
     
-    //hàm lấy ra tất cả các bản ghi.
+    /// lấy ra các bản ghi trong bảng
+    ///
+    /// - Returns: mảng row
     func getAllRow() -> AnySequence<Row>? {
         do {
             return try Database.share.connection!.prepare(tblModel)
@@ -89,7 +94,10 @@ public class Model_SQLite {
         }
     }
     
-    //hàm query dữ liệu.
+    /// lấy về dữ liệu model theo key
+    ///
+    /// - Parameter key: modelName
+    /// - Returns: mảng row
     func queryDataForKey(key: String) -> AnySequence<Row>? {
         //var arrayModel: [Model]
         do {
@@ -101,14 +109,31 @@ public class Model_SQLite {
         }
     }
     
-    //hàm update bản ghi
+    /// update dữ liệu trên bảng
+    ///
+    /// - Returns: bool
     func updateRow() -> Bool {
         return true
     }
     
-    // hàm show ra dữ liệu
+
+    /// show dữ liệu 1 hàng
+    ///
+    /// - Parameter department: row
     func toString(department: Row) {
         print("modelID:\(department[self.modelID]), modelName:\(department[self.modelName]), unitPrice:\(department[self.unitPrice])")
+    }
+    
+    /// xoá dữ liệu bảng
+    func deleteAllRow() {
+        do {
+            if let connect = Database.share.connection {
+                try connect.run(self.tblModel.delete())
+            }
+        } catch {
+            print("delete error")
+            return
+        }
     }
     
 }

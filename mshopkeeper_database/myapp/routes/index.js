@@ -43,6 +43,7 @@ router.post('/login', function (req, res) {
         user['tel'] = row[0].tel;
         user['role'] = row[0].role;
         user['tokenType'] = token.type;
+        user['shopID'] = row[0].shopID;
         user['tokenStart'] = Math.floor(Date.now() / 1000);
         res.status(200).json(user);
         var decode = jwt.decode(token, {complete: true});

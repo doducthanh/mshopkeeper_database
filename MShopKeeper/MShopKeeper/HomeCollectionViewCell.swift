@@ -11,7 +11,7 @@ import Alamofire
 import Kingfisher
 
 class HomeCollectionViewCell: UICollectionViewCell {
-    
+    //khai báo thuộc tín
     @IBOutlet weak var viewContent: UIView!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var labelItem: UILabel!
@@ -23,6 +23,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     var item: Item! = Item()
     var requestAPI: RequestAPIModel!
     var delegate: HomeCollectionViewCellDelegate!
+    /// vẽ cell khi có giá trị
     var model: Model! {
         didSet{
             //let model = arrayModel[index]
@@ -36,17 +37,18 @@ class HomeCollectionViewCell: UICollectionViewCell {
             } else {
                 self.img.kf.setImage(with: resource)  
             }
-            if model.isPromtion {
-                self.imgSale.isHidden = false
-            } else {
-                self.imgSale.isHidden = true
-            }
+//            if model.isPromtion {
+//                self.imgSale.isHidden = false
+//            } else {
+//                self.imgSale.isHidden = true
+//            }
             
             self.labelItem.text = model.modelName
             self.labelPrice.text = String(model.unitPrice) + Constant.Currency_Unit
         }
     }
     
+    /// thực hiện khi chọn vào 1 cell
     var selectItem: Int! {
         didSet {
             let model = arrayModel[selectItem]
@@ -66,11 +68,11 @@ class HomeCollectionViewCell: UICollectionViewCell {
 
 protocol HomeCollectionViewCellDelegate {
     func onClickCell (arrayColor: [String], arraySize: [String], arrayItem: [Item])
+    func disconnectOnCell()
 }
 extension HomeCollectionViewCell: DisConnectInternet {
     func disConect() {
-        CommonVariable.isDisConnect = true
+        self.delegate.disconnectOnCell()
+//        CommonVariable.isDisConnect = true
     }
-    
-    
 }

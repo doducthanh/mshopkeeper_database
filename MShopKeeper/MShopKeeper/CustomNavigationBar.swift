@@ -11,6 +11,7 @@ import UIKit
 class CustomNavigationBar: UIView {
     //MARK: Property
 //    var viewHeader: UIView!
+    //khai báo các thành phần của view custom
     var heightBar: CGFloat!
     var btMenu: UIButton!
     var btScan: UIButton!
@@ -20,6 +21,7 @@ class CustomNavigationBar: UIView {
     var textfieldSearch: UITextField!
     var delegate: CustomNavigationBarDelegate!
     
+    //vẽ các thành phần
     override init(frame: CGRect) {
         super.init(frame: frame)
         heightBar = frame.size.height
@@ -53,7 +55,7 @@ class CustomNavigationBar: UIView {
         btBack = UIButton.init()
         btBack.frame = CGRect.init(x: 15, y: 0, width: heightBar, height: heightBar)
         btBack.addTarget(self, action: #selector(tapBackButton), for: .touchUpInside)
-        btBack.setImage(UIImage.init(named: "ic_previous"), for: .normal)
+        btBack.setImage(UIImage.init(named: "ic_back"), for: .normal)
         self.addSubview(btBack)
         btBack.isHidden = true
         

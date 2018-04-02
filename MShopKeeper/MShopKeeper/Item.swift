@@ -8,9 +8,9 @@
 
 import Foundation
 import UIKit
-
+//đối tượng item
 class Item {
-    
+//    khai báo các thuộc tính của đối tượng item
     var itemId = 0
     var modelID = 0
     var SKUCode: String = ""

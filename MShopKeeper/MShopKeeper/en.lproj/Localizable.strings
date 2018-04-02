@@ -22,7 +22,10 @@
 "password_short" = "Password must be greater than 6 characters";
 "password_not_match" = "passwords do not match";
 "ok" = "OK";
-"aler_title" = "Bạn đã hết phiên, vui lòng đăng nhập lại để sử dụng";
+"aler_title" = "You have ended the session, please login again to use";
 "change_pass_success" = "";
+"dis_internet" = "Disconnection internet";
+"toast_dis_internet" = "Do you use local data";
+"toast_succes_dis_internet" = "switched to local data, continue to lookup";
 
 
