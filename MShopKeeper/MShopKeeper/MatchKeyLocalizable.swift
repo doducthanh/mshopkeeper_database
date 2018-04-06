@@ -19,6 +19,7 @@ public class MatchKeyLocalizable {
     public static let kTextHelp = "help"
     public static let kTextRecomend = "recommend_to_friends"
     public static let kTextReview = "reviews_app"
+    public static let kTextTuVan = "tu_van"
     public static let kTextProductInfor = "product_information"
     public static let kTextChangePass = "change_password"
     public static let kTextPassEmpty = "password_empty"

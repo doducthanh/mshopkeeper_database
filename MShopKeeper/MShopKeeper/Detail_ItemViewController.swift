@@ -174,6 +174,15 @@ class Detail_ItemViewController: UIViewController {
         }
     }
     
+    @IBAction func onClickSegmentAddress(_ sender: Any) {
+        let segment = sender as! UISegmentedControl
+        if segment.selectedSegmentIndex == 0 {
+            CommonVariable.isSelectShopCurrent = true
+        } else {
+            CommonVariable.isSelectShopCurrent = false
+        }
+        self.setUI(color: self.color, size: self.size)
+    }
     @objc func onClickSwitch() {
         
     }
@@ -231,9 +240,12 @@ extension Detail_ItemViewController: ButtonModeProtocol {
         lbPrice.text = itemMode.getPrice(color: color, size: size)
         lbSKU.text = itemMode.getSKUCode(color: color, size: size)
 //        thực hiện thêm view địa chỉ vào màn hình và set lại contraint
+        
+        
         let height = CGFloat(620 + Int(viewSize.frame.height) + Int(viewColors.frame.height))
         let array = itemMode.getArrayItemSelect(color: color, size: size)
-        let frame = CGRect.init(x: 30, y: Int(height), width: Int(self.view.frame.width - 60), height: 70 + array.count * 40)
+        let frame = CGRect.init(x: 30, y: Int(height + 10), width: Int(self.view.frame.width - 60), height: 10 + array.count * 40)
+        
         if self.viewAddress != nil {
             self.viewAddress.removeFromSuperview()
         }
@@ -249,6 +261,15 @@ extension Detail_ItemViewController: ButtonModeProtocol {
             self.contraintHeightScrollView.constant = CGFloat(620 + Int(viewSize.frame.height) + Int(viewColors.frame.height) + 20)
             self.contraintBotViewResult.constant = CGFloat(30)
         }
+    }
+    
+    @objc func onClickSegment(segment: UISegmentedControl) {
+        if segment.selectedSegmentIndex == 0 {
+            CommonVariable.isSelectShopCurrent = true
+        } else {
+            CommonVariable.isSelectShopCurrent = false
+        }
+        self.setUI(color: self.color, size: self.size)
     }
 }
 

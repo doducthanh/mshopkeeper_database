@@ -19,6 +19,10 @@ class MenuTableViewCell: UITableViewCell {
                 self.img?.image = UIImage.init(named: "ic_menu_share")
                 self.labelText?.text = NSLocalizedString(MatchKeyLocalizable.kTextRecomend, comment: "")
             }
+            if row == 5 {
+                self.img?.image = UIImage.init(named: "ic_menu_share")
+                self.labelText?.text = NSLocalizedString(MatchKeyLocalizable.kTextTuVan, comment: "")
+            }
             if row == 1 {
                 self.img?.image = UIImage.init(named: "ic_menu_rate")
                 self.labelText?.text = NSLocalizedString(MatchKeyLocalizable.kTextReview, comment: "")

@@ -72,11 +72,11 @@ class ItemModel {
     /// hàm trả về số lượng sản phẩm còn lại trong của hàng hiên tại
     ///
     /// - Returns: tuple (tên của hàng, số lượng)
-    func getCurrentShopCountItem() -> [(String, Int)] {
+    func getCurrentShopCountItem(arrayItems: [Item]) -> [(String, Int)] {
         var count: Int = 0
         var addressShop = ""
         let shopID = UserDefaults.standard.value(forKey: "shopID") as! Int
-        for item in arrayItem {
+        for item in arrayItems {
             if item.shopID == shopID {
                 count += 1
                 addressShop = item.addressShop
@@ -132,22 +132,23 @@ class ItemModel {
     /// hàm thêm view danh sách cửa hàng
     ///
     /// - Parameters:
-    ///   - array: danh sách tên địa chỉ cửa hàng
+    ///   - array: danh sách item cung model.
     ///   - frame: frame vẽ view
     /// - Returns: view địa chỉ
     func addViewAddress(array: [Item], frame: CGRect) -> UIView {
         let view = UIView.init(frame: frame)
         
-        switchAddress = UISegmentedControl.init()
-        switchAddress.frame = CGRect.init(x: frame.width/2 - 120, y: 0, width: 240, height: 40)
-        switchAddress.insertSegment(withTitle: "Trong kho cửa hàng", at: 0, animated: true)
-        switchAddress.insertSegment(withTitle: "Cửa hàng khác", at: 1, animated: true)
-        switchAddress.selectedSegmentIndex = 0
-        switchAddress.addTarget(self, action: #selector(onClickSegment), for: .valueChanged)
-        view.addSubview(switchAddress)
+//        switchAddress = UISegmentedControl.init()
+//        switchAddress.frame = CGRect.init(x: frame.width/2 - 140, y: 0, width: 280, height: 40)
+//        switchAddress.insertSegment(withTitle: "Trong kho cửa hàng", at: 0, animated: true)
+//        switchAddress.insertSegment(withTitle: "Cửa hàng khác", at: 1, animated: true)
+//        switchAddress.selectedSegmentIndex = 0
+//        switchAddress.addTarget(self, action: #selector(onClickSegment), for: .valueChanged)
+//        switchAddress.addTarget(self, action: #selector(onClickSegment), for: .touchUpInside)
+//        view.addSubview(switchAddress)
         
         if CommonVariable.isSelectShopCurrent {
-            let arr = self.getCurrentShopCountItem()
+            let arr = self.getCurrentShopCountItem(arrayItems: array)
             if arr[0].1 == 0 {
                 CommonVariable.numberRowAddress = 0
                 return view
@@ -175,11 +176,11 @@ class ItemModel {
     
     @objc func onClickSegment() {
         self.delegate.segmentChangeValue(index: switchAddress.selectedSegmentIndex)
-        if switchAddress.selectedSegmentIndex == 0 {
-            CommonVariable.isSelectShopCurrent = true
-        } else {
-            CommonVariable.isSelectShopCurrent = false
-        }
+//        if switchAddress.selectedSegmentIndex == 0 {
+//            CommonVariable.isSelectShopCurrent = true
+//        } else {
+//            CommonVariable.isSelectShopCurrent = false
+//        }
     }
 }
 

@@ -49,7 +49,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,6 +61,13 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        click vào button tư vấn
+        if indexPath.row == 5 {
+            self.closeLeft()
+            let changeVC = storyboard?.instantiateViewController(withIdentifier: "SelectCustomerViewController")
+            self.present(changeVC!, animated: true, completion: nil)
+        }
+        
 //        click vào button chia sẻ app
         if indexPath.row == 0 {
             self.closeLeft()
@@ -71,7 +78,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
 //        click vào button đánh giá app
         if indexPath.row == 1 {
             self.closeLeft()
-            SKStoreReviewController.requestReview()
+//            SKStoreReviewController.requestReview()
         }
 //        click vào button giới thiệu
         if indexPath.row == 2 {

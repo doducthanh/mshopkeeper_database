@@ -225,6 +225,22 @@
 		77FB9DAA20205B8600E444B8 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB9DA920205B8600E444B8 /* CustomNavigationBar.swift */; };
 		77FB9DAC202068A200E444B8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB9DAB202068A200E444B8 /* CustomButton.swift */; };
 		7D2DFB00E6EC078729D68EE9 /* Pods_MShopKeeperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFE0FBD171DAC3F95FF4179 /* Pods_MShopKeeperTests.framework */; };
+		841604EF20774E7B00004576 /* icon_female.png in Resources */ = {isa = PBXBuildFile; fileRef = 841604ED20774E7A00004576 /* icon_female.png */; };
+		841604F020774E7B00004576 /* icon_male.png in Resources */ = {isa = PBXBuildFile; fileRef = 841604EE20774E7A00004576 /* icon_male.png */; };
+		841604F220774F8200004576 /* ic_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 841604F120774F8100004576 /* ic_background.jpg */; };
+		841604F42077519400004576 /* logo_shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 841604F32077519400004576 /* logo_shop.png */; };
+		841604F6207751CF00004576 /* logo_shop2.png in Resources */ = {isa = PBXBuildFile; fileRef = 841604F5207751CE00004576 /* logo_shop2.png */; };
+		841604F8207754A400004576 /* ic_female.png in Resources */ = {isa = PBXBuildFile; fileRef = 841604F7207754A300004576 /* ic_female.png */; };
+		841604FA2077552A00004576 /* icon_baby.png in Resources */ = {isa = PBXBuildFile; fileRef = 841604F92077552900004576 /* icon_baby.png */; };
+		841604FC207755C200004576 /* icon_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 841604FB207755C100004576 /* icon_next.png */; };
+		841604FE207756E300004576 /* ButtonSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841604FD207756E300004576 /* ButtonSelect.swift */; };
+		8416050120775A8300004576 /* icon_round_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 841604FF20775A8200004576 /* icon_round_gray.png */; };
+		8416050220775A8300004576 /* icon_tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 8416050020775A8300004576 /* icon_tick.png */; };
+		8416050420775BA900004576 /* SelectCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416050320775BA900004576 /* SelectCustomerViewController.swift */; };
+		8416050620775BD200004576 /* ChooseClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416050520775BD200004576 /* ChooseClothesViewController.swift */; };
+		847227652077620900F19E32 /* icon_saler.png in Resources */ = {isa = PBXBuildFile; fileRef = 847227642077620800F19E32 /* icon_saler.png */; };
+		84722767207762A700F19E32 /* icon_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 84722766207762A600F19E32 /* icon_message.png */; };
+		847227692077691100F19E32 /* item1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 847227682077690F00F19E32 /* item1.jpg */; };
 		F1AA43AA990A2FE809FAA401 /* Pods_MShopKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49FFD73EA07BD2BF71FD6 /* Pods_MShopKeeper.framework */; };
 /* End PBXBuildFile section */
 
@@ -478,6 +494,22 @@
 		77FB9DA920205B8600E444B8 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		77FB9DAB202068A200E444B8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		78F8C85891DF5CD630BE4211 /* Pods-MShopKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MShopKeeper.release.xcconfig"; path = "Pods/Target Support Files/Pods-MShopKeeper/Pods-MShopKeeper.release.xcconfig"; sourceTree = "<group>"; };
+		841604ED20774E7A00004576 /* icon_female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_female.png; sourceTree = "<group>"; };
+		841604EE20774E7A00004576 /* icon_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_male.png; sourceTree = "<group>"; };
+		841604F120774F8100004576 /* ic_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_background.jpg; sourceTree = "<group>"; };
+		841604F32077519400004576 /* logo_shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_shop.png; sourceTree = "<group>"; };
+		841604F5207751CE00004576 /* logo_shop2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_shop2.png; sourceTree = "<group>"; };
+		841604F7207754A300004576 /* ic_female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_female.png; sourceTree = "<group>"; };
+		841604F92077552900004576 /* icon_baby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_baby.png; sourceTree = "<group>"; };
+		841604FB207755C100004576 /* icon_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_next.png; sourceTree = "<group>"; };
+		841604FD207756E300004576 /* ButtonSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSelect.swift; sourceTree = "<group>"; };
+		841604FF20775A8200004576 /* icon_round_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_round_gray.png; sourceTree = "<group>"; };
+		8416050020775A8300004576 /* icon_tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tick.png; sourceTree = "<group>"; };
+		8416050320775BA900004576 /* SelectCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCustomerViewController.swift; sourceTree = "<group>"; };
+		8416050520775BD200004576 /* ChooseClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseClothesViewController.swift; sourceTree = "<group>"; };
+		847227642077620800F19E32 /* icon_saler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_saler.png; sourceTree = "<group>"; };
+		84722766207762A600F19E32 /* icon_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_message.png; sourceTree = "<group>"; };
+		847227682077690F00F19E32 /* item1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = item1.jpg; sourceTree = "<group>"; };
 		DD313B0095FFC52BD3A6550F /* Pods-MShopKeeperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MShopKeeperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MShopKeeperUITests/Pods-MShopKeeperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E2DFB463A2FCAB628A139CFD /* Pods-MShopKeeperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MShopKeeperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MShopKeeperUITests/Pods-MShopKeeperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FCC49FFD73EA07BD2BF71FD6 /* Pods_MShopKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MShopKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -527,6 +559,7 @@
 		7704BF8D20293FB7007F5AA6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				775C0091203D566300D4D73F /* ViewsCustom */,
 				7713E7A5201B0E66006708A5 /* SubView */,
 				773223D62015DDB7008D376B /* CustomCollectionCell */,
 				773223D32015C503008D376B /* CustemTableCell */,
@@ -571,7 +604,6 @@
 				77C6B6BB202C31BB007F8723 /* ViewIntroduce */,
 				7704C344202AF08E00227ADC /* ViewAnimation */,
 				7704C349202B049B00227ADC /* ViewSort */,
-				775C0091203D566300D4D73F /* ViewsCustom */,
 				77F4270320285222006C06CE /* ViewCatalogItem */,
 				77F4270220285212006C06CE /* ViewOutOfStock */,
 			);
@@ -621,7 +653,7 @@
 		7750DC8120108A730065A397 /* MShopKeeper */ = {
 			isa = PBXGroup;
 			children = (
-				77BD53DE205220C20085445D /* SQLite */,
+				77BD53DE205220C20085445D /* DataBase */,
 				77F3A1B9204FBF9600A0D742 /* Framework */,
 				7704BF8E20293FDE007F5AA6 /* Util */,
 				7750DCB720108D370065A397 /* Resource */,
@@ -664,6 +696,8 @@
 				77DA51842023098600C193F6 /* InforProductViewController.swift */,
 				77DA518620230DEE00C193F6 /* ScanCodeViewController.swift */,
 				77A42854203D15C300B50D96 /* ForgetPassViewController.swift */,
+				8416050320775BA900004576 /* SelectCustomerViewController.swift */,
+				8416050520775BD200004576 /* ChooseClothesViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -681,6 +715,7 @@
 			children = (
 				77FB9DA920205B8600E444B8 /* CustomNavigationBar.swift */,
 				77FB9DAB202068A200E444B8 /* CustomButton.swift */,
+				841604FD207756E300004576 /* ButtonSelect.swift */,
 			);
 			name = ViewsCustom;
 			sourceTree = "<group>";
@@ -688,6 +723,19 @@
 		776213A52011E421006F8186 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				847227682077690F00F19E32 /* item1.jpg */,
+				84722766207762A600F19E32 /* icon_message.png */,
+				847227642077620800F19E32 /* icon_saler.png */,
+				841604FF20775A8200004576 /* icon_round_gray.png */,
+				8416050020775A8300004576 /* icon_tick.png */,
+				841604FB207755C100004576 /* icon_next.png */,
+				841604F92077552900004576 /* icon_baby.png */,
+				841604F7207754A300004576 /* ic_female.png */,
+				841604F5207751CE00004576 /* logo_shop2.png */,
+				841604F32077519400004576 /* logo_shop.png */,
+				841604F120774F8100004576 /* ic_background.jpg */,
+				841604ED20774E7A00004576 /* icon_female.png */,
+				841604EE20774E7A00004576 /* icon_male.png */,
 				775F5FFD206B474000FA72E0 /* ic_back.png */,
 				7717D7412069EA5D00B8A578 /* ic_app.png */,
 				7717D73F2069DB7A00B8A578 /* ic_sale.png */,
@@ -855,7 +903,7 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
-		77BD53DE205220C20085445D /* SQLite */ = {
+		77BD53DE205220C20085445D /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
 				77BD53DF205220DE0085445D /* Database.swift */,
@@ -864,7 +912,7 @@
 				774512032061EFF7006BBB74 /* Item_SQLite.swift */,
 				77D021C42064E453003C66B9 /* ModelImage_SQLite.swift */,
 			);
-			name = SQLite;
+			name = DataBase;
 			sourceTree = "<group>";
 		};
 		77C375402021A3170098DB0B /* Models */ = {
@@ -1042,6 +1090,7 @@
 				TargetAttributes = {
 					7750DC7E20108A730065A397 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = MHMKQ53K33;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -1089,6 +1138,7 @@
 				7750DDC420108D540065A397 /* icon_person.png in Resources */,
 				7750DD5D20108D540065A397 /* abc_list_selector_disabled_holo_light.9.png in Resources */,
 				7750DD9620108D540065A397 /* ic_clear_text.png in Resources */,
+				841604EF20774E7B00004576 /* icon_female.png in Resources */,
 				7750DD8E20108D540065A397 /* ic_bg_license_2_01.png in Resources */,
 				7750DD9320108D540065A397 /* ic_cart_empty.png in Resources */,
 				7750DD9F20108D540065A397 /* ic_help_gray_40dp.png in Resources */,
@@ -1110,12 +1160,14 @@
 				7750DD5F20108D540065A397 /* abc_popup_background_mtrl_mult.9.png in Resources */,
 				7750DDC020108D540065A397 /* ic_user_30dp.png in Resources */,
 				7750DDA520108D540065A397 /* ic_item_delete_blue.png in Resources */,
+				841604FA2077552A00004576 /* icon_baby.png in Resources */,
 				7750DD7020108D540065A397 /* abc_textfield_search_activated_mtrl_alpha.9.png in Resources */,
 				7750DDC320108D540065A397 /* icon_disclosure.png in Resources */,
 				7750DD5920108D540065A397 /* abc_list_longpressed_holo.9.png in Resources */,
 				7750DD7820108D540065A397 /* common_google_signin_btn_icon_light_disabled.9.png in Resources */,
 				7750DDA820108D540065A397 /* ic_launcher.png in Resources */,
 				7717D73C2069D32F00B8A578 /* scanCode.png in Resources */,
+				841604F020774E7B00004576 /* icon_male.png in Resources */,
 				77C6B6BA202C250A007F8723 /* ic_previous_white.png in Resources */,
 				7750DD9020108D540065A397 /* ic_btn_slidemenu.png in Resources */,
 				7750DD8820108D540065A397 /* ic_app_logo.png in Resources */,
@@ -1129,6 +1181,8 @@
 				7750DD7920108D540065A397 /* common_google_signin_btn_icon_light_normal.9.png in Resources */,
 				773364C3202460FA00EEEA49 /* CatalogItem.xib in Resources */,
 				7750DDCA20108D540065A397 /* notification_bg_normal_pressed.9.png in Resources */,
+				84722767207762A700F19E32 /* icon_message.png in Resources */,
+				841604F6207751CF00004576 /* logo_shop2.png in Resources */,
 				7750DD8420108D540065A397 /* ic_about_selected.png in Resources */,
 				7750DD9420108D540065A397 /* ic_check_black_24dp.png in Resources */,
 				7750DDB920108D540065A397 /* ic_password_30dp.png in Resources */,
@@ -1136,6 +1190,7 @@
 				7750DDAA20108D540065A397 /* ic_logo_full_gray.png in Resources */,
 				7750DD7B20108D540065A397 /* common_google_signin_btn_text_dark_disabled.9.png in Resources */,
 				7750DDA920108D540065A397 /* ic_loading_bound.png in Resources */,
+				8416050120775A8300004576 /* icon_round_gray.png in Resources */,
 				7750DD8120108D540065A397 /* design_ic_visibility_off.png in Resources */,
 				7750DD8020108D540065A397 /* common_google_signin_btn_text_light_pressed.9.png in Resources */,
 				7704C33D202AD8CB00227ADC /* ic_chelsea.png in Resources */,
@@ -1160,6 +1215,7 @@
 				7750DD8D20108D540065A397 /* ic_bg_license_2_01_out.png in Resources */,
 				7750DD6F20108D540065A397 /* abc_textfield_default_mtrl_alpha.9.png in Resources */,
 				7750DD5620108D540065A397 /* abc_ic_star_half_black_48dp.png in Resources */,
+				8416050220775A8300004576 /* icon_tick.png in Resources */,
 				7750DD7620108D540065A397 /* common_google_signin_btn_icon_dark_normal.9.png in Resources */,
 				7750DDB120108D540065A397 /* ic_menu_rate.png in Resources */,
 				7750DDCD20108D540065A397 /* ptr_pulltorefresh_arrow.png in Resources */,
@@ -1172,6 +1228,7 @@
 				7750DDB520108D540065A397 /* ic_next.png in Resources */,
 				7750DDCC20108D540065A397 /* notify_panel_notification_icon_bg.png in Resources */,
 				7750DD8B20108D540065A397 /* ic_back_vector.png in Resources */,
+				841604F42077519400004576 /* logo_shop.png in Resources */,
 				7750DD5420108D540065A397 /* abc_ic_star_half_black_16dp.png in Resources */,
 				7750DDC920108D540065A397 /* notification_bg_low_pressed.9.png in Resources */,
 				7750DD6320108D540065A397 /* abc_scrubber_primary_mtrl_alpha.9.png in Resources */,
@@ -1185,12 +1242,14 @@
 				7750DD5B20108D540065A397 /* abc_list_pressed_holo_light.9.png in Resources */,
 				7750DD5120108D540065A397 /* abc_ic_star_black_16dp.png in Resources */,
 				7750DD8620108D540065A397 /* ic_action_back.png in Resources */,
+				841604F8207754A400004576 /* ic_female.png in Resources */,
 				7750DD9B20108D540065A397 /* ic_force_version_1.png in Resources */,
 				7750DD9220108D540065A397 /* ic_cancel_grey600_36dp.png in Resources */,
 				7750DD6420108D540065A397 /* abc_scrubber_track_mtrl_alpha.9.png in Resources */,
 				7750DD9E20108D540065A397 /* ic_hamburger_menu_vector.png in Resources */,
 				7717D7422069EA5D00B8A578 /* ic_app.png in Resources */,
 				7750DD4F20108D540065A397 /* abc_ic_menu_selectall_mtrl_alpha.png in Resources */,
+				841604F220774F8200004576 /* ic_background.jpg in Resources */,
 				773364BF20244B7A00EEEA49 /* PopupCell.xib in Resources */,
 				7750DD4C20108D540065A397 /* abc_ic_menu_copy_mtrl_am_alpha.png in Resources */,
 				7750DDB720108D540065A397 /* ic_notification_gray_40dp.png in Resources */,
@@ -1204,6 +1263,7 @@
 				7750DDB620108D540065A397 /* ic_no_image.png in Resources */,
 				7750DDC520108D540065A397 /* icon_public.png in Resources */,
 				7750DD8A20108D540065A397 /* ic_arrow_up_white.png in Resources */,
+				841604FC207755C200004576 /* icon_next.png in Resources */,
 				7750DD6C20108D540065A397 /* abc_text_select_handle_right_mtrl_dark.png in Resources */,
 				7750DDAE20108D540065A397 /* ic_menu_about.png in Resources */,
 				7750DD9A20108D540065A397 /* ic_fb_phone.png in Resources */,
@@ -1218,6 +1278,8 @@
 				7750DD8320108D540065A397 /* facebook_circle_color.png in Resources */,
 				7750DDAB20108D540065A397 /* ic_logo_full.png in Resources */,
 				7750DD8920108D540065A397 /* ic_arrow_down_white.png in Resources */,
+				847227652077620900F19E32 /* icon_saler.png in Resources */,
+				847227692077691100F19E32 /* item1.jpg in Resources */,
 				7750DD4520108D540065A397 /* abc_btn_check_to_on_mtrl_015.png in Resources */,
 				77C6B6C1202C31F5007F8723 /* ViewIntroduce.xib in Resources */,
 				7750DD6E20108D540065A397 /* abc_textfield_activated_mtrl_alpha.9.png in Resources */,
@@ -1429,10 +1491,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				77DF15832062585F00EFED58 /* DatabaseModel.swift in Sources */,
+				841604FE207756E300004576 /* ButtonSelect.swift in Sources */,
 				77F426FB20283167006C06CE /* Item.swift in Sources */,
 				77DA5183202305EA00C193F6 /* ChangePassViewController.swift in Sources */,
 				77FB9DAC202068A200E444B8 /* CustomButton.swift in Sources */,
 				7745955D205774BF00BFED01 /* ViewWaitingModel.swift in Sources */,
+				8416050620775BD200004576 /* ChooseClothesViewController.swift in Sources */,
 				77DA51852023098600C193F6 /* InforProductViewController.swift in Sources */,
 				77A42855203D15C300B50D96 /* ForgetPassViewController.swift in Sources */,
 				773754C6203ECFD7006B35FA /* Account.swift in Sources */,
@@ -1461,6 +1525,7 @@
 				77DA518720230DEE00C193F6 /* ScanCodeViewController.swift in Sources */,
 				7750DC8520108A730065A397 /* ViewController.swift in Sources */,
 				77FB784A2068D0DE0065C6BD /* ViewAddress.swift in Sources */,
+				8416050420775BA900004576 /* SelectCustomerViewController.swift in Sources */,
 				77C6B6C0202C31F5007F8723 /* ViewIntroduce.swift in Sources */,
 				77FB9DA82020501600E444B8 /* Detail_ItemViewController.swift in Sources */,
 				774752B72058FCD200C8882A /* ManageInputModel.swift in Sources */,
@@ -1661,8 +1726,9 @@
 			baseConfigurationReference = 3EAFEC76EFC5DAE63A2854C4 /* Pods-MShopKeeper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MHMKQ53K33;
 				INFOPLIST_FILE = MShopKeeper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Misa.MShopKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1676,8 +1742,9 @@
 			baseConfigurationReference = 78F8C85891DF5CD630BE4211 /* Pods-MShopKeeper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MHMKQ53K33;
 				INFOPLIST_FILE = MShopKeeper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Misa.MShopKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
