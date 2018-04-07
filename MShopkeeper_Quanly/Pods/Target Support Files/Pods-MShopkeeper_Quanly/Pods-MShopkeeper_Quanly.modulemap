@@ -1,0 +1,6 @@
+framework module Pods_MShopkeeper_Quanly {
+  umbrella header "Pods-MShopkeeper_Quanly-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,987 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BA49476C3D49D49A56FA4F6 /* Pods_MShopkeeper_Quanly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25ABE2C0661B7952043260D /* Pods_MShopkeeper_Quanly.framework */; };
+		848BE697207857AB000CC06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE696207857AB000CC06F /* AppDelegate.swift */; };
+		848BE699207857AB000CC06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE698207857AB000CC06F /* ViewController.swift */; };
+		848BE69F207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848BE69D207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld */; };
+		848BE6A1207857AB000CC06F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6A0207857AB000CC06F /* Assets.xcassets */; };
+		848BE6B620786176000CC06F /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE6B320786176000CC06F /* SlideMenuController.swift */; };
+		848BE6B720786176000CC06F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE6B520786176000CC06F /* Reachability.swift */; };
+		848BE73220786278000CC06F /* ic_bg_license_2_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6BE20786256000CC06F /* ic_bg_license_2_01.png */; };
+		848BE73320786278000CC06F /* icon_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6BF20786256000CC06F /* icon_message.png */; };
+		848BE73420786278000CC06F /* ic_introduction1.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6C020786256000CC06F /* ic_introduction1.png */; };
+		848BE73520786278000CC06F /* ic_next_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6C120786256000CC06F /* ic_next_24dp.png */; };
+		848BE73620786278000CC06F /* ic_female.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6C220786256000CC06F /* ic_female.png */; };
+		848BE73720786278000CC06F /* ic_warning_sync_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6C320786257000CC06F /* ic_warning_sync_1.png */; };
+		848BE73820786278000CC06F /* common_google_signin_btn_text_light_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6C420786257000CC06F /* common_google_signin_btn_text_light_normal.9.png */; };
+		848BE73920786278000CC06F /* icon_baby.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6C520786257000CC06F /* icon_baby.png */; };
+		848BE73A20786278000CC06F /* icon_female.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6C620786257000CC06F /* icon_female.png */; };
+		848BE73B20786278000CC06F /* ic_success_sync_40dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6C720786257000CC06F /* ic_success_sync_40dp.png */; };
+		848BE73C20786278000CC06F /* ic_cloud_force_version_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6C820786258000CC06F /* ic_cloud_force_version_1.png */; };
+		848BE73D20786278000CC06F /* icon_public.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6C920786258000CC06F /* icon_public.png */; };
+		848BE73E20786278000CC06F /* ic_pause_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6CA20786258000CC06F /* ic_pause_white.png */; };
+		848BE73F20786278000CC06F /* icon_person.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6CB20786258000CC06F /* icon_person.png */; };
+		848BE74020786278000CC06F /* item1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6CC20786259000CC06F /* item1.jpg */; };
+		848BE74120786278000CC06F /* ic_arrow_up_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6CD20786259000CC06F /* ic_arrow_up_white.png */; };
+		848BE74220786278000CC06F /* ic_dropdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6CE20786259000CC06F /* ic_dropdown.png */; };
+		848BE74320786278000CC06F /* logo_shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6CF20786259000CC06F /* logo_shop.png */; };
+		848BE74420786278000CC06F /* ic_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6D02078625A000CC06F /* ic_background.jpg */; };
+		848BE74520786278000CC06F /* ic_keyboard_voice_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6D12078625A000CC06F /* ic_keyboard_voice_white.png */; };
+		848BE74620786278000CC06F /* notification_bg_low_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6D22078625B000CC06F /* notification_bg_low_normal.9.png */; };
+		848BE74720786278000CC06F /* ic_chelsea.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6D32078625B000CC06F /* ic_chelsea.png */; };
+		848BE74820786278000CC06F /* ic_search_vector.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6D42078625B000CC06F /* ic_search_vector.png */; };
+		848BE74920786278000CC06F /* notify_panel_notification_icon_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6D52078625B000CC06F /* notify_panel_notification_icon_bg.png */; };
+		848BE74A20786278000CC06F /* notification_bg_normal_pressed.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6D62078625C000CC06F /* notification_bg_normal_pressed.9.png */; };
+		848BE74B20786278000CC06F /* ic_arsenal.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6D72078625C000CC06F /* ic_arsenal.png */; };
+		848BE74C20786278000CC06F /* icon_male.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6D82078625C000CC06F /* icon_male.png */; };
+		848BE74D20786278000CC06F /* ic_logo_text_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6D92078625C000CC06F /* ic_logo_text_2.png */; };
+		848BE74E20786278000CC06F /* met_ic_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6DA2078625D000CC06F /* met_ic_clear.png */; };
+		848BE74F20786278000CC06F /* ic_background_click.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6DB2078625D000CC06F /* ic_background_click.png */; };
+		848BE75020786278000CC06F /* notification_bg_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6DC2078625D000CC06F /* notification_bg_normal.9.png */; };
+		848BE75120786278000CC06F /* notification_bg_low_pressed.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6DD2078625D000CC06F /* notification_bg_low_pressed.9.png */; };
+		848BE75220786278000CC06F /* ic_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6DE2078625E000CC06F /* ic_about.png */; };
+		848BE75320786278000CC06F /* ic_mancity.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6DF2078625E000CC06F /* ic_mancity.png */; };
+		848BE75420786278000CC06F /* ic_item_delete_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6E02078625E000CC06F /* ic_item_delete_blue.png */; };
+		848BE75520786278000CC06F /* ic_cancel_grey600_36dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6E12078625F000CC06F /* ic_cancel_grey600_36dp.png */; };
+		848BE75620786278000CC06F /* ic_loading_bound.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6E22078625F000CC06F /* ic_loading_bound.png */; };
+		848BE75720786278000CC06F /* ic_notifications_white_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6E32078625F000CC06F /* ic_notifications_white_24dp.png */; };
+		848BE75820786278000CC06F /* ic_retry_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6E42078625F000CC06F /* ic_retry_black_24dp.png */; };
+		848BE75920786278000CC06F /* icon_disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6E520786260000CC06F /* icon_disclosure.png */; };
+		848BE75A20786278000CC06F /* ic_notification_gray_40dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6E620786260000CC06F /* ic_notification_gray_40dp.png */; };
+		848BE75B20786278000CC06F /* ic_user_30dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6E720786260000CC06F /* ic_user_30dp.png */; };
+		848BE75C20786278000CC06F /* ic_search_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6E820786261000CC06F /* ic_search_white.png */; };
+		848BE75D20786278000CC06F /* ic_keyboard_arrow_right_gray_48dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6E920786261000CC06F /* ic_keyboard_arrow_right_gray_48dp.png */; };
+		848BE75E20786278000CC06F /* ic_browser.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6EA20786261000CC06F /* ic_browser.png */; };
+		848BE75F20786278000CC06F /* ic_password_30dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6EB20786261000CC06F /* ic_password_30dp.png */; };
+		848BE76020786278000CC06F /* common_google_signin_btn_text_dark_disabled.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6EC20786262000CC06F /* common_google_signin_btn_text_dark_disabled.9.png */; };
+		848BE76120786278000CC06F /* common_google_signin_btn_icon_dark_pressed.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6ED20786262000CC06F /* common_google_signin_btn_icon_dark_pressed.9.png */; };
+		848BE76220786278000CC06F /* ic_cart_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6EE20786262000CC06F /* ic_cart_empty.png */; };
+		848BE76320786278000CC06F /* ic_domain_20dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6EF20786263000CC06F /* ic_domain_20dp.png */; };
+		848BE76420786278000CC06F /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6F020786263000CC06F /* key.png */; };
+		848BE76520786278000CC06F /* common_google_signin_btn_text_dark_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6F120786263000CC06F /* common_google_signin_btn_text_dark_normal.9.png */; };
+		848BE76620786278000CC06F /* ic_no_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6F220786264000CC06F /* ic_no_image.png */; };
+		848BE76720786278000CC06F /* ic_previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6F320786264000CC06F /* ic_previous.png */; };
+		848BE76820786278000CC06F /* ic_logo_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6F420786264000CC06F /* ic_logo_full.png */; };
+		848BE76920786278000CC06F /* ic_action_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6F520786265000CC06F /* ic_action_back.png */; };
+		848BE76A20786278000CC06F /* common_google_signin_btn_text_light_pressed.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6F620786265000CC06F /* common_google_signin_btn_text_light_pressed.9.png */; };
+		848BE76B20786278000CC06F /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6F720786265000CC06F /* ic_launcher.png */; };
+		848BE76C20786278000CC06F /* ic_bg_license_2_01_out.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6F820786266000CC06F /* ic_bg_license_2_01_out.png */; };
+		848BE76D20786278000CC06F /* icon_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6F920786266000CC06F /* icon_next.png */; };
+		848BE76E20786278000CC06F /* common_full_open_on_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6FA20786266000CC06F /* common_full_open_on_phone.png */; };
+		848BE76F20786278000CC06F /* ic_hamburger_menu_vector.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6FB20786266000CC06F /* ic_hamburger_menu_vector.png */; };
+		848BE77020786278000CC06F /* ic_action_previous_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6FC20786267000CC06F /* ic_action_previous_item.png */; };
+		848BE77120786278000CC06F /* ic_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6FD20786267000CC06F /* ic_check.png */; };
+		848BE77220786278000CC06F /* design_ic_visibility_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6FE20786267000CC06F /* design_ic_visibility_off.png */; };
+		848BE77320786278000CC06F /* ic_gift.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE6FF20786267000CC06F /* ic_gift.png */; };
+		848BE77420786278000CC06F /* ic_help_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70020786268000CC06F /* ic_help_gray.png */; };
+		848BE77520786278000CC06F /* ic_cancel_40dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70120786268000CC06F /* ic_cancel_40dp.png */; };
+		848BE77620786278000CC06F /* ic_mobile_fb_history.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70220786268000CC06F /* ic_mobile_fb_history.png */; };
+		848BE77720786278000CC06F /* ic_gift_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70320786269000CC06F /* ic_gift_phone.png */; };
+		848BE77820786278000CC06F /* ic_introduction3.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70420786269000CC06F /* ic_introduction3.png */; };
+		848BE77920786278000CC06F /* ic_back_vector.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70520786269000CC06F /* ic_back_vector.png */; };
+		848BE77A20786278000CC06F /* logo_shop2.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70620786269000CC06F /* logo_shop2.png */; };
+		848BE77B20786278000CC06F /* common_google_signin_btn_icon_dark_disabled.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7072078626A000CC06F /* common_google_signin_btn_icon_dark_disabled.9.png */; };
+		848BE77C20786278000CC06F /* common_google_signin_btn_icon_light_pressed.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7082078626A000CC06F /* common_google_signin_btn_icon_light_pressed.9.png */; };
+		848BE77D20786278000CC06F /* ic_back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7092078626A000CC06F /* ic_back_white.png */; };
+		848BE77E20786278000CC06F /* ic_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70A2078626B000CC06F /* ic_next.png */; };
+		848BE77F20786278000CC06F /* ic_app_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70B2078626B000CC06F /* ic_app_logo.png */; };
+		848BE78020786278000CC06F /* common_google_signin_btn_icon_dark_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70C2078626B000CC06F /* common_google_signin_btn_icon_dark_normal.9.png */; };
+		848BE78120786278000CC06F /* ic_help_gray_40dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70D2078626C000CC06F /* ic_help_gray_40dp.png */; };
+		848BE78220786278000CC06F /* ic_scan_barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70E2078626E000CC06F /* ic_scan_barcode.png */; };
+		848BE78320786278000CC06F /* icon_saler.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE70F2078626E000CC06F /* icon_saler.png */; };
+		848BE78420786278000CC06F /* ic_sale.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7102078626E000CC06F /* ic_sale.png */; };
+		848BE78520786278000CC06F /* ic_app.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7112078626F000CC06F /* ic_app.png */; };
+		848BE78620786278000CC06F /* tap_dang_nhap.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7122078626F000CC06F /* tap_dang_nhap.png */; };
+		848BE78720786278000CC06F /* ic_menu_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7132078626F000CC06F /* ic_menu_share.png */; };
+		848BE78820786278000CC06F /* common_google_signin_btn_icon_light_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71420786270000CC06F /* common_google_signin_btn_icon_light_normal.9.png */; };
+		848BE78920786278000CC06F /* ic_btn_slidemenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71520786270000CC06F /* ic_btn_slidemenu.png */; };
+		848BE78A20786278000CC06F /* ic_pause_vector.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71620786270000CC06F /* ic_pause_vector.png */; };
+		848BE78B20786278000CC06F /* common_google_signin_btn_text_dark_pressed.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71720786271000CC06F /* common_google_signin_btn_text_dark_pressed.9.png */; };
+		848BE78C20786278000CC06F /* ic_clear_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71820786271000CC06F /* ic_clear_text.png */; };
+		848BE78D20786278000CC06F /* ic_introduction2.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71920786271000CC06F /* ic_introduction2.png */; };
+		848BE78E20786278000CC06F /* ptr_pulltorefresh_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71A20786271000CC06F /* ptr_pulltorefresh_arrow.png */; };
+		848BE78F20786278000CC06F /* ic_menu_change_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71B20786272000CC06F /* ic_menu_change_password.png */; };
+		848BE79020786278000CC06F /* ic_menu_logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71C20786272000CC06F /* ic_menu_logout.png */; };
+		848BE79120786278000CC06F /* ic_about_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71D20786272000CC06F /* ic_about_selected.png */; };
+		848BE79220786278000CC06F /* ic_logo_full_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71E20786273000CC06F /* ic_logo_full_gray.png */; };
+		848BE79320786278000CC06F /* ic_previous_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE71F20786273000CC06F /* ic_previous_white.png */; };
+		848BE79420786278000CC06F /* default_dang_nhap.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72020786273000CC06F /* default_dang_nhap.png */; };
+		848BE79520786278000CC06F /* ic_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72120786273000CC06F /* ic_back.png */; };
+		848BE79620786278000CC06F /* ic_voice_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72220786274000CC06F /* ic_voice_black_24dp.png */; };
+		848BE79720786278000CC06F /* common_google_signin_btn_text_light_disabled.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72320786274000CC06F /* common_google_signin_btn_text_light_disabled.9.png */; };
+		848BE79820786278000CC06F /* scanCode.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72420786274000CC06F /* scanCode.png */; };
+		848BE79920786278000CC06F /* ic_check_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72520786275000CC06F /* ic_check_black_24dp.png */; };
+		848BE79A20786278000CC06F /* ic_fb_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72620786275000CC06F /* ic_fb_phone.png */; };
+		848BE79B20786278000CC06F /* ic_arrow_down_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72720786275000CC06F /* ic_arrow_down_white.png */; };
+		848BE79C20786278000CC06F /* icon_tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72820786275000CC06F /* icon_tick.png */; };
+		848BE79D20786278000CC06F /* common_google_signin_btn_icon_light_disabled.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72920786276000CC06F /* common_google_signin_btn_icon_light_disabled.9.png */; };
+		848BE79E20786278000CC06F /* ic_menu_rate.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72A20786276000CC06F /* ic_menu_rate.png */; };
+		848BE79F20786278000CC06F /* ic_menu_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72B20786276000CC06F /* ic_menu_about.png */; };
+		848BE7A020786278000CC06F /* ic_help_vector.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72C20786277000CC06F /* ic_help_vector.png */; };
+		848BE7A120786278000CC06F /* ic_cart_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72D20786277000CC06F /* ic_cart_red.png */; };
+		848BE7A220786278000CC06F /* ic_force_version_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72E20786277000CC06F /* ic_force_version_1.png */; };
+		848BE7A320786278000CC06F /* ic_logo_no_bound.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE72F20786277000CC06F /* ic_logo_no_bound.png */; };
+		848BE7A420786278000CC06F /* icon_round_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE73020786278000CC06F /* icon_round_gray.png */; };
+		848BE7A520786278000CC06F /* design_ic_visibility.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE73120786278000CC06F /* design_ic_visibility.png */; };
+		848BE7A820786362000CC06F /* bg_login_user.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7A720786361000CC06F /* bg_login_user.jpg */; };
+		848BE7AA2078637D000CC06F /* ic_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7A92078637C000CC06F /* ic_back.png */; };
+		848BE7B5207866B9000CC06F /* bg_null.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7AC207866B7000CC06F /* bg_null.png */; };
+		848BE7B6207866B9000CC06F /* abc_ab_share_pack_mtrl_alpha.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7AD207866B8000CC06F /* abc_ab_share_pack_mtrl_alpha.9.png */; };
+		848BE7BB207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7B2207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png */; };
+		848BE7C120786708000CC06F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7BD20786708000CC06F /* LaunchScreen.storyboard */; };
+		848BE7C220786708000CC06F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7BF20786708000CC06F /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A1AF5E38AC2AC728707AEC0 /* Pods-MShopkeeper_Quanly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MShopkeeper_Quanly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MShopkeeper_Quanly/Pods-MShopkeeper_Quanly.debug.xcconfig"; sourceTree = "<group>"; };
+		848BE693207857AB000CC06F /* MShopkeeper_Quanly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MShopkeeper_Quanly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		848BE696207857AB000CC06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		848BE698207857AB000CC06F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		848BE69E207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MShopkeeper_Quanly.xcdatamodel; sourceTree = "<group>"; };
+		848BE6A0207857AB000CC06F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		848BE6A5207857AB000CC06F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848BE6B320786176000CC06F /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = ../../../MShopKeeper/MShopKeeper/SlideMenuController.swift; sourceTree = "<group>"; };
+		848BE6B420786176000CC06F /* SlideMenuControllerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideMenuControllerSwift.h; path = ../../../MShopKeeper/MShopKeeper/SlideMenuControllerSwift.h; sourceTree = "<group>"; };
+		848BE6B520786176000CC06F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = ../../../MShopKeeper/MShopKeeper/Reachability.swift; sourceTree = "<group>"; };
+		848BE6BE20786256000CC06F /* ic_bg_license_2_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_bg_license_2_01.png; sourceTree = "<group>"; };
+		848BE6BF20786256000CC06F /* icon_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_message.png; sourceTree = "<group>"; };
+		848BE6C020786256000CC06F /* ic_introduction1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_introduction1.png; sourceTree = "<group>"; };
+		848BE6C120786256000CC06F /* ic_next_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_next_24dp.png; sourceTree = "<group>"; };
+		848BE6C220786256000CC06F /* ic_female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_female.png; sourceTree = "<group>"; };
+		848BE6C320786257000CC06F /* ic_warning_sync_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_warning_sync_1.png; sourceTree = "<group>"; };
+		848BE6C420786257000CC06F /* common_google_signin_btn_text_light_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_text_light_normal.9.png; sourceTree = "<group>"; };
+		848BE6C520786257000CC06F /* icon_baby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_baby.png; sourceTree = "<group>"; };
+		848BE6C620786257000CC06F /* icon_female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_female.png; sourceTree = "<group>"; };
+		848BE6C720786257000CC06F /* ic_success_sync_40dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_success_sync_40dp.png; sourceTree = "<group>"; };
+		848BE6C820786258000CC06F /* ic_cloud_force_version_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_cloud_force_version_1.png; sourceTree = "<group>"; };
+		848BE6C920786258000CC06F /* icon_public.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_public.png; sourceTree = "<group>"; };
+		848BE6CA20786258000CC06F /* ic_pause_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_pause_white.png; sourceTree = "<group>"; };
+		848BE6CB20786258000CC06F /* icon_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_person.png; sourceTree = "<group>"; };
+		848BE6CC20786259000CC06F /* item1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = item1.jpg; sourceTree = "<group>"; };
+		848BE6CD20786259000CC06F /* ic_arrow_up_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_up_white.png; sourceTree = "<group>"; };
+		848BE6CE20786259000CC06F /* ic_dropdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dropdown.png; sourceTree = "<group>"; };
+		848BE6CF20786259000CC06F /* logo_shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_shop.png; sourceTree = "<group>"; };
+		848BE6D02078625A000CC06F /* ic_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_background.jpg; sourceTree = "<group>"; };
+		848BE6D12078625A000CC06F /* ic_keyboard_voice_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_keyboard_voice_white.png; sourceTree = "<group>"; };
+		848BE6D22078625B000CC06F /* notification_bg_low_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification_bg_low_normal.9.png; sourceTree = "<group>"; };
+		848BE6D32078625B000CC06F /* ic_chelsea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_chelsea.png; sourceTree = "<group>"; };
+		848BE6D42078625B000CC06F /* ic_search_vector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_search_vector.png; sourceTree = "<group>"; };
+		848BE6D52078625B000CC06F /* notify_panel_notification_icon_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notify_panel_notification_icon_bg.png; sourceTree = "<group>"; };
+		848BE6D62078625C000CC06F /* notification_bg_normal_pressed.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification_bg_normal_pressed.9.png; sourceTree = "<group>"; };
+		848BE6D72078625C000CC06F /* ic_arsenal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arsenal.png; sourceTree = "<group>"; };
+		848BE6D82078625C000CC06F /* icon_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_male.png; sourceTree = "<group>"; };
+		848BE6D92078625C000CC06F /* ic_logo_text_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_logo_text_2.png; sourceTree = "<group>"; };
+		848BE6DA2078625D000CC06F /* met_ic_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = met_ic_clear.png; sourceTree = "<group>"; };
+		848BE6DB2078625D000CC06F /* ic_background_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_background_click.png; sourceTree = "<group>"; };
+		848BE6DC2078625D000CC06F /* notification_bg_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification_bg_normal.9.png; sourceTree = "<group>"; };
+		848BE6DD2078625D000CC06F /* notification_bg_low_pressed.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification_bg_low_pressed.9.png; sourceTree = "<group>"; };
+		848BE6DE2078625E000CC06F /* ic_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_about.png; sourceTree = "<group>"; };
+		848BE6DF2078625E000CC06F /* ic_mancity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_mancity.png; sourceTree = "<group>"; };
+		848BE6E02078625E000CC06F /* ic_item_delete_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_item_delete_blue.png; sourceTree = "<group>"; };
+		848BE6E12078625F000CC06F /* ic_cancel_grey600_36dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_cancel_grey600_36dp.png; sourceTree = "<group>"; };
+		848BE6E22078625F000CC06F /* ic_loading_bound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_loading_bound.png; sourceTree = "<group>"; };
+		848BE6E32078625F000CC06F /* ic_notifications_white_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_notifications_white_24dp.png; sourceTree = "<group>"; };
+		848BE6E42078625F000CC06F /* ic_retry_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_retry_black_24dp.png; sourceTree = "<group>"; };
+		848BE6E520786260000CC06F /* icon_disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_disclosure.png; sourceTree = "<group>"; };
+		848BE6E620786260000CC06F /* ic_notification_gray_40dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_notification_gray_40dp.png; sourceTree = "<group>"; };
+		848BE6E720786260000CC06F /* ic_user_30dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_user_30dp.png; sourceTree = "<group>"; };
+		848BE6E820786261000CC06F /* ic_search_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_search_white.png; sourceTree = "<group>"; };
+		848BE6E920786261000CC06F /* ic_keyboard_arrow_right_gray_48dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_keyboard_arrow_right_gray_48dp.png; sourceTree = "<group>"; };
+		848BE6EA20786261000CC06F /* ic_browser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_browser.png; sourceTree = "<group>"; };
+		848BE6EB20786261000CC06F /* ic_password_30dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_password_30dp.png; sourceTree = "<group>"; };
+		848BE6EC20786262000CC06F /* common_google_signin_btn_text_dark_disabled.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_text_dark_disabled.9.png; sourceTree = "<group>"; };
+		848BE6ED20786262000CC06F /* common_google_signin_btn_icon_dark_pressed.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_icon_dark_pressed.9.png; sourceTree = "<group>"; };
+		848BE6EE20786262000CC06F /* ic_cart_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_cart_empty.png; sourceTree = "<group>"; };
+		848BE6EF20786263000CC06F /* ic_domain_20dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_domain_20dp.png; sourceTree = "<group>"; };
+		848BE6F020786263000CC06F /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
+		848BE6F120786263000CC06F /* common_google_signin_btn_text_dark_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_text_dark_normal.9.png; sourceTree = "<group>"; };
+		848BE6F220786264000CC06F /* ic_no_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_no_image.png; sourceTree = "<group>"; };
+		848BE6F320786264000CC06F /* ic_previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_previous.png; sourceTree = "<group>"; };
+		848BE6F420786264000CC06F /* ic_logo_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_logo_full.png; sourceTree = "<group>"; };
+		848BE6F520786265000CC06F /* ic_action_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_back.png; sourceTree = "<group>"; };
+		848BE6F620786265000CC06F /* common_google_signin_btn_text_light_pressed.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_text_light_pressed.9.png; sourceTree = "<group>"; };
+		848BE6F720786265000CC06F /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
+		848BE6F820786266000CC06F /* ic_bg_license_2_01_out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_bg_license_2_01_out.png; sourceTree = "<group>"; };
+		848BE6F920786266000CC06F /* icon_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_next.png; sourceTree = "<group>"; };
+		848BE6FA20786266000CC06F /* common_full_open_on_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_full_open_on_phone.png; sourceTree = "<group>"; };
+		848BE6FB20786266000CC06F /* ic_hamburger_menu_vector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_hamburger_menu_vector.png; sourceTree = "<group>"; };
+		848BE6FC20786267000CC06F /* ic_action_previous_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_previous_item.png; sourceTree = "<group>"; };
+		848BE6FD20786267000CC06F /* ic_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_check.png; sourceTree = "<group>"; };
+		848BE6FE20786267000CC06F /* design_ic_visibility_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = design_ic_visibility_off.png; sourceTree = "<group>"; };
+		848BE6FF20786267000CC06F /* ic_gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_gift.png; sourceTree = "<group>"; };
+		848BE70020786268000CC06F /* ic_help_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_help_gray.png; sourceTree = "<group>"; };
+		848BE70120786268000CC06F /* ic_cancel_40dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_cancel_40dp.png; sourceTree = "<group>"; };
+		848BE70220786268000CC06F /* ic_mobile_fb_history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_mobile_fb_history.png; sourceTree = "<group>"; };
+		848BE70320786269000CC06F /* ic_gift_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_gift_phone.png; sourceTree = "<group>"; };
+		848BE70420786269000CC06F /* ic_introduction3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_introduction3.png; sourceTree = "<group>"; };
+		848BE70520786269000CC06F /* ic_back_vector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back_vector.png; sourceTree = "<group>"; };
+		848BE70620786269000CC06F /* logo_shop2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_shop2.png; sourceTree = "<group>"; };
+		848BE7072078626A000CC06F /* common_google_signin_btn_icon_dark_disabled.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_icon_dark_disabled.9.png; sourceTree = "<group>"; };
+		848BE7082078626A000CC06F /* common_google_signin_btn_icon_light_pressed.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_icon_light_pressed.9.png; sourceTree = "<group>"; };
+		848BE7092078626A000CC06F /* ic_back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back_white.png; sourceTree = "<group>"; };
+		848BE70A2078626B000CC06F /* ic_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_next.png; sourceTree = "<group>"; };
+		848BE70B2078626B000CC06F /* ic_app_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_app_logo.png; sourceTree = "<group>"; };
+		848BE70C2078626B000CC06F /* common_google_signin_btn_icon_dark_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_icon_dark_normal.9.png; sourceTree = "<group>"; };
+		848BE70D2078626C000CC06F /* ic_help_gray_40dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_help_gray_40dp.png; sourceTree = "<group>"; };
+		848BE70E2078626E000CC06F /* ic_scan_barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_scan_barcode.png; sourceTree = "<group>"; };
+		848BE70F2078626E000CC06F /* icon_saler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_saler.png; sourceTree = "<group>"; };
+		848BE7102078626E000CC06F /* ic_sale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sale.png; sourceTree = "<group>"; };
+		848BE7112078626F000CC06F /* ic_app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_app.png; sourceTree = "<group>"; };
+		848BE7122078626F000CC06F /* tap_dang_nhap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap_dang_nhap.png; sourceTree = "<group>"; };
+		848BE7132078626F000CC06F /* ic_menu_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_share.png; sourceTree = "<group>"; };
+		848BE71420786270000CC06F /* common_google_signin_btn_icon_light_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_icon_light_normal.9.png; sourceTree = "<group>"; };
+		848BE71520786270000CC06F /* ic_btn_slidemenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_btn_slidemenu.png; sourceTree = "<group>"; };
+		848BE71620786270000CC06F /* ic_pause_vector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_pause_vector.png; sourceTree = "<group>"; };
+		848BE71720786271000CC06F /* common_google_signin_btn_text_dark_pressed.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_text_dark_pressed.9.png; sourceTree = "<group>"; };
+		848BE71820786271000CC06F /* ic_clear_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_clear_text.png; sourceTree = "<group>"; };
+		848BE71920786271000CC06F /* ic_introduction2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_introduction2.png; sourceTree = "<group>"; };
+		848BE71A20786271000CC06F /* ptr_pulltorefresh_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ptr_pulltorefresh_arrow.png; sourceTree = "<group>"; };
+		848BE71B20786272000CC06F /* ic_menu_change_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_change_password.png; sourceTree = "<group>"; };
+		848BE71C20786272000CC06F /* ic_menu_logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_logout.png; sourceTree = "<group>"; };
+		848BE71D20786272000CC06F /* ic_about_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_about_selected.png; sourceTree = "<group>"; };
+		848BE71E20786273000CC06F /* ic_logo_full_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_logo_full_gray.png; sourceTree = "<group>"; };
+		848BE71F20786273000CC06F /* ic_previous_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_previous_white.png; sourceTree = "<group>"; };
+		848BE72020786273000CC06F /* default_dang_nhap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_dang_nhap.png; sourceTree = "<group>"; };
+		848BE72120786273000CC06F /* ic_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back.png; sourceTree = "<group>"; };
+		848BE72220786274000CC06F /* ic_voice_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_voice_black_24dp.png; sourceTree = "<group>"; };
+		848BE72320786274000CC06F /* common_google_signin_btn_text_light_disabled.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_text_light_disabled.9.png; sourceTree = "<group>"; };
+		848BE72420786274000CC06F /* scanCode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scanCode.png; sourceTree = "<group>"; };
+		848BE72520786275000CC06F /* ic_check_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_check_black_24dp.png; sourceTree = "<group>"; };
+		848BE72620786275000CC06F /* ic_fb_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_fb_phone.png; sourceTree = "<group>"; };
+		848BE72720786275000CC06F /* ic_arrow_down_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_down_white.png; sourceTree = "<group>"; };
+		848BE72820786275000CC06F /* icon_tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tick.png; sourceTree = "<group>"; };
+		848BE72920786276000CC06F /* common_google_signin_btn_icon_light_disabled.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_google_signin_btn_icon_light_disabled.9.png; sourceTree = "<group>"; };
+		848BE72A20786276000CC06F /* ic_menu_rate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_rate.png; sourceTree = "<group>"; };
+		848BE72B20786276000CC06F /* ic_menu_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_about.png; sourceTree = "<group>"; };
+		848BE72C20786277000CC06F /* ic_help_vector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_help_vector.png; sourceTree = "<group>"; };
+		848BE72D20786277000CC06F /* ic_cart_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_cart_red.png; sourceTree = "<group>"; };
+		848BE72E20786277000CC06F /* ic_force_version_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_force_version_1.png; sourceTree = "<group>"; };
+		848BE72F20786277000CC06F /* ic_logo_no_bound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_logo_no_bound.png; sourceTree = "<group>"; };
+		848BE73020786278000CC06F /* icon_round_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_round_gray.png; sourceTree = "<group>"; };
+		848BE73120786278000CC06F /* design_ic_visibility.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = design_ic_visibility.png; sourceTree = "<group>"; };
+		848BE7A720786361000CC06F /* bg_login_user.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_login_user.jpg; sourceTree = "<group>"; };
+		848BE7A92078637C000CC06F /* ic_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_back.png; path = ../../../../../MyFirstProject/mshopkeeper_database/MShopKeeper/MShopKeeper/ic_back.png; sourceTree = "<group>"; };
+		848BE7AC207866B7000CC06F /* bg_null.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_null.png; sourceTree = "<group>"; };
+		848BE7AD207866B8000CC06F /* abc_ab_share_pack_mtrl_alpha.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc_ab_share_pack_mtrl_alpha.9.png; sourceTree = "<group>"; };
+		848BE7B2207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc_textfield_search_default_mtrl_alpha.9.png; sourceTree = "<group>"; };
+		848BE7BE20786708000CC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		848BE7C020786708000CC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A25ABE2C0661B7952043260D /* Pods_MShopkeeper_Quanly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MShopkeeper_Quanly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06221F43DFACA063B55F4CA /* Pods-MShopkeeper_Quanly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MShopkeeper_Quanly.release.xcconfig"; path = "Pods/Target Support Files/Pods-MShopkeeper_Quanly/Pods-MShopkeeper_Quanly.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		848BE690207857AA000CC06F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA49476C3D49D49A56FA4F6 /* Pods_MShopkeeper_Quanly.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		073B4BB4583B7BBBB5166DA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A25ABE2C0661B7952043260D /* Pods_MShopkeeper_Quanly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		848BE68A207857AA000CC06F = {
+			isa = PBXGroup;
+			children = (
+				848BE695207857AB000CC06F /* MShopkeeper_Quanly */,
+				848BE694207857AB000CC06F /* Products */,
+				99DA46B5D27EF43C800223B9 /* Pods */,
+				073B4BB4583B7BBBB5166DA7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		848BE694207857AB000CC06F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				848BE693207857AB000CC06F /* MShopkeeper_Quanly.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		848BE695207857AB000CC06F /* MShopkeeper_Quanly */ = {
+			isa = PBXGroup;
+			children = (
+				848BE6B220786141000CC06F /* Library */,
+				848BE6B12078613B000CC06F /* Resource */,
+				848BE6B02078612E000CC06F /* Util */,
+				848BE6AF2078611A000CC06F /* ViewController */,
+				848BE6AE20786112000CC06F /* ViewModel */,
+				848BE6AC20786106000CC06F /* Model */,
+				848BE6AB207860F4000CC06F /* SupportFile */,
+			);
+			path = MShopkeeper_Quanly;
+			sourceTree = "<group>";
+		};
+		848BE6AB207860F4000CC06F /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				848BE7BD20786708000CC06F /* LaunchScreen.storyboard */,
+				848BE7BF20786708000CC06F /* Main.storyboard */,
+				848BE698207857AB000CC06F /* ViewController.swift */,
+				848BE696207857AB000CC06F /* AppDelegate.swift */,
+				848BE6A0207857AB000CC06F /* Assets.xcassets */,
+				848BE6A5207857AB000CC06F /* Info.plist */,
+				848BE69D207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld */,
+			);
+			path = SupportFile;
+			sourceTree = "<group>";
+		};
+		848BE6AC20786106000CC06F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		848BE6AE20786112000CC06F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		848BE6AF2078611A000CC06F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		848BE6B02078612E000CC06F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		848BE6B12078613B000CC06F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				848BE7A62078628E000CC06F /* Image */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		848BE6B220786141000CC06F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				848BE6B520786176000CC06F /* Reachability.swift */,
+				848BE6B320786176000CC06F /* SlideMenuController.swift */,
+				848BE6B420786176000CC06F /* SlideMenuControllerSwift.h */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		848BE7A62078628E000CC06F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				848BE7AD207866B8000CC06F /* abc_ab_share_pack_mtrl_alpha.9.png */,
+				848BE7B2207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png */,
+				848BE7AC207866B7000CC06F /* bg_null.png */,
+				848BE7A92078637C000CC06F /* ic_back.png */,
+				848BE7A720786361000CC06F /* bg_login_user.jpg */,
+				848BE6FA20786266000CC06F /* common_full_open_on_phone.png */,
+				848BE7072078626A000CC06F /* common_google_signin_btn_icon_dark_disabled.9.png */,
+				848BE70C2078626B000CC06F /* common_google_signin_btn_icon_dark_normal.9.png */,
+				848BE6ED20786262000CC06F /* common_google_signin_btn_icon_dark_pressed.9.png */,
+				848BE72920786276000CC06F /* common_google_signin_btn_icon_light_disabled.9.png */,
+				848BE71420786270000CC06F /* common_google_signin_btn_icon_light_normal.9.png */,
+				848BE7082078626A000CC06F /* common_google_signin_btn_icon_light_pressed.9.png */,
+				848BE6EC20786262000CC06F /* common_google_signin_btn_text_dark_disabled.9.png */,
+				848BE6F120786263000CC06F /* common_google_signin_btn_text_dark_normal.9.png */,
+				848BE71720786271000CC06F /* common_google_signin_btn_text_dark_pressed.9.png */,
+				848BE72320786274000CC06F /* common_google_signin_btn_text_light_disabled.9.png */,
+				848BE6C420786257000CC06F /* common_google_signin_btn_text_light_normal.9.png */,
+				848BE6F620786265000CC06F /* common_google_signin_btn_text_light_pressed.9.png */,
+				848BE72020786273000CC06F /* default_dang_nhap.png */,
+				848BE6FE20786267000CC06F /* design_ic_visibility_off.png */,
+				848BE73120786278000CC06F /* design_ic_visibility.png */,
+				848BE71D20786272000CC06F /* ic_about_selected.png */,
+				848BE6DE2078625E000CC06F /* ic_about.png */,
+				848BE6F520786265000CC06F /* ic_action_back.png */,
+				848BE6FC20786267000CC06F /* ic_action_previous_item.png */,
+				848BE70B2078626B000CC06F /* ic_app_logo.png */,
+				848BE7112078626F000CC06F /* ic_app.png */,
+				848BE72720786275000CC06F /* ic_arrow_down_white.png */,
+				848BE6CD20786259000CC06F /* ic_arrow_up_white.png */,
+				848BE6D72078625C000CC06F /* ic_arsenal.png */,
+				848BE70520786269000CC06F /* ic_back_vector.png */,
+				848BE7092078626A000CC06F /* ic_back_white.png */,
+				848BE72120786273000CC06F /* ic_back.png */,
+				848BE6DB2078625D000CC06F /* ic_background_click.png */,
+				848BE6D02078625A000CC06F /* ic_background.jpg */,
+				848BE6F820786266000CC06F /* ic_bg_license_2_01_out.png */,
+				848BE6BE20786256000CC06F /* ic_bg_license_2_01.png */,
+				848BE6EA20786261000CC06F /* ic_browser.png */,
+				848BE71520786270000CC06F /* ic_btn_slidemenu.png */,
+				848BE70120786268000CC06F /* ic_cancel_40dp.png */,
+				848BE6E12078625F000CC06F /* ic_cancel_grey600_36dp.png */,
+				848BE6EE20786262000CC06F /* ic_cart_empty.png */,
+				848BE72D20786277000CC06F /* ic_cart_red.png */,
+				848BE72520786275000CC06F /* ic_check_black_24dp.png */,
+				848BE6FD20786267000CC06F /* ic_check.png */,
+				848BE6D32078625B000CC06F /* ic_chelsea.png */,
+				848BE71820786271000CC06F /* ic_clear_text.png */,
+				848BE6C820786258000CC06F /* ic_cloud_force_version_1.png */,
+				848BE6EF20786263000CC06F /* ic_domain_20dp.png */,
+				848BE6CE20786259000CC06F /* ic_dropdown.png */,
+				848BE72620786275000CC06F /* ic_fb_phone.png */,
+				848BE6C220786256000CC06F /* ic_female.png */,
+				848BE72E20786277000CC06F /* ic_force_version_1.png */,
+				848BE70320786269000CC06F /* ic_gift_phone.png */,
+				848BE6FF20786267000CC06F /* ic_gift.png */,
+				848BE6FB20786266000CC06F /* ic_hamburger_menu_vector.png */,
+				848BE70D2078626C000CC06F /* ic_help_gray_40dp.png */,
+				848BE70020786268000CC06F /* ic_help_gray.png */,
+				848BE72C20786277000CC06F /* ic_help_vector.png */,
+				848BE6C020786256000CC06F /* ic_introduction1.png */,
+				848BE71920786271000CC06F /* ic_introduction2.png */,
+				848BE70420786269000CC06F /* ic_introduction3.png */,
+				848BE6E02078625E000CC06F /* ic_item_delete_blue.png */,
+				848BE6E920786261000CC06F /* ic_keyboard_arrow_right_gray_48dp.png */,
+				848BE6D12078625A000CC06F /* ic_keyboard_voice_white.png */,
+				848BE6F720786265000CC06F /* ic_launcher.png */,
+				848BE6E22078625F000CC06F /* ic_loading_bound.png */,
+				848BE71E20786273000CC06F /* ic_logo_full_gray.png */,
+				848BE6F420786264000CC06F /* ic_logo_full.png */,
+				848BE72F20786277000CC06F /* ic_logo_no_bound.png */,
+				848BE6D92078625C000CC06F /* ic_logo_text_2.png */,
+				848BE6DF2078625E000CC06F /* ic_mancity.png */,
+				848BE72B20786276000CC06F /* ic_menu_about.png */,
+				848BE71B20786272000CC06F /* ic_menu_change_password.png */,
+				848BE71C20786272000CC06F /* ic_menu_logout.png */,
+				848BE72A20786276000CC06F /* ic_menu_rate.png */,
+				848BE7132078626F000CC06F /* ic_menu_share.png */,
+				848BE70220786268000CC06F /* ic_mobile_fb_history.png */,
+				848BE6C120786256000CC06F /* ic_next_24dp.png */,
+				848BE70A2078626B000CC06F /* ic_next.png */,
+				848BE6F220786264000CC06F /* ic_no_image.png */,
+				848BE6E620786260000CC06F /* ic_notification_gray_40dp.png */,
+				848BE6E32078625F000CC06F /* ic_notifications_white_24dp.png */,
+				848BE6EB20786261000CC06F /* ic_password_30dp.png */,
+				848BE71620786270000CC06F /* ic_pause_vector.png */,
+				848BE6CA20786258000CC06F /* ic_pause_white.png */,
+				848BE71F20786273000CC06F /* ic_previous_white.png */,
+				848BE6F320786264000CC06F /* ic_previous.png */,
+				848BE6E42078625F000CC06F /* ic_retry_black_24dp.png */,
+				848BE7102078626E000CC06F /* ic_sale.png */,
+				848BE70E2078626E000CC06F /* ic_scan_barcode.png */,
+				848BE6D42078625B000CC06F /* ic_search_vector.png */,
+				848BE6E820786261000CC06F /* ic_search_white.png */,
+				848BE6C720786257000CC06F /* ic_success_sync_40dp.png */,
+				848BE6E720786260000CC06F /* ic_user_30dp.png */,
+				848BE72220786274000CC06F /* ic_voice_black_24dp.png */,
+				848BE6C320786257000CC06F /* ic_warning_sync_1.png */,
+				848BE6C520786257000CC06F /* icon_baby.png */,
+				848BE6E520786260000CC06F /* icon_disclosure.png */,
+				848BE6C620786257000CC06F /* icon_female.png */,
+				848BE6D82078625C000CC06F /* icon_male.png */,
+				848BE6BF20786256000CC06F /* icon_message.png */,
+				848BE6F920786266000CC06F /* icon_next.png */,
+				848BE6CB20786258000CC06F /* icon_person.png */,
+				848BE6C920786258000CC06F /* icon_public.png */,
+				848BE73020786278000CC06F /* icon_round_gray.png */,
+				848BE70F2078626E000CC06F /* icon_saler.png */,
+				848BE72820786275000CC06F /* icon_tick.png */,
+				848BE6CC20786259000CC06F /* item1.jpg */,
+				848BE6F020786263000CC06F /* key.png */,
+				848BE6CF20786259000CC06F /* logo_shop.png */,
+				848BE70620786269000CC06F /* logo_shop2.png */,
+				848BE6DA2078625D000CC06F /* met_ic_clear.png */,
+				848BE6D22078625B000CC06F /* notification_bg_low_normal.9.png */,
+				848BE6DD2078625D000CC06F /* notification_bg_low_pressed.9.png */,
+				848BE6D62078625C000CC06F /* notification_bg_normal_pressed.9.png */,
+				848BE6DC2078625D000CC06F /* notification_bg_normal.9.png */,
+				848BE6D52078625B000CC06F /* notify_panel_notification_icon_bg.png */,
+				848BE71A20786271000CC06F /* ptr_pulltorefresh_arrow.png */,
+				848BE72420786274000CC06F /* scanCode.png */,
+				848BE7122078626F000CC06F /* tap_dang_nhap.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		99DA46B5D27EF43C800223B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A1AF5E38AC2AC728707AEC0 /* Pods-MShopkeeper_Quanly.debug.xcconfig */,
+				D06221F43DFACA063B55F4CA /* Pods-MShopkeeper_Quanly.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		848BE692207857AA000CC06F /* MShopkeeper_Quanly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848BE6A8207857AB000CC06F /* Build configuration list for PBXNativeTarget "MShopkeeper_Quanly" */;
+			buildPhases = (
+				2CAD346E058706B6B26BC97D /* [CP] Check Pods Manifest.lock */,
+				848BE68F207857AA000CC06F /* Sources */,
+				848BE690207857AA000CC06F /* Frameworks */,
+				848BE691207857AA000CC06F /* Resources */,
+				2394A6482D75D668F1410B59 /* [CP] Embed Pods Frameworks */,
+				52D0528585A3C44FCDCDF784 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MShopkeeper_Quanly;
+			productName = MShopkeeper_Quanly;
+			productReference = 848BE693207857AB000CC06F /* MShopkeeper_Quanly.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		848BE68B207857AA000CC06F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Admin;
+				TargetAttributes = {
+					848BE692207857AA000CC06F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 848BE68E207857AA000CC06F /* Build configuration list for PBXProject "MShopkeeper_Quanly" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 848BE68A207857AA000CC06F;
+			productRefGroup = 848BE694207857AB000CC06F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				848BE692207857AA000CC06F /* MShopkeeper_Quanly */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		848BE691207857AA000CC06F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848BE7B6207866B9000CC06F /* abc_ab_share_pack_mtrl_alpha.9.png in Resources */,
+				848BE78C20786278000CC06F /* ic_clear_text.png in Resources */,
+				848BE75E20786278000CC06F /* ic_browser.png in Resources */,
+				848BE79A20786278000CC06F /* ic_fb_phone.png in Resources */,
+				848BE76320786278000CC06F /* ic_domain_20dp.png in Resources */,
+				848BE7BB207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png in Resources */,
+				848BE77320786278000CC06F /* ic_gift.png in Resources */,
+				848BE73C20786278000CC06F /* ic_cloud_force_version_1.png in Resources */,
+				848BE73920786278000CC06F /* icon_baby.png in Resources */,
+				848BE76620786278000CC06F /* ic_no_image.png in Resources */,
+				848BE76920786278000CC06F /* ic_action_back.png in Resources */,
+				848BE78720786278000CC06F /* ic_menu_share.png in Resources */,
+				848BE73220786278000CC06F /* ic_bg_license_2_01.png in Resources */,
+				848BE76B20786278000CC06F /* ic_launcher.png in Resources */,
+				848BE6A1207857AB000CC06F /* Assets.xcassets in Resources */,
+				848BE75220786278000CC06F /* ic_about.png in Resources */,
+				848BE74B20786278000CC06F /* ic_arsenal.png in Resources */,
+				848BE75A20786278000CC06F /* ic_notification_gray_40dp.png in Resources */,
+				848BE77D20786278000CC06F /* ic_back_white.png in Resources */,
+				848BE76120786278000CC06F /* common_google_signin_btn_icon_dark_pressed.9.png in Resources */,
+				848BE78520786278000CC06F /* ic_app.png in Resources */,
+				848BE75B20786278000CC06F /* ic_user_30dp.png in Resources */,
+				848BE76A20786278000CC06F /* common_google_signin_btn_text_light_pressed.9.png in Resources */,
+				848BE75620786278000CC06F /* ic_loading_bound.png in Resources */,
+				848BE79020786278000CC06F /* ic_menu_logout.png in Resources */,
+				848BE77220786278000CC06F /* design_ic_visibility_off.png in Resources */,
+				848BE77820786278000CC06F /* ic_introduction3.png in Resources */,
+				848BE77120786278000CC06F /* ic_check.png in Resources */,
+				848BE73420786278000CC06F /* ic_introduction1.png in Resources */,
+				848BE74F20786278000CC06F /* ic_background_click.png in Resources */,
+				848BE74320786278000CC06F /* logo_shop.png in Resources */,
+				848BE79E20786278000CC06F /* ic_menu_rate.png in Resources */,
+				848BE75720786278000CC06F /* ic_notifications_white_24dp.png in Resources */,
+				848BE73520786278000CC06F /* ic_next_24dp.png in Resources */,
+				848BE7B5207866B9000CC06F /* bg_null.png in Resources */,
+				848BE77920786278000CC06F /* ic_back_vector.png in Resources */,
+				848BE77B20786278000CC06F /* common_google_signin_btn_icon_dark_disabled.9.png in Resources */,
+				848BE75420786278000CC06F /* ic_item_delete_blue.png in Resources */,
+				848BE76520786278000CC06F /* common_google_signin_btn_text_dark_normal.9.png in Resources */,
+				848BE75320786278000CC06F /* ic_mancity.png in Resources */,
+				848BE77720786278000CC06F /* ic_gift_phone.png in Resources */,
+				848BE77020786278000CC06F /* ic_action_previous_item.png in Resources */,
+				848BE74C20786278000CC06F /* icon_male.png in Resources */,
+				848BE77A20786278000CC06F /* logo_shop2.png in Resources */,
+				848BE75520786278000CC06F /* ic_cancel_grey600_36dp.png in Resources */,
+				848BE7AA2078637D000CC06F /* ic_back.png in Resources */,
+				848BE75C20786278000CC06F /* ic_search_white.png in Resources */,
+				848BE74120786278000CC06F /* ic_arrow_up_white.png in Resources */,
+				848BE73D20786278000CC06F /* icon_public.png in Resources */,
+				848BE77F20786278000CC06F /* ic_app_logo.png in Resources */,
+				848BE78120786278000CC06F /* ic_help_gray_40dp.png in Resources */,
+				848BE78020786278000CC06F /* common_google_signin_btn_icon_dark_normal.9.png in Resources */,
+				848BE78F20786278000CC06F /* ic_menu_change_password.png in Resources */,
+				848BE74520786278000CC06F /* ic_keyboard_voice_white.png in Resources */,
+				848BE74020786278000CC06F /* item1.jpg in Resources */,
+				848BE78920786278000CC06F /* ic_btn_slidemenu.png in Resources */,
+				848BE74820786278000CC06F /* ic_search_vector.png in Resources */,
+				848BE76220786278000CC06F /* ic_cart_empty.png in Resources */,
+				848BE75820786278000CC06F /* ic_retry_black_24dp.png in Resources */,
+				848BE74620786278000CC06F /* notification_bg_low_normal.9.png in Resources */,
+				848BE7C120786708000CC06F /* LaunchScreen.storyboard in Resources */,
+				848BE77520786278000CC06F /* ic_cancel_40dp.png in Resources */,
+				848BE79420786278000CC06F /* default_dang_nhap.png in Resources */,
+				848BE76720786278000CC06F /* ic_previous.png in Resources */,
+				848BE74220786278000CC06F /* ic_dropdown.png in Resources */,
+				848BE78D20786278000CC06F /* ic_introduction2.png in Resources */,
+				848BE78820786278000CC06F /* common_google_signin_btn_icon_light_normal.9.png in Resources */,
+				848BE74720786278000CC06F /* ic_chelsea.png in Resources */,
+				848BE75F20786278000CC06F /* ic_password_30dp.png in Resources */,
+				848BE79520786278000CC06F /* ic_back.png in Resources */,
+				848BE78E20786278000CC06F /* ptr_pulltorefresh_arrow.png in Resources */,
+				848BE74D20786278000CC06F /* ic_logo_text_2.png in Resources */,
+				848BE75920786278000CC06F /* icon_disclosure.png in Resources */,
+				848BE73620786278000CC06F /* ic_female.png in Resources */,
+				848BE79720786278000CC06F /* common_google_signin_btn_text_light_disabled.9.png in Resources */,
+				848BE75120786278000CC06F /* notification_bg_low_pressed.9.png in Resources */,
+				848BE79320786278000CC06F /* ic_previous_white.png in Resources */,
+				848BE73820786278000CC06F /* common_google_signin_btn_text_light_normal.9.png in Resources */,
+				848BE79D20786278000CC06F /* common_google_signin_btn_icon_light_disabled.9.png in Resources */,
+				848BE7A320786278000CC06F /* ic_logo_no_bound.png in Resources */,
+				848BE7A420786278000CC06F /* icon_round_gray.png in Resources */,
+				848BE76F20786278000CC06F /* ic_hamburger_menu_vector.png in Resources */,
+				848BE79920786278000CC06F /* ic_check_black_24dp.png in Resources */,
+				848BE73F20786278000CC06F /* icon_person.png in Resources */,
+				848BE78220786278000CC06F /* ic_scan_barcode.png in Resources */,
+				848BE73B20786278000CC06F /* ic_success_sync_40dp.png in Resources */,
+				848BE79B20786278000CC06F /* ic_arrow_down_white.png in Resources */,
+				848BE73A20786278000CC06F /* icon_female.png in Resources */,
+				848BE77420786278000CC06F /* ic_help_gray.png in Resources */,
+				848BE79F20786278000CC06F /* ic_menu_about.png in Resources */,
+				848BE75D20786278000CC06F /* ic_keyboard_arrow_right_gray_48dp.png in Resources */,
+				848BE7C220786708000CC06F /* Main.storyboard in Resources */,
+				848BE7A820786362000CC06F /* bg_login_user.jpg in Resources */,
+				848BE76E20786278000CC06F /* common_full_open_on_phone.png in Resources */,
+				848BE79220786278000CC06F /* ic_logo_full_gray.png in Resources */,
+				848BE79820786278000CC06F /* scanCode.png in Resources */,
+				848BE75020786278000CC06F /* notification_bg_normal.9.png in Resources */,
+				848BE76820786278000CC06F /* ic_logo_full.png in Resources */,
+				848BE78A20786278000CC06F /* ic_pause_vector.png in Resources */,
+				848BE7A120786278000CC06F /* ic_cart_red.png in Resources */,
+				848BE73720786278000CC06F /* ic_warning_sync_1.png in Resources */,
+				848BE78420786278000CC06F /* ic_sale.png in Resources */,
+				848BE76420786278000CC06F /* key.png in Resources */,
+				848BE77C20786278000CC06F /* common_google_signin_btn_icon_light_pressed.9.png in Resources */,
+				848BE77620786278000CC06F /* ic_mobile_fb_history.png in Resources */,
+				848BE78320786278000CC06F /* icon_saler.png in Resources */,
+				848BE78B20786278000CC06F /* common_google_signin_btn_text_dark_pressed.9.png in Resources */,
+				848BE74E20786278000CC06F /* met_ic_clear.png in Resources */,
+				848BE76C20786278000CC06F /* ic_bg_license_2_01_out.png in Resources */,
+				848BE77E20786278000CC06F /* ic_next.png in Resources */,
+				848BE79C20786278000CC06F /* icon_tick.png in Resources */,
+				848BE7A220786278000CC06F /* ic_force_version_1.png in Resources */,
+				848BE78620786278000CC06F /* tap_dang_nhap.png in Resources */,
+				848BE73E20786278000CC06F /* ic_pause_white.png in Resources */,
+				848BE7A020786278000CC06F /* ic_help_vector.png in Resources */,
+				848BE79620786278000CC06F /* ic_voice_black_24dp.png in Resources */,
+				848BE73320786278000CC06F /* icon_message.png in Resources */,
+				848BE74920786278000CC06F /* notify_panel_notification_icon_bg.png in Resources */,
+				848BE74A20786278000CC06F /* notification_bg_normal_pressed.9.png in Resources */,
+				848BE79120786278000CC06F /* ic_about_selected.png in Resources */,
+				848BE76D20786278000CC06F /* icon_next.png in Resources */,
+				848BE76020786278000CC06F /* common_google_signin_btn_text_dark_disabled.9.png in Resources */,
+				848BE7A520786278000CC06F /* design_ic_visibility.png in Resources */,
+				848BE74420786278000CC06F /* ic_background.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2394A6482D75D668F1410B59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MShopkeeper_Quanly/Pods-MShopkeeper_Quanly-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MShopkeeper_Quanly/Pods-MShopkeeper_Quanly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CAD346E058706B6B26BC97D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MShopkeeper_Quanly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52D0528585A3C44FCDCDF784 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MShopkeeper_Quanly/Pods-MShopkeeper_Quanly-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		848BE68F207857AA000CC06F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848BE699207857AB000CC06F /* ViewController.swift in Sources */,
+				848BE69F207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld in Sources */,
+				848BE6B620786176000CC06F /* SlideMenuController.swift in Sources */,
+				848BE6B720786176000CC06F /* Reachability.swift in Sources */,
+				848BE697207857AB000CC06F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		848BE7BD20786708000CC06F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				848BE7BE20786708000CC06F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		848BE7BF20786708000CC06F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				848BE7C020786708000CC06F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		848BE6A6207857AB000CC06F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		848BE6A7207857AB000CC06F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		848BE6A9207857AB000CC06F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A1AF5E38AC2AC728707AEC0 /* Pods-MShopkeeper_Quanly.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MHMKQ53K33;
+				INFOPLIST_FILE = "$(SRCROOT)/MShopkeeper_Quanly/SupportFile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ddthanh.MShopkeeper-Quanly";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		848BE6AA207857AB000CC06F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D06221F43DFACA063B55F4CA /* Pods-MShopkeeper_Quanly.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MHMKQ53K33;
+				INFOPLIST_FILE = "$(SRCROOT)/MShopkeeper_Quanly/SupportFile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ddthanh.MShopkeeper-Quanly";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		848BE68E207857AA000CC06F /* Build configuration list for PBXProject "MShopkeeper_Quanly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848BE6A6207857AB000CC06F /* Debug */,
+				848BE6A7207857AB000CC06F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		848BE6A8207857AB000CC06F /* Build configuration list for PBXNativeTarget "MShopkeeper_Quanly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848BE6A9207857AB000CC06F /* Debug */,
+				848BE6AA207857AB000CC06F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		848BE69D207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				848BE69E207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodel */,
+			);
+			currentVersion = 848BE69E207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodel */;
+			path = MShopkeeper_Quanly.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 848BE68B207857AA000CC06F /* Project object */;
+}

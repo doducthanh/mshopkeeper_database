@@ -15,7 +15,7 @@
         <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LogInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LogInViewController" customModule="MShopKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LogInViewController" customModule="MShopkeeper_Quanly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nd4-cZ-XpJ"/>
                         <viewControllerLayoutGuide type="bottom" id="EZ4-h8-rzM"/>
@@ -419,7 +419,7 @@
         <!--Menu View Controller-->
         <scene sceneID="VSg-gt-hrE">
             <objects>
-                <viewController storyboardIdentifier="MenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t5N-cC-NB7" customClass="MenuViewController" customModule="MShopKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t5N-cC-NB7" customClass="MenuViewController" customModule="MShopkeeper_Quanly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9qJ-Op-tF2"/>
                         <viewControllerLayoutGuide type="bottom" id="Kw9-x3-DbW"/>
@@ -485,7 +485,7 @@
                                     <constraint firstAttribute="height" constant="300" id="Zfx-Qt-C3T"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="mycell" rowHeight="50" id="qQw-Bv-kVS" customClass="MenuTableViewCell" customModule="MShopKeeper" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="mycell" rowHeight="50" id="qQw-Bv-kVS" customClass="MenuTableViewCell" customModule="MShopkeeper_Quanly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="270" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qQw-Bv-kVS" id="NjZ-ot-bJg">
@@ -552,7 +552,8 @@
         <!--Select Customer View Controller-->
         <scene sceneID="9Iv-2X-n1J">
             <objects>
-                <viewController storyboardIdentifier="SelectCustomerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Hi-d5-n7o" customClass="SelectCustomerViewController" customModule="MShopKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVg-Et-M10" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="SelectCustomerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Hi-d5-n7o" customClass="SelectCustomerViewController" customModule="MShopkeeper_Quanly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F6K-GJ-dHr"/>
                         <viewControllerLayoutGuide type="bottom" id="gtB-MV-kLC"/>
@@ -564,7 +565,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOV-z3-N1L" userLabel="ViewContent">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hse-J6-U1O">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:hse-J6-U1O:image" translatesAutoresizingMaskIntoConstraints="NO" id="hse-J6-U1O">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5w-HY-VDx" userLabel="ViewMale">
@@ -578,7 +579,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_male.png" translatesAutoresizingMaskIntoConstraints="NO" id="vtj-PW-7Nh">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:vtj-PW-7Nh:image" translatesAutoresizingMaskIntoConstraints="NO" id="vtj-PW-7Nh">
                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -589,7 +590,7 @@
                                         <rect key="frame" x="46" y="195" width="101" height="124"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_baby.png" translatesAutoresizingMaskIntoConstraints="NO" id="DiM-uB-wr8">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:DiM-uB-wr8:image" translatesAutoresizingMaskIntoConstraints="NO" id="DiM-uB-wr8">
                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -607,7 +608,7 @@
                                         <rect key="frame" x="109" y="340" width="101" height="124"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_female.png" translatesAutoresizingMaskIntoConstraints="NO" id="LoJ-99-ZQQ">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:LoJ-99-ZQQ:image" translatesAutoresizingMaskIntoConstraints="NO" id="LoJ-99-ZQQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -624,7 +625,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTr-Di-HAe" userLabel="ViewHeader">
                                         <rect key="frame" x="59.5" y="40" width="200" height="125"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_shop2.png" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-cE-ksE">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:yZX-cE-ksE:image" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-cE-ksE">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="107"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="yZX-cE-ksE" secondAttribute="height" multiplier="1328:711" id="pT3-a4-b2E"/>
@@ -683,7 +684,7 @@
                                             <constraint firstAttribute="width" constant="56" id="NVP-dR-DPY"/>
                                             <constraint firstAttribute="height" constant="47" id="Roy-AP-L43"/>
                                         </constraints>
-                                        <state key="normal" image="icon_next.png"/>
+                                        <state key="normal" image="button:L0F-xg-mv8:image"/>
                                         <connections>
                                             <segue destination="JJA-T7-AXF" kind="show" id="pIS-Nn-qg0"/>
                                         </connections>
@@ -728,14 +729,14 @@
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hVg-Et-M10" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="975" y="1664.7887323943662"/>
         </scene>
         <!--Choose Clothes View Controller-->
         <scene sceneID="OjK-xB-5Jm">
             <objects>
-                <viewController storyboardIdentifier="ChooseClothesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JJA-T7-AXF" customClass="ChooseClothesViewController" customModule="MShopKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0g7-SU-aJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="ChooseClothesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JJA-T7-AXF" customClass="ChooseClothesViewController" customModule="MShopkeeper_Quanly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FcJ-tC-QL3"/>
                         <viewControllerLayoutGuide type="bottom" id="aDR-co-S55"/>
@@ -744,14 +745,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hp7-bd-yb0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:hse-J6-U1O:image" translatesAutoresizingMaskIntoConstraints="NO" id="Hp7-bd-yb0">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e2r-Cu-YdC" userLabel="ViewSaler">
                                 <rect key="frame" x="0.0" y="82" width="320" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_saler.png" translatesAutoresizingMaskIntoConstraints="NO" id="rRJ-Zv-V7k">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:rRJ-Zv-V7k:image" translatesAutoresizingMaskIntoConstraints="NO" id="rRJ-Zv-V7k">
                                         <rect key="frame" x="8" y="14" width="100" height="101"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -771,7 +772,7 @@
                                     <constraint firstAttribute="width" constant="56" id="QTq-Yw-RfH"/>
                                     <constraint firstAttribute="height" constant="47" id="d8H-7n-aZY"/>
                                 </constraints>
-                                <state key="normal" image="icon_next.png"/>
+                                <state key="normal" image="button:L0F-xg-mv8:image"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -785,7 +786,6 @@
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0g7-SU-aJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1659" y="1665"/>
         </scene>
@@ -812,7 +812,7 @@
         <!--Home View Controller-->
         <scene sceneID="OMF-LD-huK">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WKW-0n-aJ7" customClass="HomeViewController" customModule="MShopKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WKW-0n-aJ7" customClass="HomeViewController" customModule="MShopkeeper_Quanly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ejH-te-Imd"/>
                         <viewControllerLayoutGuide type="bottom" id="yMH-GU-cNR"/>
@@ -838,7 +838,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="mycell" id="3BN-4l-fYQ" customClass="HomeCollectionViewCell" customModule="MShopKeeper" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="mycell" id="3BN-4l-fYQ" customClass="HomeCollectionViewCell" customModule="MShopkeeper_Quanly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -996,7 +996,8 @@
         <!--Detail Item View Controller-->
         <scene sceneID="qlh-4r-1pg">
             <objects>
-                <viewController storyboardIdentifier="Detail_ItemViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1ms-y4-0rL" customClass="Detail_ItemViewController" customModule="MShopKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMY-kk-QnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Detail_ItemViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1ms-y4-0rL" customClass="Detail_ItemViewController" customModule="MShopkeeper_Quanly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ecE-TX-BhZ"/>
                         <viewControllerLayoutGuide type="bottom" id="aPU-1y-GqK"/>
@@ -1011,7 +1012,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Swt-KH-621" userLabel="ViewScroll">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ZX-Rn-VIV" customClass="ViewOutOfStock" customModule="MShopKeeper" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ZX-Rn-VIV" customClass="ViewOutOfStock" customModule="MShopkeeper_Quanly" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="258" width="375" height="250"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1022,7 +1023,7 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="17B-ls-Rxe">
                                                         <rect key="frame" x="62.5" y="15" width="250" height="220"/>
                                                     </imageView>
-                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sale.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gfh-rr-wRs">
+                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:Gfh-rr-wRs:image" translatesAutoresizingMaskIntoConstraints="NO" id="Gfh-rr-wRs">
                                                         <rect key="frame" x="315" y="0.0" width="55" height="52"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="aj7-YE-qIg"/>
@@ -1082,7 +1083,7 @@
                                                                 <color key="onTintColor" red="0.25094205141067505" green="0.49873995780944824" blue="0.68173062801361084" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trừ vào số lượng hàng hoá khách đặt vao tồn kho" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyG-pd-ew3">
-                                                                <rect key="frame" x="55" y="60" width="270" height="50"/>
+                                                                <rect key="frame" x="55" y="59.5" width="270" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1312,14 +1313,14 @@
                         <outlet property="viewSize" destination="s0W-Ag-8dI" id="ffb-6y-5SQ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dMY-kk-QnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2875" y="723"/>
         </scene>
         <!--Scan Code View Controller-->
         <scene sceneID="QLS-8B-ZwF">
             <objects>
-                <viewController id="9UZ-W8-AeX" customClass="ScanCodeViewController" customModule="MShopKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbB-nT-hKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="9UZ-W8-AeX" customClass="ScanCodeViewController" customModule="MShopkeeper_Quanly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FzG-FW-LbQ"/>
                         <viewControllerLayoutGuide type="bottom" id="r6L-ge-trj"/>
@@ -1362,7 +1363,7 @@
                                     <constraint firstItem="RhB-R6-Fjm" firstAttribute="centerX" secondItem="Zqf-VA-O90" secondAttribute="centerX" id="q4x-4s-0nt"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanCode.png" translatesAutoresizingMaskIntoConstraints="NO" id="sDw-0h-oeI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:sDw-0h-oeI:image" translatesAutoresizingMaskIntoConstraints="NO" id="sDw-0h-oeI">
                                 <rect key="frame" x="0.0" y="405" width="320" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sDw-0h-oeI" secondAttribute="height" multiplier="640:150" id="bPW-kc-uu4"/>
@@ -1380,14 +1381,13 @@
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cbB-nT-hKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3705" y="-224"/>
         </scene>
         <!--Infor Product View Controller-->
         <scene sceneID="Vsf-bQ-bNb">
             <objects>
-                <viewController storyboardIdentifier="InforProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gw8-mj-De3" customClass="InforProductViewController" customModule="MShopKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InforProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gw8-mj-De3" customClass="InforProductViewController" customModule="MShopkeeper_Quanly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uHu-iU-GAd"/>
                         <viewControllerLayoutGuide type="bottom" id="Gmu-cT-Whv"/>
@@ -1661,7 +1661,7 @@
         <!--Change Pass View Controller-->
         <scene sceneID="qjT-CG-T2L">
             <objects>
-                <viewController storyboardIdentifier="ChangePassViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eDK-Rf-ex9" customClass="ChangePassViewController" customModule="MShopKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangePassViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eDK-Rf-ex9" customClass="ChangePassViewController" customModule="MShopkeeper_Quanly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bnt-KN-zwe"/>
                         <viewControllerLayoutGuide type="bottom" id="Fpd-xC-0IC"/>
@@ -1942,7 +1942,7 @@
         <!--Forget Pass View Controller-->
         <scene sceneID="p2Y-rg-gRe">
             <objects>
-                <viewController storyboardIdentifier="ForgetPassViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oix-cj-Vwa" customClass="ForgetPassViewController" customModule="MShopKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgetPassViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oix-cj-Vwa" customClass="ForgetPassViewController" customModule="MShopkeeper_Quanly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bXP-pK-B1K"/>
                         <viewControllerLayoutGuide type="bottom" id="aPa-Dq-ZOW"/>
@@ -2120,6 +2120,7 @@
         <!--View Controller-->
         <scene sceneID="xF5-s8-TNj">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCf-on-Y8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="XYJ-Sr-IHk" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g7t-oG-F11"/>
@@ -2129,14 +2130,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SOG-ZT-OaX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:hse-J6-U1O:image" translatesAutoresizingMaskIntoConstraints="NO" id="SOG-ZT-OaX">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jiu-9E-Oqs" userLabel="ViewSaler">
                                 <rect key="frame" x="0.0" y="82" width="320" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_saler.png" translatesAutoresizingMaskIntoConstraints="NO" id="AkQ-d1-BkQ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:rRJ-Zv-V7k:image" translatesAutoresizingMaskIntoConstraints="NO" id="AkQ-d1-BkQ">
                                         <rect key="frame" x="8" y="14" width="100" height="101"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -2156,7 +2157,7 @@
                                     <constraint firstAttribute="height" constant="47" id="Uhc-Zx-K2W"/>
                                     <constraint firstAttribute="width" constant="56" id="qe4-6r-eOV"/>
                                 </constraints>
-                                <state key="normal" image="icon_next.png"/>
+                                <state key="normal" image="button:L0F-xg-mv8:image"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2170,13 +2171,13 @@
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GCf-on-Y8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2349" y="1665"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eA9-A7-fXJ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="plm-ie-oGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="dBE-yv-Ccg" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wHW-JK-xxp"/>
@@ -2186,14 +2187,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WNq-IL-AYg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:hse-J6-U1O:image" translatesAutoresizingMaskIntoConstraints="NO" id="WNq-IL-AYg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHs-eD-PeS" userLabel="ViewSaler">
                                 <rect key="frame" x="0.0" y="82" width="320" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_saler.png" translatesAutoresizingMaskIntoConstraints="NO" id="3n2-Y2-jyg">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:rRJ-Zv-V7k:image" translatesAutoresizingMaskIntoConstraints="NO" id="3n2-Y2-jyg">
                                         <rect key="frame" x="8" y="14" width="100" height="101"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -2213,7 +2214,7 @@
                                     <constraint firstAttribute="width" constant="56" id="uWV-UE-a2P"/>
                                     <constraint firstAttribute="height" constant="47" id="wvP-s1-eQQ"/>
                                 </constraints>
-                                <state key="normal" image="icon_next.png"/>
+                                <state key="normal" image="button:L0F-xg-mv8:image"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2227,13 +2228,13 @@
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="plm-ie-oGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2973.75" y="1664.7887323943662"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Rvv-jN-wGd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Hu-ve-8TB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cNo-9Z-uTV" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="095-fr-Siy"/>
@@ -2243,14 +2244,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hgm-lN-aLj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:hse-J6-U1O:image" translatesAutoresizingMaskIntoConstraints="NO" id="hgm-lN-aLj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbQ-le-cOn" userLabel="ViewSaler">
                                 <rect key="frame" x="0.0" y="37" width="320" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_saler.png" translatesAutoresizingMaskIntoConstraints="NO" id="OVY-Df-tqc">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:rRJ-Zv-V7k:image" translatesAutoresizingMaskIntoConstraints="NO" id="OVY-Df-tqc">
                                         <rect key="frame" x="8" y="14" width="100" height="101"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -2317,11 +2318,11 @@
                                                                         <constraint firstItem="IOM-Dt-LV7" firstAttribute="centerY" secondItem="Otw-TG-HMm" secondAttribute="centerY" id="aTc-OD-wzo"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7aD-rX-bBA">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:7aD-rX-bBA:image" translatesAutoresizingMaskIntoConstraints="NO" id="7aD-rX-bBA">
                                                                     <rect key="frame" x="7.5" y="5" width="135" height="107.5"/>
                                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 </imageView>
-                                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sale.png" translatesAutoresizingMaskIntoConstraints="NO" id="LqC-pE-NvU">
+                                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:Gfh-rr-wRs:image" translatesAutoresizingMaskIntoConstraints="NO" id="LqC-pE-NvU">
                                                                     <rect key="frame" x="115" y="5" width="27" height="27.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="LqC-pE-NvU" secondAttribute="height" multiplier="1:1" id="FzB-GP-2tU"/>
@@ -2389,7 +2390,6 @@
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Hu-ve-8TB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3725.625" y="1662.6760563380283"/>
         </scene>
@@ -2397,24 +2397,166 @@
     <resources>
         <image name="backgroundClick.png" width="545" height="305"/>
         <image name="bg_login_user.jpg" width="1080" height="1920"/>
+        <image name="button:L0F-xg-mv8:image" width="582" height="595">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKWns1ODIsIDU5NX3SFQoWGFpOUy5vYmplY3RzoReABIAJ0hUKGhii
+GxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18Qc2ZpbGU6Ly8vQXBwbGlj
+YXRpb25zL1hjb2RlLmFwcC9Db250ZW50cy9QbHVnSW5zL0lERUludGVyZmFjZUJ1aWxkZXJLaXQuZnJh
+bWV3b3JrL1Jlc291cmNlcy9JQk1pc3NpbmdJbWFnZUdseXBoLnRpZmbSJygpKlokY2xhc3NuYW1lWCRj
+bGFzc2VzVU5TVVJMoikrWE5TT2JqZWN00icoLS5XTlNBcnJheaItK9MwMQoyMzRXTlNXaGl0ZVxOU0Nv
+bG9yU3BhY2VEMCAwABADgAvSJyg2N1dOU0NvbG9yojYr0icoOTpXTlNJbWFnZaI5K18QD05TS2V5ZWRB
+cmNoaXZlctE9PlRyb290gAEACAARABoAIwAtADIANwBFAEsAVgBdAGQAcQB4AIAAggCEAIkAiwCNAJgA
+nQCoAKoArACuALMAtgC4ALoAvAC+AMUAzQDZANsA3QDfAVUBWgFlAW4BdAF3AYABhQGNAZABlwGfAawB
+sQGzAbUBugHCAcUBygHSAdUB5wHqAe8AAAAAAAACAQAAAAAAAAA/AAAAAAAAAAAAAAAAAAAB8Q
+</mutableData>
+        </image>
         <image name="ic_about.png" width="48" height="48"/>
         <image name="ic_app_logo.png" width="720" height="316"/>
         <image name="ic_back" width="16" height="16"/>
         <image name="ic_background.jpg" width="564" height="1001"/>
         <image name="ic_background_click" width="16" height="16"/>
         <image name="ic_domain_20dp.png" width="45" height="45"/>
-        <image name="ic_female.png" width="512" height="512"/>
         <image name="ic_menu_share.png" width="60" height="66"/>
         <image name="ic_password_30dp.png" width="45" height="45"/>
         <image name="ic_sale.png" width="512" height="512"/>
         <image name="ic_user_30dp.png" width="45" height="45"/>
-        <image name="icon_baby.png" width="300" height="300"/>
-        <image name="icon_male.png" width="512" height="512"/>
-        <image name="icon_next.png" width="582" height="595"/>
         <image name="icon_person.png" width="48" height="48"/>
-        <image name="icon_saler.png" width="512" height="512"/>
-        <image name="item1.jpg" width="564" height="722"/>
-        <image name="logo_shop2.png" width="1328" height="711"/>
-        <image name="scanCode.png" width="637" height="150"/>
+        <image name="imageView:7aD-rX-bBA:image" width="564" height="722">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKWns1NjQsIDcyMn3SFQoWGFpOUy5vYmplY3RzoReABIAJ0hUKGhii
+GxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18Qc2ZpbGU6Ly8vQXBwbGlj
+YXRpb25zL1hjb2RlLmFwcC9Db250ZW50cy9QbHVnSW5zL0lERUludGVyZmFjZUJ1aWxkZXJLaXQuZnJh
+bWV3b3JrL1Jlc291cmNlcy9JQk1pc3NpbmdJbWFnZUdseXBoLnRpZmbSJygpKlokY2xhc3NuYW1lWCRj
+bGFzc2VzVU5TVVJMoikrWE5TT2JqZWN00icoLS5XTlNBcnJheaItK9MwMQoyMzRXTlNXaGl0ZVxOU0Nv
+bG9yU3BhY2VEMCAwABADgAvSJyg2N1dOU0NvbG9yojYr0icoOTpXTlNJbWFnZaI5K18QD05TS2V5ZWRB
+cmNoaXZlctE9PlRyb290gAEACAARABoAIwAtADIANwBFAEsAVgBdAGQAcQB4AIAAggCEAIkAiwCNAJgA
+nQCoAKoArACuALMAtgC4ALoAvAC+AMUAzQDZANsA3QDfAVUBWgFlAW4BdAF3AYABhQGNAZABlwGfAawB
+sQGzAbUBugHCAcUBygHSAdUB5wHqAe8AAAAAAAACAQAAAAAAAAA/AAAAAAAAAAAAAAAAAAAB8Q
+</mutableData>
+        </image>
+        <image name="imageView:DiM-uB-wr8:image" width="300" height="300">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKWnszMDAsIDMwMH3SFQoWGFpOUy5vYmplY3RzoReABIAJ0hUKGhii
+GxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18Qc2ZpbGU6Ly8vQXBwbGlj
+YXRpb25zL1hjb2RlLmFwcC9Db250ZW50cy9QbHVnSW5zL0lERUludGVyZmFjZUJ1aWxkZXJLaXQuZnJh
+bWV3b3JrL1Jlc291cmNlcy9JQk1pc3NpbmdJbWFnZUdseXBoLnRpZmbSJygpKlokY2xhc3NuYW1lWCRj
+bGFzc2VzVU5TVVJMoikrWE5TT2JqZWN00icoLS5XTlNBcnJheaItK9MwMQoyMzRXTlNXaGl0ZVxOU0Nv
+bG9yU3BhY2VEMCAwABADgAvSJyg2N1dOU0NvbG9yojYr0icoOTpXTlNJbWFnZaI5K18QD05TS2V5ZWRB
+cmNoaXZlctE9PlRyb290gAEACAARABoAIwAtADIANwBFAEsAVgBdAGQAcQB4AIAAggCEAIkAiwCNAJgA
+nQCoAKoArACuALMAtgC4ALoAvAC+AMUAzQDZANsA3QDfAVUBWgFlAW4BdAF3AYABhQGNAZABlwGfAawB
+sQGzAbUBugHCAcUBygHSAdUB5wHqAe8AAAAAAAACAQAAAAAAAAA/AAAAAAAAAAAAAAAAAAAB8Q
+</mutableData>
+        </image>
+        <image name="imageView:Gfh-rr-wRs:image" width="512" height="512">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKWns1MTIsIDUxMn3SFQoWGFpOUy5vYmplY3RzoReABIAJ0hUKGhii
+GxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18Qc2ZpbGU6Ly8vQXBwbGlj
+YXRpb25zL1hjb2RlLmFwcC9Db250ZW50cy9QbHVnSW5zL0lERUludGVyZmFjZUJ1aWxkZXJLaXQuZnJh
+bWV3b3JrL1Jlc291cmNlcy9JQk1pc3NpbmdJbWFnZUdseXBoLnRpZmbSJygpKlokY2xhc3NuYW1lWCRj
+bGFzc2VzVU5TVVJMoikrWE5TT2JqZWN00icoLS5XTlNBcnJheaItK9MwMQoyMzRXTlNXaGl0ZVxOU0Nv
+bG9yU3BhY2VEMCAwABADgAvSJyg2N1dOU0NvbG9yojYr0icoOTpXTlNJbWFnZaI5K18QD05TS2V5ZWRB
+cmNoaXZlctE9PlRyb290gAEACAARABoAIwAtADIANwBFAEsAVgBdAGQAcQB4AIAAggCEAIkAiwCNAJgA
+nQCoAKoArACuALMAtgC4ALoAvAC+AMUAzQDZANsA3QDfAVUBWgFlAW4BdAF3AYABhQGNAZABlwGfAawB
+sQGzAbUBugHCAcUBygHSAdUB5wHqAe8AAAAAAAACAQAAAAAAAAA/AAAAAAAAAAAAAAAAAAAB8Q
+</mutableData>
+        </image>
+        <image name="imageView:LoJ-99-ZQQ:image" width="512" height="512">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKWns1MTIsIDUxMn3SFQoWGFpOUy5vYmplY3RzoReABIAJ0hUKGhii
+GxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18Qc2ZpbGU6Ly8vQXBwbGlj
+YXRpb25zL1hjb2RlLmFwcC9Db250ZW50cy9QbHVnSW5zL0lERUludGVyZmFjZUJ1aWxkZXJLaXQuZnJh
+bWV3b3JrL1Jlc291cmNlcy9JQk1pc3NpbmdJbWFnZUdseXBoLnRpZmbSJygpKlokY2xhc3NuYW1lWCRj
+bGFzc2VzVU5TVVJMoikrWE5TT2JqZWN00icoLS5XTlNBcnJheaItK9MwMQoyMzRXTlNXaGl0ZVxOU0Nv
+bG9yU3BhY2VEMCAwABADgAvSJyg2N1dOU0NvbG9yojYr0icoOTpXTlNJbWFnZaI5K18QD05TS2V5ZWRB
+cmNoaXZlctE9PlRyb290gAEACAARABoAIwAtADIANwBFAEsAVgBdAGQAcQB4AIAAggCEAIkAiwCNAJgA
+nQCoAKoArACuALMAtgC4ALoAvAC+AMUAzQDZANsA3QDfAVUBWgFlAW4BdAF3AYABhQGNAZABlwGfAawB
+sQGzAbUBugHCAcUBygHSAdUB5wHqAe8AAAAAAAACAQAAAAAAAAA/AAAAAAAAAAAAAAAAAAAB8Q
+</mutableData>
+        </image>
+        <image name="imageView:hse-J6-U1O:image" width="564" height="1001">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKW3s1NjQsIDEwMDF90hUKFhhaTlMub2JqZWN0c6EXgASACdIVChoY
+ohscgAWABoAJEAXTIAohIiMkV05TLmJhc2VbTlMucmVsYXRpdmWAAIAIgAdfEHNmaWxlOi8vL0FwcGxp
+Y2F0aW9ucy9YY29kZS5hcHAvQ29udGVudHMvUGx1Z0lucy9JREVJbnRlcmZhY2VCdWlsZGVyS2l0LmZy
+YW1ld29yay9SZXNvdXJjZXMvSUJNaXNzaW5nSW1hZ2VHbHlwaC50aWZm0icoKSpaJGNsYXNzbmFtZVgk
+Y2xhc3Nlc1VOU1VSTKIpK1hOU09iamVjdNInKC0uV05TQXJyYXmiLSvTMDEKMjM0V05TV2hpdGVcTlND
+b2xvclNwYWNlRDAgMAAQA4AL0icoNjdXTlNDb2xvcqI2K9InKDk6V05TSW1hZ2WiOStfEA9OU0tleWVk
+QXJjaGl2ZXLRPT5Ucm9vdIABAAgAEQAaACMALQAyADcARQBLAFYAXQBkAHEAeACAAIIAhACJAIsAjQCZ
+AJ4AqQCrAK0ArwC0ALcAuQC7AL0AvwDGAM4A2gDcAN4A4AFWAVsBZgFvAXUBeAGBAYYBjgGRAZgBoAGt
+AbIBtAG2AbsBwwHGAcsB0wHWAegB6wHwAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAfI
+</mutableData>
+        </image>
+        <image name="imageView:rRJ-Zv-V7k:image" width="512" height="512">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKWns1MTIsIDUxMn3SFQoWGFpOUy5vYmplY3RzoReABIAJ0hUKGhii
+GxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18Qc2ZpbGU6Ly8vQXBwbGlj
+YXRpb25zL1hjb2RlLmFwcC9Db250ZW50cy9QbHVnSW5zL0lERUludGVyZmFjZUJ1aWxkZXJLaXQuZnJh
+bWV3b3JrL1Jlc291cmNlcy9JQk1pc3NpbmdJbWFnZUdseXBoLnRpZmbSJygpKlokY2xhc3NuYW1lWCRj
+bGFzc2VzVU5TVVJMoikrWE5TT2JqZWN00icoLS5XTlNBcnJheaItK9MwMQoyMzRXTlNXaGl0ZVxOU0Nv
+bG9yU3BhY2VEMCAwABADgAvSJyg2N1dOU0NvbG9yojYr0icoOTpXTlNJbWFnZaI5K18QD05TS2V5ZWRB
+cmNoaXZlctE9PlRyb290gAEACAARABoAIwAtADIANwBFAEsAVgBdAGQAcQB4AIAAggCEAIkAiwCNAJgA
+nQCoAKoArACuALMAtgC4ALoAvAC+AMUAzQDZANsA3QDfAVUBWgFlAW4BdAF3AYABhQGNAZABlwGfAawB
+sQGzAbUBugHCAcUBygHSAdUB5wHqAe8AAAAAAAACAQAAAAAAAAA/AAAAAAAAAAAAAAAAAAAB8Q
+</mutableData>
+        </image>
+        <image name="imageView:sDw-0h-oeI:image" width="637" height="150">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKWns2MzcsIDE1MH3SFQoWGFpOUy5vYmplY3RzoReABIAJ0hUKGhii
+GxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18Qc2ZpbGU6Ly8vQXBwbGlj
+YXRpb25zL1hjb2RlLmFwcC9Db250ZW50cy9QbHVnSW5zL0lERUludGVyZmFjZUJ1aWxkZXJLaXQuZnJh
+bWV3b3JrL1Jlc291cmNlcy9JQk1pc3NpbmdJbWFnZUdseXBoLnRpZmbSJygpKlokY2xhc3NuYW1lWCRj
+bGFzc2VzVU5TVVJMoikrWE5TT2JqZWN00icoLS5XTlNBcnJheaItK9MwMQoyMzRXTlNXaGl0ZVxOU0Nv
+bG9yU3BhY2VEMCAwABADgAvSJyg2N1dOU0NvbG9yojYr0icoOTpXTlNJbWFnZaI5K18QD05TS2V5ZWRB
+cmNoaXZlctE9PlRyb290gAEACAARABoAIwAtADIANwBFAEsAVgBdAGQAcQB4AIAAggCEAIkAiwCNAJgA
+nQCoAKoArACuALMAtgC4ALoAvAC+AMUAzQDZANsA3QDfAVUBWgFlAW4BdAF3AYABhQGNAZABlwGfAawB
+sQGzAbUBugHCAcUBygHSAdUB5wHqAe8AAAAAAAACAQAAAAAAAAA/AAAAAAAAAAAAAAAAAAAB8Q
+</mutableData>
+        </image>
+        <image name="imageView:vtj-PW-7Nh:image" width="512" height="512">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKWns1MTIsIDUxMn3SFQoWGFpOUy5vYmplY3RzoReABIAJ0hUKGhii
+GxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18Qc2ZpbGU6Ly8vQXBwbGlj
+YXRpb25zL1hjb2RlLmFwcC9Db250ZW50cy9QbHVnSW5zL0lERUludGVyZmFjZUJ1aWxkZXJLaXQuZnJh
+bWV3b3JrL1Jlc291cmNlcy9JQk1pc3NpbmdJbWFnZUdseXBoLnRpZmbSJygpKlokY2xhc3NuYW1lWCRj
+bGFzc2VzVU5TVVJMoikrWE5TT2JqZWN00icoLS5XTlNBcnJheaItK9MwMQoyMzRXTlNXaGl0ZVxOU0Nv
+bG9yU3BhY2VEMCAwABADgAvSJyg2N1dOU0NvbG9yojYr0icoOTpXTlNJbWFnZaI5K18QD05TS2V5ZWRB
+cmNoaXZlctE9PlRyb290gAEACAARABoAIwAtADIANwBFAEsAVgBdAGQAcQB4AIAAggCEAIkAiwCNAJgA
+nQCoAKoArACuALMAtgC4ALoAvAC+AMUAzQDZANsA3QDfAVUBWgFlAW4BdAF3AYABhQGNAZABlwGfAawB
+sQGzAbUBugHCAcUBygHSAdUB5wHqAe8AAAAAAAACAQAAAAAAAAA/AAAAAAAAAAAAAAAAAAAB8Q
+</mutableData>
+        </image>
+        <image name="imageView:yZX-cE-ksE:image" width="1328" height="711">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKW3sxMzI4LCA3MTF90hUKFhhaTlMub2JqZWN0c6EXgASACdIVChoY
+ohscgAWABoAJEAXTIAohIiMkV05TLmJhc2VbTlMucmVsYXRpdmWAAIAIgAdfEHNmaWxlOi8vL0FwcGxp
+Y2F0aW9ucy9YY29kZS5hcHAvQ29udGVudHMvUGx1Z0lucy9JREVJbnRlcmZhY2VCdWlsZGVyS2l0LmZy
+YW1ld29yay9SZXNvdXJjZXMvSUJNaXNzaW5nSW1hZ2VHbHlwaC50aWZm0icoKSpaJGNsYXNzbmFtZVgk
+Y2xhc3Nlc1VOU1VSTKIpK1hOU09iamVjdNInKC0uV05TQXJyYXmiLSvTMDEKMjM0V05TV2hpdGVcTlND
+b2xvclNwYWNlRDAgMAAQA4AL0icoNjdXTlNDb2xvcqI2K9InKDk6V05TSW1hZ2WiOStfEA9OU0tleWVk
+QXJjaGl2ZXLRPT5Ucm9vdIABAAgAEQAaACMALQAyADcARQBLAFYAXQBkAHEAeACAAIIAhACJAIsAjQCZ
+AJ4AqQCrAK0ArwC0ALcAuQC7AL0AvwDGAM4A2gDcAN4A4AFWAVsBZgFvAXUBeAGBAYYBjgGRAZgBoAGt
+AbIBtAG2AbsBwwHGAcsB0wHWAegB6wHwAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAfI
+</mutableData>
+        </image>
     </resources>
 </document>
