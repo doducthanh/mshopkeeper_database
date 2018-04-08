@@ -7,5 +7,5 @@ target 'MShopkeeper_Quanly' do
 
   # Pods for MShopkeeper_Quanly
   pod 'Alamofire', '~> 4.5'
-
+pod 'SwiftCharts', :git => 'https://github.com/i-schuetz/SwiftCharts.git'
 end

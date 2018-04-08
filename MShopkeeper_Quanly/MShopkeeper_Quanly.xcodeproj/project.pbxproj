@@ -137,6 +137,7 @@
 		848BE7BB207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7B2207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png */; };
 		848BE7C120786708000CC06F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7BD20786708000CC06F /* LaunchScreen.storyboard */; };
 		848BE7C220786708000CC06F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7BF20786708000CC06F /* Main.storyboard */; };
+		84E04FA9207A5C4300E9373E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E04FA8207A5C4300E9373E /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -273,6 +274,7 @@
 		848BE7B2207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc_textfield_search_default_mtrl_alpha.9.png; sourceTree = "<group>"; };
 		848BE7BE20786708000CC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		848BE7C020786708000CC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84E04FA8207A5C4300E9373E /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		A25ABE2C0661B7952043260D /* Pods_MShopkeeper_Quanly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MShopkeeper_Quanly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06221F43DFACA063B55F4CA /* Pods-MShopkeeper_Quanly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MShopkeeper_Quanly.release.xcconfig"; path = "Pods/Target Support Files/Pods-MShopkeeper_Quanly/Pods-MShopkeeper_Quanly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -360,6 +362,7 @@
 		848BE6AF2078611A000CC06F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				84E04FA8207A5C4300E9373E /* LogInViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -538,7 +541,6 @@
 				848BE690207857AA000CC06F /* Frameworks */,
 				848BE691207857AA000CC06F /* Resources */,
 				2394A6482D75D668F1410B59 /* [CP] Embed Pods Frameworks */,
-				52D0528585A3C44FCDCDF784 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -726,10 +728,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MShopkeeper_Quanly/Pods-MShopkeeper_Quanly-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCharts.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -754,21 +758,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		52D0528585A3C44FCDCDF784 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MShopkeeper_Quanly/Pods-MShopkeeper_Quanly-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -778,6 +767,7 @@
 			files = (
 				848BE699207857AB000CC06F /* ViewController.swift in Sources */,
 				848BE69F207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld in Sources */,
+				84E04FA9207A5C4300E9373E /* LogInViewController.swift in Sources */,
 				848BE6B620786176000CC06F /* SlideMenuController.swift in Sources */,
 				848BE6B720786176000CC06F /* Reachability.swift in Sources */,
 				848BE697207857AB000CC06F /* AppDelegate.swift in Sources */,
@@ -860,6 +850,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 			};
 			name = Debug;
 		};
@@ -909,6 +900,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -925,6 +917,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ddthanh.MShopkeeper-Quanly";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -942,6 +935,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ddthanh.MShopkeeper-Quanly";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
