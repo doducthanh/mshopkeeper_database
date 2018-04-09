@@ -13,7 +13,11 @@ class BusinessSituationViewController: UIViewController {
 
     @IBOutlet weak var viewScroll: UIView!
     var chartView: BarsChart!
+    var chartLine: LineChart!
     @IBOutlet weak var viewChartRevenue: UIView!
+    @IBOutlet var viewChartTrend: UIView!
+    @IBOutlet var vChartRevenue: UIView!
+    @IBOutlet var vChartTrends: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +27,7 @@ class BusinessSituationViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         ConfigChart()
+        drawChartTrend()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,7 +36,7 @@ class BusinessSituationViewController: UIViewController {
     
     fileprivate func ConfigChart() {
         let charConfig = BarsChartConfig.init(valsAxisConfig: ChartAxisConfig(from: 0, to: 10, by: 2))
-        let frame = CGRect.init(x: 0, y: 0, width: self.viewChartRevenue.frame.width, height: self.viewChartRevenue.frame.height)
+        let frame = CGRect.init(x: self.vChartRevenue.frame.origin.x, y: self.vChartRevenue.frame.origin.y + 20, width: self.vChartRevenue.frame.width, height: self.vChartRevenue.frame.height - 20)
         let chart = BarsChart.init(frame: frame,
                                    chartConfig: charConfig,
                                    xTitle: "",
@@ -46,6 +51,19 @@ class BusinessSituationViewController: UIViewController {
         self.chartView = chart
         
     }
+    
+    fileprivate func drawChartTrend() {
+//        let chartConfig
+        let chartConfig = ChartConfigXY.init(xAxisConfig: ChartAxisConfig.init(from: 1, to: 12, by: 2),
+                                             yAxisConfig: ChartAxisConfig.init(from: 1, to: 10, by: 2))
+        let chart = LineChart.init(frame: self.vChartTrends.frame,
+                                   chartConfig: chartConfig,
+                                   xTitle: "",
+                                   yTitle: "",
+                                   line: (chartPoints: [(1, 10), (5, 5)], color: UIColor.red))
+        self.viewChartTrend.addSubview(chart.view)
+        self.chartLine = chart
+    }
     /*
     // MARK: - Navigation
 
@@ -55,6 +73,10 @@ class BusinessSituationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func onClickMenu(_ sender: Any) {
+        openLeft()
+    }
+    
 }
 

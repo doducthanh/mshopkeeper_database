@@ -141,6 +141,7 @@
 		848BE7C120786708000CC06F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7BD20786708000CC06F /* LaunchScreen.storyboard */; };
 		848BE7C220786708000CC06F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7BF20786708000CC06F /* Main.storyboard */; };
 		84E04FA9207A5C4300E9373E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E04FA8207A5C4300E9373E /* LogInViewController.swift */; };
+		84E41145207BA42B00178F68 /* ic_trends.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E41144207BA42A00178F68 /* ic_trends.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -281,6 +282,7 @@
 		848BE7BE20786708000CC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		848BE7C020786708000CC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84E04FA8207A5C4300E9373E /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		84E41144207BA42A00178F68 /* ic_trends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_trends.png; sourceTree = "<group>"; };
 		A25ABE2C0661B7952043260D /* Pods_MShopkeeper_Quanly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MShopkeeper_Quanly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06221F43DFACA063B55F4CA /* Pods-MShopkeeper_Quanly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MShopkeeper_Quanly.release.xcconfig"; path = "Pods/Target Support Files/Pods-MShopkeeper_Quanly/Pods-MShopkeeper_Quanly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -412,6 +414,7 @@
 		848BE7A62078628E000CC06F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				84E41144207BA42A00178F68 /* ic_trends.png */,
 				770E2948207B50F300626697 /* ic_back.png */,
 				848BE7AD207866B8000CC06F /* abc_ab_share_pack_mtrl_alpha.9.png */,
 				848BE7B2207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png */,
@@ -666,6 +669,7 @@
 				848BE76220786278000CC06F /* ic_cart_empty.png in Resources */,
 				848BE75820786278000CC06F /* ic_retry_black_24dp.png in Resources */,
 				848BE74620786278000CC06F /* notification_bg_low_normal.9.png in Resources */,
+				84E41145207BA42B00178F68 /* ic_trends.png in Resources */,
 				848BE7C120786708000CC06F /* LaunchScreen.storyboard in Resources */,
 				848BE77520786278000CC06F /* ic_cancel_40dp.png in Resources */,
 				848BE79420786278000CC06F /* default_dang_nhap.png in Resources */,

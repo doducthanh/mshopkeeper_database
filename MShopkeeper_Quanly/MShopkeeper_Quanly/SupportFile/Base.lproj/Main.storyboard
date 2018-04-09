@@ -488,7 +488,7 @@
                                         <rect key="frame" x="0.0" y="28" width="270" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qQw-Bv-kVS" id="NjZ-ot-bJg">
-                                            <rect key="frame" x="0.0" y="0.0" width="270" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="270" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_menu_share.png" translatesAutoresizingMaskIntoConstraints="NO" id="73M-IL-DWj">
@@ -677,7 +677,13 @@
                                                             <constraint firstAttribute="height" constant="22" id="hWV-Sk-S4F"/>
                                                         </constraints>
                                                         <attributedString key="attributedText">
-                                                            <fragment content="Số tiền ">
+                                                            <fragment content="Số tiền">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="14" name="Arial-BoldMT"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=" ">
                                                                 <attributes>
                                                                     <font key="NSFont" size="16" name="Arial-BoldMT"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -685,7 +691,7 @@
                                                             </fragment>
                                                             <fragment content="(triệu đồng)">
                                                                 <attributes>
-                                                                    <font key="NSFont" size="14" name="ArialMT"/>
+                                                                    <font key="NSFont" size="13" name="ArialMT"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -713,9 +719,66 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjj-zv-L5J" userLabel="ViewChartTrend">
                                                 <rect key="frame" x="0.0" y="371" width="375" height="300"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_trends.png" translatesAutoresizingMaskIntoConstraints="NO" id="dpK-Nw-AQp">
+                                                        <rect key="frame" x="5" y="10" width="33" height="33"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33" id="3XD-ny-66R"/>
+                                                            <constraint firstAttribute="width" constant="33" id="Ib9-oa-jwc"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xu hướng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbF-o5-CsI">
+                                                        <rect key="frame" x="48" y="10" width="327" height="33"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33" id="p6J-am-5nh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FI9-hf-lvB">
+                                                        <rect key="frame" x="8" y="51" width="173" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="ZWQ-OC-edX"/>
+                                                            <constraint firstAttribute="width" constant="173" id="ZyN-Id-Mes"/>
+                                                        </constraints>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Số tiền ">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="14" name="Arial-BoldMT"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="(triệu đồng)">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="12" name="ArialMT"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eH8-EI-rcD" userLabel="ViewChartTrends">
+                                                        <rect key="frame" x="0.0" y="82" width="370" height="210"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="210" id="wq6-Fk-SnA"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="ZbF-o5-CsI" secondAttribute="trailing" id="5d6-ME-CpS"/>
                                                     <constraint firstAttribute="height" constant="300" id="Gro-xu-1Mr"/>
+                                                    <constraint firstItem="FI9-hf-lvB" firstAttribute="top" secondItem="dpK-Nw-AQp" secondAttribute="bottom" constant="8" id="Hbj-xm-Mfm"/>
+                                                    <constraint firstItem="eH8-EI-rcD" firstAttribute="top" secondItem="FI9-hf-lvB" secondAttribute="bottom" constant="10" id="KsZ-90-1pY"/>
+                                                    <constraint firstItem="ZbF-o5-CsI" firstAttribute="top" secondItem="Qjj-zv-L5J" secondAttribute="top" constant="10" id="Wnp-dY-3OV"/>
+                                                    <constraint firstItem="eH8-EI-rcD" firstAttribute="leading" secondItem="Qjj-zv-L5J" secondAttribute="leading" id="YLh-Pg-TeF"/>
+                                                    <constraint firstItem="ZbF-o5-CsI" firstAttribute="leading" secondItem="dpK-Nw-AQp" secondAttribute="trailing" constant="10" id="cqL-UT-aQa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eH8-EI-rcD" secondAttribute="trailing" constant="5" id="jzt-C4-u5G"/>
+                                                    <constraint firstItem="dpK-Nw-AQp" firstAttribute="leading" secondItem="Qjj-zv-L5J" secondAttribute="leading" constant="5" id="k3i-yk-h17"/>
+                                                    <constraint firstItem="FI9-hf-lvB" firstAttribute="leading" secondItem="Qjj-zv-L5J" secondAttribute="leading" constant="8" id="onE-FQ-Sh3"/>
+                                                    <constraint firstItem="dpK-Nw-AQp" firstAttribute="top" secondItem="Qjj-zv-L5J" secondAttribute="top" constant="10" id="pah-Uc-ZjE"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -757,10 +820,19 @@
                             <constraint firstItem="yMH-GU-cNR" firstAttribute="top" secondItem="eMD-PV-2ZW" secondAttribute="bottom" id="r8c-kC-nfB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tình hình kinh doanh" id="0rz-4f-Yn7"/>
+                    <navigationItem key="navigationItem" title="Tình hình kinh doanh" id="0rz-4f-Yn7">
+                        <barButtonItem key="leftBarButtonItem" image="ic_btn_slidemenu.png" id="igc-tX-f7P">
+                            <connections>
+                                <action selector="onClickMenu:" destination="WKW-0n-aJ7" id="KLw-HR-dIN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="850"/>
                     <connections>
-                        <outlet property="viewChartRevenue" destination="QJ1-7t-vIm" id="sQm-nc-1QV"/>
+                        <outlet property="vChartRevenue" destination="QJ1-7t-vIm" id="kXv-6B-v3A"/>
+                        <outlet property="vChartTrends" destination="eH8-EI-rcD" id="LZm-cu-Dhv"/>
+                        <outlet property="viewChartRevenue" destination="oCK-1o-NrD" id="7Jw-jf-p9I"/>
+                        <outlet property="viewChartTrend" destination="Qjj-zv-L5J" id="bn4-1f-zMn"/>
                         <outlet property="viewScroll" destination="Sio-3B-gSf" id="bQS-Qi-2Ov"/>
                     </connections>
                 </viewController>
@@ -1511,10 +1583,12 @@
         <image name="ic_back" width="16" height="16"/>
         <image name="ic_background.jpg" width="564" height="1001"/>
         <image name="ic_background_click" width="16" height="16"/>
+        <image name="ic_btn_slidemenu.png" width="36" height="24"/>
         <image name="ic_domain_20dp.png" width="45" height="45"/>
         <image name="ic_dropdown.png" width="48" height="48"/>
         <image name="ic_menu_share.png" width="60" height="66"/>
         <image name="ic_password_30dp.png" width="45" height="45"/>
+        <image name="ic_trends.png" width="150" height="150"/>
         <image name="ic_user_30dp.png" width="45" height="45"/>
         <image name="icon_person.png" width="48" height="48"/>
     </resources>
