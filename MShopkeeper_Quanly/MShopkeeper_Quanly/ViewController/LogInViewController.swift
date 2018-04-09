@@ -191,6 +191,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         textfieldUser.resignFirstResponder()
         textfieldPass.resignFirstResponder()
         
+        let main = self.storyboard?.instantiateViewController(withIdentifier: "BusinessSituationViewController")
+        let left = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
+        let navigation = UINavigationController.init(rootViewController: main!)
+        let slideMenu = SlideMenuController(mainViewController: navigation, leftMenuViewController: left!)
+        slideMenu.mainContainerView.backgroundColor = .white
+        slideMenu.opacityView.backgroundColor = .white
+        self.show(slideMenu, sender: nil)
+        
 //        self.viewWaitingModel.startAnimatonWaiting()
 //        gửi yêu cầu đăng nhập
 //        requestAPI.requestLogin(companyCode: textfieldStore.text!, username: textfieldUser.text!, password: textfieldPass.text!) { (value, error) in

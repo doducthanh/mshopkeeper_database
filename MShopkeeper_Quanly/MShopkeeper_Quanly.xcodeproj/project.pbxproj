@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2BA49476C3D49D49A56FA4F6 /* Pods_MShopkeeper_Quanly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25ABE2C0661B7952043260D /* Pods_MShopkeeper_Quanly.framework */; };
+		770E2947207B505500626697 /* BusinessSituationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E2946207B505500626697 /* BusinessSituationViewController.swift */; };
+		770E2949207B50F300626697 /* ic_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 770E2948207B50F300626697 /* ic_back.png */; };
+		770E294B207B533A00626697 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E294A207B533A00626697 /* MenuViewController.swift */; };
+		770E294E207B53EF00626697 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E294D207B53EF00626697 /* MenuTableViewCell.swift */; };
 		848BE697207857AB000CC06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE696207857AB000CC06F /* AppDelegate.swift */; };
 		848BE699207857AB000CC06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE698207857AB000CC06F /* ViewController.swift */; };
 		848BE69F207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848BE69D207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld */; };
@@ -131,7 +135,6 @@
 		848BE7A420786278000CC06F /* icon_round_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE73020786278000CC06F /* icon_round_gray.png */; };
 		848BE7A520786278000CC06F /* design_ic_visibility.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE73120786278000CC06F /* design_ic_visibility.png */; };
 		848BE7A820786362000CC06F /* bg_login_user.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7A720786361000CC06F /* bg_login_user.jpg */; };
-		848BE7AA2078637D000CC06F /* ic_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7A92078637C000CC06F /* ic_back.png */; };
 		848BE7B5207866B9000CC06F /* bg_null.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7AC207866B7000CC06F /* bg_null.png */; };
 		848BE7B6207866B9000CC06F /* abc_ab_share_pack_mtrl_alpha.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7AD207866B8000CC06F /* abc_ab_share_pack_mtrl_alpha.9.png */; };
 		848BE7BB207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE7B2207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png */; };
@@ -142,6 +145,10 @@
 
 /* Begin PBXFileReference section */
 		1A1AF5E38AC2AC728707AEC0 /* Pods-MShopkeeper_Quanly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MShopkeeper_Quanly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MShopkeeper_Quanly/Pods-MShopkeeper_Quanly.debug.xcconfig"; sourceTree = "<group>"; };
+		770E2946207B505500626697 /* BusinessSituationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSituationViewController.swift; sourceTree = "<group>"; };
+		770E2948207B50F300626697 /* ic_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_back.png; path = ../../../../MShopKeeper/MShopKeeper/ic_back.png; sourceTree = "<group>"; };
+		770E294A207B533A00626697 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		770E294D207B53EF00626697 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		848BE693207857AB000CC06F /* MShopkeeper_Quanly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MShopkeeper_Quanly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848BE696207857AB000CC06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848BE698207857AB000CC06F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -268,7 +275,6 @@
 		848BE73020786278000CC06F /* icon_round_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_round_gray.png; sourceTree = "<group>"; };
 		848BE73120786278000CC06F /* design_ic_visibility.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = design_ic_visibility.png; sourceTree = "<group>"; };
 		848BE7A720786361000CC06F /* bg_login_user.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_login_user.jpg; sourceTree = "<group>"; };
-		848BE7A92078637C000CC06F /* ic_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_back.png; path = ../../../../../MyFirstProject/mshopkeeper_database/MShopKeeper/MShopKeeper/ic_back.png; sourceTree = "<group>"; };
 		848BE7AC207866B7000CC06F /* bg_null.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_null.png; sourceTree = "<group>"; };
 		848BE7AD207866B8000CC06F /* abc_ab_share_pack_mtrl_alpha.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc_ab_share_pack_mtrl_alpha.9.png; sourceTree = "<group>"; };
 		848BE7B2207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc_textfield_search_default_mtrl_alpha.9.png; sourceTree = "<group>"; };
@@ -297,6 +303,14 @@
 				A25ABE2C0661B7952043260D /* Pods_MShopkeeper_Quanly.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		770E294C207B53D500626697 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				770E294D207B53EF00626697 /* MenuTableViewCell.swift */,
+			);
+			path = SubView;
 			sourceTree = "<group>";
 		};
 		848BE68A207857AA000CC06F = {
@@ -362,7 +376,10 @@
 		848BE6AF2078611A000CC06F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				770E294C207B53D500626697 /* SubView */,
 				84E04FA8207A5C4300E9373E /* LogInViewController.swift */,
+				770E2946207B505500626697 /* BusinessSituationViewController.swift */,
+				770E294A207B533A00626697 /* MenuViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -395,10 +412,10 @@
 		848BE7A62078628E000CC06F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				770E2948207B50F300626697 /* ic_back.png */,
 				848BE7AD207866B8000CC06F /* abc_ab_share_pack_mtrl_alpha.9.png */,
 				848BE7B2207866B9000CC06F /* abc_textfield_search_default_mtrl_alpha.9.png */,
 				848BE7AC207866B7000CC06F /* bg_null.png */,
-				848BE7A92078637C000CC06F /* ic_back.png */,
 				848BE7A720786361000CC06F /* bg_login_user.jpg */,
 				848BE6FA20786266000CC06F /* common_full_open_on_phone.png */,
 				848BE7072078626A000CC06F /* common_google_signin_btn_icon_dark_disabled.9.png */,
@@ -635,7 +652,6 @@
 				848BE74C20786278000CC06F /* icon_male.png in Resources */,
 				848BE77A20786278000CC06F /* logo_shop2.png in Resources */,
 				848BE75520786278000CC06F /* ic_cancel_grey600_36dp.png in Resources */,
-				848BE7AA2078637D000CC06F /* ic_back.png in Resources */,
 				848BE75C20786278000CC06F /* ic_search_white.png in Resources */,
 				848BE74120786278000CC06F /* ic_arrow_up_white.png in Resources */,
 				848BE73D20786278000CC06F /* icon_public.png in Resources */,
@@ -697,6 +713,7 @@
 				848BE77620786278000CC06F /* ic_mobile_fb_history.png in Resources */,
 				848BE78320786278000CC06F /* icon_saler.png in Resources */,
 				848BE78B20786278000CC06F /* common_google_signin_btn_text_dark_pressed.9.png in Resources */,
+				770E2949207B50F300626697 /* ic_back.png in Resources */,
 				848BE74E20786278000CC06F /* met_ic_clear.png in Resources */,
 				848BE76C20786278000CC06F /* ic_bg_license_2_01_out.png in Resources */,
 				848BE77E20786278000CC06F /* ic_next.png in Resources */,
@@ -769,8 +786,11 @@
 				848BE69F207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld in Sources */,
 				84E04FA9207A5C4300E9373E /* LogInViewController.swift in Sources */,
 				848BE6B620786176000CC06F /* SlideMenuController.swift in Sources */,
+				770E2947207B505500626697 /* BusinessSituationViewController.swift in Sources */,
+				770E294E207B53EF00626697 /* MenuTableViewCell.swift in Sources */,
 				848BE6B720786176000CC06F /* Reachability.swift in Sources */,
 				848BE697207857AB000CC06F /* AppDelegate.swift in Sources */,
+				770E294B207B533A00626697 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
