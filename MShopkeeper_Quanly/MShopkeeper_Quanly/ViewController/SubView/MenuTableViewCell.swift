@@ -17,33 +17,50 @@ class MenuTableViewCell: UITableViewCell {
         didSet{
             if row == 0 {
                 self.img?.image = UIImage.init(named: "ic_menu_share")
-                self.labelText?.text = "Intro"
-            }
-            if row == 5 {
-                self.img?.image = UIImage.init(named: "ic_menu_share")
-                self.labelText?.text = "share app"
+                self.labelText?.text = "Tình hình kinh doanh"
             }
             if row == 1 {
-                self.img?.image = UIImage.init(named: "ic_menu_rate")
-                self.labelText?.text = "rate app"
+                self.img?.image = UIImage.init(named: "ic_menu_share")
+                self.labelText?.text = "Xu hướng tìm kiếm sản phẩm"
+                
             }
             if row == 2 {
-                self.img?.image = UIImage.init(named: "ic_menu_about")
-                self.labelText?.text = "information app"
-            }
-            if row == 3 {
                 let line = UIView.init()
                 line.frame = CGRect.init(x: 0, y: 0, width: 270, height: 1)
                 line.backgroundColor = UIColor.gray
                 self.addSubview(line)
-                self.img?.image = UIImage.init(named: "ic_menu_change_password")
-                self.labelText?.text = "change password"
                 self.separatorInset = UIEdgeInsetsMake(0, 0, 1, 0)
+                self.img?.image = UIImage.init(named: "ic_menu_share")
+                self.labelText?.text = "share app"
+            }
+            if row == 3 {
+                self.img?.image = UIImage.init(named: "ic_menu_rate")
+                self.labelText?.text = "rate app"
             }
             if row == 4 {
+                self.img?.image = UIImage.init(named: "ic_menu_about")
+                self.labelText?.text = "information app"
+            }
+            if row == 5 {
+                let line = UIView.init()
+                line.frame = CGRect.init(x: 0, y: 0, width: 270, height: 1)
+                line.backgroundColor = UIColor.gray
+                self.addSubview(line)
+                self.separatorInset = UIEdgeInsetsMake(0, 0, 1, 0)
+                self.img?.image = UIImage.init(named: "ic_menu_change_password")
+                self.labelText?.text = "change password"
+                
+            }
+            if row == 6 {
                 self.img?.image = UIImage.init(named: "ic_menu_logout")
                 self.labelText?.text = "log out"
             }
+        }
+    }
+    
+    var didSelect: Int! {
+        didSet {
+            
         }
     }
     

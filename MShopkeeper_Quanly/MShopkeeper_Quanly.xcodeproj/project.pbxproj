@@ -12,6 +12,9 @@
 		770E2949207B50F300626697 /* ic_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 770E2948207B50F300626697 /* ic_back.png */; };
 		770E294B207B533A00626697 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E294A207B533A00626697 /* MenuViewController.swift */; };
 		770E294E207B53EF00626697 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E294D207B53EF00626697 /* MenuTableViewCell.swift */; };
+		7743D550207C4D1000B4B629 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743D54F207C4D1000B4B629 /* ChartViewModel.swift */; };
+		7743D571207C5F6E00B4B629 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743D56F207C5F6D00B4B629 /* ChangePassViewController.swift */; };
+		7743D572207C5F6E00B4B629 /* InforProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743D570207C5F6D00B4B629 /* InforProductViewController.swift */; };
 		848BE697207857AB000CC06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE696207857AB000CC06F /* AppDelegate.swift */; };
 		848BE699207857AB000CC06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE698207857AB000CC06F /* ViewController.swift */; };
 		848BE69F207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848BE69D207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld */; };
@@ -150,6 +153,9 @@
 		770E2948207B50F300626697 /* ic_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_back.png; path = ../../../../MShopKeeper/MShopKeeper/ic_back.png; sourceTree = "<group>"; };
 		770E294A207B533A00626697 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		770E294D207B53EF00626697 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		7743D54F207C4D1000B4B629 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartViewModel.swift; path = MShopkeeper_Quanly/ViewController/SubView/ChartViewModel.swift; sourceTree = SOURCE_ROOT; };
+		7743D56F207C5F6D00B4B629 /* ChangePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
+		7743D570207C5F6D00B4B629 /* InforProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforProductViewController.swift; sourceTree = "<group>"; };
 		848BE693207857AB000CC06F /* MShopkeeper_Quanly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MShopkeeper_Quanly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848BE696207857AB000CC06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848BE698207857AB000CC06F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -371,6 +377,7 @@
 		848BE6AE20786112000CC06F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7743D54F207C4D1000B4B629 /* ChartViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -378,6 +385,8 @@
 		848BE6AF2078611A000CC06F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7743D56F207C5F6D00B4B629 /* ChangePassViewController.swift */,
+				7743D570207C5F6D00B4B629 /* InforProductViewController.swift */,
 				770E294C207B53D500626697 /* SubView */,
 				84E04FA8207A5C4300E9373E /* LogInViewController.swift */,
 				770E2946207B505500626697 /* BusinessSituationViewController.swift */,
@@ -791,9 +800,12 @@
 				84E04FA9207A5C4300E9373E /* LogInViewController.swift in Sources */,
 				848BE6B620786176000CC06F /* SlideMenuController.swift in Sources */,
 				770E2947207B505500626697 /* BusinessSituationViewController.swift in Sources */,
+				7743D550207C4D1000B4B629 /* ChartViewModel.swift in Sources */,
+				7743D571207C5F6E00B4B629 /* ChangePassViewController.swift in Sources */,
 				770E294E207B53EF00626697 /* MenuTableViewCell.swift in Sources */,
 				848BE6B720786176000CC06F /* Reachability.swift in Sources */,
 				848BE697207857AB000CC06F /* AppDelegate.swift in Sources */,
+				7743D572207C5F6E00B4B629 /* InforProductViewController.swift in Sources */,
 				770E294B207B533A00626697 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

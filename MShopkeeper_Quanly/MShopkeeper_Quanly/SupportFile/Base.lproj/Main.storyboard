@@ -488,7 +488,7 @@
                                         <rect key="frame" x="0.0" y="28" width="270" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qQw-Bv-kVS" id="NjZ-ot-bJg">
-                                            <rect key="frame" x="0.0" y="0.0" width="270" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="270" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_menu_share.png" translatesAutoresizingMaskIntoConstraints="NO" id="73M-IL-DWj">
@@ -612,7 +612,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMD-PV-2ZW">
-                                <rect key="frame" x="0.0" y="116" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="115" width="375" height="691"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sio-3B-gSf" userLabel="ViewScroll">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
@@ -670,51 +670,43 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCK-1o-NrD" userLabel="ViewChartRevenue" customClass="ChartView" customModule="SwiftCharts">
                                                 <rect key="frame" x="0.0" y="61" width="375" height="300"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZR-CP-lGx">
-                                                        <rect key="frame" x="10" y="10" width="355" height="22"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vq-v9-gPQ">
+                                                        <rect key="frame" x="5" y="10" width="156" height="21"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="22" id="hWV-Sk-S4F"/>
+                                                            <constraint firstAttribute="width" constant="156" id="8QE-mq-sff"/>
+                                                            <constraint firstAttribute="height" constant="21" id="t9n-Zr-QfR"/>
                                                         </constraints>
                                                         <attributedString key="attributedText">
-                                                            <fragment content="Số tiền">
+                                                            <fragment content="Số tiền ">
                                                                 <attributes>
                                                                     <font key="NSFont" size="14" name="Arial-BoldMT"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                            <fragment content=" ">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="16" name="Arial-BoldMT"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                             <fragment content="(triệu đồng)">
                                                                 <attributes>
                                                                     <font key="NSFont" size="13" name="ArialMT"/>
+                                                                    <font key="NSOriginalFont" size="13" name="ArialMT"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJ1-7t-vIm">
-                                                        <rect key="frame" x="0.0" y="42" width="365" height="250"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDt-DO-dWN">
+                                                        <rect key="frame" x="0.0" y="41" width="375" height="259"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="250" id="aUq-bX-Ubf"/>
-                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="QJ1-7t-vIm" secondAttribute="trailing" constant="10" id="7AU-fU-gje"/>
-                                                    <constraint firstItem="QJ1-7t-vIm" firstAttribute="top" secondItem="YZR-CP-lGx" secondAttribute="bottom" constant="10" id="AML-CE-1AV"/>
+                                                    <constraint firstItem="7vq-v9-gPQ" firstAttribute="leading" secondItem="oCK-1o-NrD" secondAttribute="leading" constant="5" id="48l-Mo-VF7"/>
                                                     <constraint firstAttribute="height" constant="300" id="Cg4-hC-Kjg"/>
-                                                    <constraint firstAttribute="trailing" secondItem="YZR-CP-lGx" secondAttribute="trailing" constant="10" id="Gs2-7X-7nt"/>
-                                                    <constraint firstItem="QJ1-7t-vIm" firstAttribute="leading" secondItem="oCK-1o-NrD" secondAttribute="leading" id="Wv3-YD-9up"/>
-                                                    <constraint firstItem="YZR-CP-lGx" firstAttribute="leading" secondItem="oCK-1o-NrD" secondAttribute="leading" constant="10" id="dOU-1W-kxS"/>
-                                                    <constraint firstItem="YZR-CP-lGx" firstAttribute="top" secondItem="oCK-1o-NrD" secondAttribute="top" constant="10" id="ddu-TJ-0A7"/>
+                                                    <constraint firstItem="HDt-DO-dWN" firstAttribute="top" secondItem="7vq-v9-gPQ" secondAttribute="bottom" constant="10" id="HHP-cU-GI1"/>
+                                                    <constraint firstItem="HDt-DO-dWN" firstAttribute="leading" secondItem="oCK-1o-NrD" secondAttribute="leading" id="RnC-0D-Sty"/>
+                                                    <constraint firstAttribute="trailing" secondItem="HDt-DO-dWN" secondAttribute="trailing" id="lwu-qe-2jg"/>
+                                                    <constraint firstItem="7vq-v9-gPQ" firstAttribute="top" secondItem="oCK-1o-NrD" secondAttribute="top" constant="10" id="p94-fn-gGy"/>
+                                                    <constraint firstAttribute="bottom" secondItem="HDt-DO-dWN" secondAttribute="bottom" id="qrj-08-yqY"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjj-zv-L5J" userLabel="ViewChartTrend">
@@ -811,7 +803,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eMD-PV-2ZW" firstAttribute="top" secondItem="KVd-Ji-SGD" secondAttribute="bottom" constant="2" id="Lgh-QM-Hrx"/>
+                            <constraint firstItem="eMD-PV-2ZW" firstAttribute="top" secondItem="KVd-Ji-SGD" secondAttribute="bottom" constant="1" id="Lgh-QM-Hrx"/>
                             <constraint firstAttribute="trailing" secondItem="eMD-PV-2ZW" secondAttribute="trailing" id="aFg-xa-7v9"/>
                             <constraint firstItem="KVd-Ji-SGD" firstAttribute="top" secondItem="ejH-te-Imd" secondAttribute="bottom" id="c9c-hr-LJx"/>
                             <constraint firstItem="eMD-PV-2ZW" firstAttribute="leading" secondItem="ALT-3e-w3I" secondAttribute="leading" id="fqk-Wf-csQ"/>
@@ -829,7 +821,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="375" height="850"/>
                     <connections>
-                        <outlet property="vChartRevenue" destination="QJ1-7t-vIm" id="kXv-6B-v3A"/>
+                        <outlet property="vChartRevenue" destination="HDt-DO-dWN" id="WpN-rT-TKk"/>
                         <outlet property="vChartTrends" destination="eH8-EI-rcD" id="LZm-cu-Dhv"/>
                         <outlet property="viewChartRevenue" destination="oCK-1o-NrD" id="7Jw-jf-p9I"/>
                         <outlet property="viewChartTrend" destination="Qjj-zv-L5J" id="bn4-1f-zMn"/>
