@@ -3,8 +3,9 @@ var router = express.Router();
 var mysql = require('./database');
 var jwt = require('jsonwebtoken');
 //create connection
-
-
+var login = require('./api_login_manager');
+//login_manager.login_manager();
+//login;
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });

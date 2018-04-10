@@ -15,6 +15,9 @@
 		7743D550207C4D1000B4B629 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743D54F207C4D1000B4B629 /* ChartViewModel.swift */; };
 		7743D571207C5F6E00B4B629 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743D56F207C5F6D00B4B629 /* ChangePassViewController.swift */; };
 		7743D572207C5F6E00B4B629 /* InforProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743D570207C5F6D00B4B629 /* InforProductViewController.swift */; };
+		77DFB9BC207C98FD00C108AD /* TopItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFB9BA207C98FD00C108AD /* TopItemTableViewCell.swift */; };
+		77DFB9BD207C98FD00C108AD /* TopItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77DFB9BB207C98FD00C108AD /* TopItemTableViewCell.xib */; };
+		77DFB9BF207C9B4400C108AD /* TopSallerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFB9BE207C9B4400C108AD /* TopSallerViewController.swift */; };
 		848BE697207857AB000CC06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE696207857AB000CC06F /* AppDelegate.swift */; };
 		848BE699207857AB000CC06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE698207857AB000CC06F /* ViewController.swift */; };
 		848BE69F207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848BE69D207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld */; };
@@ -156,6 +159,9 @@
 		7743D54F207C4D1000B4B629 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartViewModel.swift; path = MShopkeeper_Quanly/ViewController/SubView/ChartViewModel.swift; sourceTree = SOURCE_ROOT; };
 		7743D56F207C5F6D00B4B629 /* ChangePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
 		7743D570207C5F6D00B4B629 /* InforProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforProductViewController.swift; sourceTree = "<group>"; };
+		77DFB9BA207C98FD00C108AD /* TopItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopItemTableViewCell.swift; sourceTree = "<group>"; };
+		77DFB9BB207C98FD00C108AD /* TopItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopItemTableViewCell.xib; sourceTree = "<group>"; };
+		77DFB9BE207C9B4400C108AD /* TopSallerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSallerViewController.swift; sourceTree = "<group>"; };
 		848BE693207857AB000CC06F /* MShopkeeper_Quanly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MShopkeeper_Quanly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848BE696207857AB000CC06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848BE698207857AB000CC06F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				770E294D207B53EF00626697 /* MenuTableViewCell.swift */,
+				77DFB9BA207C98FD00C108AD /* TopItemTableViewCell.swift */,
+				77DFB9BB207C98FD00C108AD /* TopItemTableViewCell.xib */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -385,12 +393,13 @@
 		848BE6AF2078611A000CC06F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				770E294C207B53D500626697 /* SubView */,
 				7743D56F207C5F6D00B4B629 /* ChangePassViewController.swift */,
 				7743D570207C5F6D00B4B629 /* InforProductViewController.swift */,
-				770E294C207B53D500626697 /* SubView */,
 				84E04FA8207A5C4300E9373E /* LogInViewController.swift */,
 				770E2946207B505500626697 /* BusinessSituationViewController.swift */,
 				770E294A207B533A00626697 /* MenuViewController.swift */,
+				77DFB9BE207C9B4400C108AD /* TopSallerViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -709,6 +718,7 @@
 				848BE73A20786278000CC06F /* icon_female.png in Resources */,
 				848BE77420786278000CC06F /* ic_help_gray.png in Resources */,
 				848BE79F20786278000CC06F /* ic_menu_about.png in Resources */,
+				77DFB9BD207C98FD00C108AD /* TopItemTableViewCell.xib in Resources */,
 				848BE75D20786278000CC06F /* ic_keyboard_arrow_right_gray_48dp.png in Resources */,
 				848BE7C220786708000CC06F /* Main.storyboard in Resources */,
 				848BE7A820786362000CC06F /* bg_login_user.jpg in Resources */,
@@ -803,8 +813,10 @@
 				7743D550207C4D1000B4B629 /* ChartViewModel.swift in Sources */,
 				7743D571207C5F6E00B4B629 /* ChangePassViewController.swift in Sources */,
 				770E294E207B53EF00626697 /* MenuTableViewCell.swift in Sources */,
+				77DFB9BC207C98FD00C108AD /* TopItemTableViewCell.swift in Sources */,
 				848BE6B720786176000CC06F /* Reachability.swift in Sources */,
 				848BE697207857AB000CC06F /* AppDelegate.swift in Sources */,
+				77DFB9BF207C9B4400C108AD /* TopSallerViewController.swift in Sources */,
 				7743D572207C5F6E00B4B629 /* InforProductViewController.swift in Sources */,
 				770E294B207B533A00626697 /* MenuViewController.swift in Sources */,
 			);

@@ -14,7 +14,7 @@ import SwiftCharts
 class ChartViewModel {
  
     func barsChart(frame: CGRect) -> BarsChart {
-        let chartPoints = [("", 8.0), ("", 9.0), ("", 10.0), ("", 12.0), ("", 17.0)]
+        let chartPoints = [("Thu", 108.0), ("Chi", 39.0), ("Lai", 69.0)]
         
         let chartConfig = BarsChartConfig(
             valsAxisConfig: ChartAxisConfig(from: 0, to: 20, by: 6)
@@ -27,7 +27,7 @@ class ChartViewModel {
             yTitle: "",
             bars: chartPoints,
             color: UIColor.red,
-            barWidth: 20
+            barWidth: 25
         )
         return chart
     }
