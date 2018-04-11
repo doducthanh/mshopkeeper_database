@@ -25,6 +25,7 @@ class MenuTableViewCell: UITableViewCell {
                 
             }
             if row == 2 {
+                
                 let line = UIView.init()
                 line.frame = CGRect.init(x: 0, y: 0, width: 270, height: 1)
                 line.backgroundColor = UIColor.gray

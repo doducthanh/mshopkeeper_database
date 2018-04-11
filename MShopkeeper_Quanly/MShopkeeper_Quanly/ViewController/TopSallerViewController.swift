@@ -10,6 +10,8 @@ import UIKit
 
 class TopSallerViewController: UIViewController {
 
+    @IBOutlet var tableTopItem: UITableView!
+    @IBOutlet var tableTopSearch: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +23,10 @@ class TopSallerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func onClickMenu(_ sender: Any) {
+        openLeft()
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -31,5 +36,24 @@ class TopSallerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
+extension TopSallerViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.register(UINib.init(nibName: "TopItemTableViewCell", bundle: nil), forCellReuseIdentifier: "mycell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mycell") as! TopItemTableViewCell
+        cell.img.text = String(indexPath.row)
+        cell.lbName.text = "ao so mi"
+        cell.lbCount.text = String(indexPath.row + 10)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+}
+
