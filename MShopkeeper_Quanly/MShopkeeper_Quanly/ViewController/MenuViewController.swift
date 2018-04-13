@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class MenuViewController: UIViewController {
 
@@ -69,7 +70,47 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             let navigation = UINavigationController.init(rootViewController: topSaller!)
             self.slideMenuController()?.mainViewController = navigation
         }
+        if indexPath.row == 2 {
+            self.closeLeft()
+            let activity = UIActivityViewController.init(activityItems: ["www.google.co.in"], applicationActivities: nil)
+            activity.popoverPresentationController?.sourceView = self.view
+            self.present(activity, animated: true, completion: nil)
+        }
+        //        click vào button đánh giá app
+        if indexPath.row == 3 {
+            self.closeLeft()
+            SKStoreReviewController.requestReview()
+        }
+        //        click vào button giới thiệu
+        if indexPath.row == 4 {
+            self.closeLeft()
+            let inforProduc = storyboard?.instantiateViewController(withIdentifier: "InforProductViewController")
+            self.present(inforProduc!, animated: true, completion: nil)
+        }
+        //        click vào button thay đổi mật khẩu
+        if indexPath.row == 5 {
+            self.closeLeft()
+            let changeVC = storyboard?.instantiateViewController(withIdentifier: "ChangePassViewController")
+            self.present(changeVC!, animated: true, completion: nil)
+        }
+        //        click vào button đăng xuất
+        if indexPath.row == 6 {
+            self.closeLeft()
+            let aler = UIAlertController.init(title: "", message: "", preferredStyle: .alert)
+            let actionYes = UIAlertAction.init(title: "Yes", style: .default, handler: { (aler) in
+                //quay ve man login
+                self.dismiss(animated: true, completion: nil)
+                //xoa token da luu
+                UserDefaults.standard.set("", forKey: "token")
+                UserDefaults.standard.synchronize()
+            })
+            let actionNo = UIAlertAction.init(title: "No", style: .cancel, handler: nil)
+            aler.addAction(actionYes)
+            aler.addAction(actionNo)
+            self.present(aler, animated: true, completion: nil)
+        }
     }
+    
 //    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
 //        print(indexPath.row)
 //        //        click vào button tư vấn

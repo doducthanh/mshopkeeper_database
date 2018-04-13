@@ -4,6 +4,7 @@ var mysql = require('./database');
 var jwt = require('jsonwebtoken');
 
 var login_manager = router.post('/login_manager', function (req, res) {
+  console.log(req);
   var userName = req.body.userName;
   var password = req.body.password;
   var companyCode = req.headers['companycode'];
