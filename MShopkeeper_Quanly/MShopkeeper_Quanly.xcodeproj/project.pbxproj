@@ -18,6 +18,8 @@
 		77DFB9BC207C98FD00C108AD /* TopItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFB9BA207C98FD00C108AD /* TopItemTableViewCell.swift */; };
 		77DFB9BD207C98FD00C108AD /* TopItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77DFB9BB207C98FD00C108AD /* TopItemTableViewCell.xib */; };
 		77DFB9BF207C9B4400C108AD /* TopSallerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFB9BE207C9B4400C108AD /* TopSallerViewController.swift */; };
+		842EE39B2084CE3000FEDAE0 /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EE39A2084CE2F00FEDAE0 /* ExamplesDefaults.swift */; };
+		842EE39D2084CEF900FEDAE0 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EE39C2084CEF900FEDAE0 /* Env.swift */; };
 		848BE697207857AB000CC06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE696207857AB000CC06F /* AppDelegate.swift */; };
 		848BE699207857AB000CC06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE698207857AB000CC06F /* ViewController.swift */; };
 		848BE69F207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848BE69D207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld */; };
@@ -165,6 +167,8 @@
 		77DFB9BA207C98FD00C108AD /* TopItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopItemTableViewCell.swift; sourceTree = "<group>"; };
 		77DFB9BB207C98FD00C108AD /* TopItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopItemTableViewCell.xib; sourceTree = "<group>"; };
 		77DFB9BE207C9B4400C108AD /* TopSallerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSallerViewController.swift; sourceTree = "<group>"; };
+		842EE39A2084CE2F00FEDAE0 /* ExamplesDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
+		842EE39C2084CEF900FEDAE0 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		848BE693207857AB000CC06F /* MShopkeeper_Quanly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MShopkeeper_Quanly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848BE696207857AB000CC06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848BE698207857AB000CC06F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -406,6 +410,8 @@
 		848BE6B220786141000CC06F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				842EE39C2084CEF900FEDAE0 /* Env.swift */,
+				842EE39A2084CE2F00FEDAE0 /* ExamplesDefaults.swift */,
 				848BE6B520786176000CC06F /* Reachability.swift */,
 				848BE6B320786176000CC06F /* SlideMenuController.swift */,
 				848BE6B420786176000CC06F /* SlideMenuControllerSwift.h */,
@@ -818,6 +824,7 @@
 				848BE699207857AB000CC06F /* ViewController.swift in Sources */,
 				848BE69F207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld in Sources */,
 				84E04FA9207A5C4300E9373E /* LogInViewController.swift in Sources */,
+				842EE39D2084CEF900FEDAE0 /* Env.swift in Sources */,
 				848BE6B620786176000CC06F /* SlideMenuController.swift in Sources */,
 				770E2947207B505500626697 /* BusinessSituationViewController.swift in Sources */,
 				84D8FA12207E3FEF00F69B41 /* ShopModel.swift in Sources */,
@@ -827,6 +834,7 @@
 				770E294E207B53EF00626697 /* MenuTableViewCell.swift in Sources */,
 				77DFB9BC207C98FD00C108AD /* TopItemTableViewCell.swift in Sources */,
 				848BE6B720786176000CC06F /* Reachability.swift in Sources */,
+				842EE39B2084CE3000FEDAE0 /* ExamplesDefaults.swift in Sources */,
 				848BE697207857AB000CC06F /* AppDelegate.swift in Sources */,
 				77DFB9BF207C9B4400C108AD /* TopSallerViewController.swift in Sources */,
 				7743D572207C5F6E00B4B629 /* InforProductViewController.swift in Sources */,
