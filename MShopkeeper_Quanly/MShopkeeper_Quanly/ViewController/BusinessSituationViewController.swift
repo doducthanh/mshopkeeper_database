@@ -11,14 +11,12 @@ import SwiftCharts
 
 class BusinessSituationViewController: UIViewController {
 
-    @IBOutlet weak var viewScroll: UIView!
     var chartView: Chart!
     var chartLine: LineChart!
-    @IBOutlet weak var viewChartRevenue: UIView!
-    @IBOutlet var viewChartTrend: UIView!
-    @IBOutlet var vChartRevenue: UIView!
-    @IBOutlet var vChartTrends: UIView!
     @IBOutlet var viewChart: UIView!
+    @IBOutlet var viewTop1: UIView!
+    @IBOutlet var viewTop2: UIView!
+    @IBOutlet var viewTop3: UIView!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -98,10 +96,12 @@ class BusinessSituationViewController: UIViewController {
     
     override func viewDidLoad() {
         showChart(horizontal: false)
-//        if let chart = chart {
-//            let sideSelector = DirSelector(frame: CGRect(x: 0, y: chart.frame.origin.y + chart.frame.size.height, width: view.frame.size.width, height: sideSelectorHeight), controller: self)
-//            view.addSubview(sideSelector)
-//        }
+        viewTop1.layer.cornerRadius = 3
+        viewTop2.layer.cornerRadius = 3
+        viewTop3.layer.cornerRadius = 3
+        viewTop1.layer.masksToBounds = true
+        viewTop2.layer.masksToBounds = true
+        viewTop3.layer.masksToBounds = true
     }
     
     
