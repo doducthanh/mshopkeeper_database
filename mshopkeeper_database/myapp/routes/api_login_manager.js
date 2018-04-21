@@ -39,4 +39,4 @@ var login_manager = router.post('/login_manager', function (req, res) {
   });
 });
 
-module.exports = login_manager
+module.exports.login_manager = login_manager;

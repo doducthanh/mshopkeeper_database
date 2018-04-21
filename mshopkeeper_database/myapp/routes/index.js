@@ -3,9 +3,9 @@ var router = express.Router();
 var mysql = require('./database');
 var jwt = require('jsonwebtoken');
 //create connection
-var login = require('./api_login_manager');
+//var login_manager = require('./api_login_manager');
 var getShop = require('./api_get_shop');
-
+var getRevenue = require('./api_revenue');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -34,7 +34,7 @@ router.post('/login', function (req, res) {
     if (!err && (row.length > 0)) {
       var user = {};
       user['data'] = 'User registered successfully!';
-      jwt.sign({exp: Math.floor(Date.now() / 1000) + 60*60*24 , row:row[0]}, 'secretkey', function (err, token) {
+      jwt.sign({exp: Math.floor(Date.now() / 1000) + 60*60*24*30 , row:row[0]}, 'secretkey', function (err, token) {
         user['token'] = token;
         user['userID'] = row[0].userID;
         user['userName'] = row[0].userName;
@@ -326,4 +326,10 @@ function verifyToken(token){
     //console.log(decode);
   });
 };
+
+router.get('/get_shop', getShop);
+//lấy doanh thu theo id của cưa hàng
+router.get('/get_revenue_shop', getRevenue);
+//lấy toàn bộ doanh thu
+router.get('/get_all_revenue', getRevenue);
 module.exports = router;
