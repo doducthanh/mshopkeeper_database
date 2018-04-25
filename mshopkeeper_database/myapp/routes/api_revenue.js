@@ -24,5 +24,4 @@ let getRevenue = function (req, res) {
   });
 }
 
-
 module.exports = getRevenue;

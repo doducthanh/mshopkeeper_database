@@ -6,6 +6,10 @@ var jwt = require('jsonwebtoken');
 //var login_manager = require('./api_login_manager');
 var getShop = require('./api_get_shop');
 var getRevenue = require('./api_revenue');
+var getAllRevenue = require('./api_get_all_revenue');
+var getRevenueDay = require('./api_revenue_day');
+var getRevenueWeek = require('./api_revenue_week');
+var getRevenueMonth = require('./api_revenue_month');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -331,5 +335,13 @@ router.get('/get_shop', getShop);
 //lấy doanh thu theo id của cưa hàng
 router.get('/get_revenue_shop', getRevenue);
 //lấy toàn bộ doanh thu
-router.get('/get_all_revenue', getRevenue);
+router.get('/get_all_revenue', getAllRevenue);
+
+//lấy doanh thu ngày hôm nay tại 1 cửa hàng bất kì
+router.get('/get_revenue_day', getRevenueDay);
+//lấy doanh thu tuần này tại 1 cửa hàng bất kì
+router.get('/get_revenue_week', getRevenueWeek);
+//lấy doanh thu thang này tại 1 cửa hàng bất kì
+router.get('/get_revenue_month', getRevenueMonth);
+
 module.exports = router;

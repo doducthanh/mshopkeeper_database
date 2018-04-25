@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftCharts
+import Charts
 
 class BusinessSituationViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class BusinessSituationViewController: UIViewController {
     @IBOutlet var viewTop2: UIView!
     @IBOutlet var viewTop3: UIView!
     
+    var id = 3
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -27,87 +29,117 @@ class BusinessSituationViewController: UIViewController {
     
     let sideSelectorHeight: CGFloat = 80
     
-    fileprivate func barsChart(horizontal: Bool) -> Chart {
-        let tuplesXY = [(2, 8), (4, 9), (6, 10), (8, 12), (12, 17)]
-        
-        func reverseTuples(_ tuples: [(Int, Int)]) -> [(Int, Int)] {
-            return tuples.map{($0.1, $0.0)}
+    fileprivate func drawChart(array: [Int]) {
+        let barChart = BarChartView.init(frame: CGRect.init(x: 10, y: 10, width: viewChart.frame.width - 20, height: viewChart.frame.height - 60))
+        var arrayEntry = [BarChartDataEntry]()
+        for index in 0..<array.count {
+            let entry1 = BarChartDataEntry(x: Double(index + 1), y: Double(array[index]))
+            arrayEntry.append(entry1)
         }
         
-        let chartPoints = (horizontal ? reverseTuples(tuplesXY) : tuplesXY).map{ChartPoint(x: ChartAxisValueInt($0.0), y: ChartAxisValueInt($0.1))}
+        let dataSet = BarChartDataSet(values: arrayEntry, label: "")
+        dataSet.colors = [UIColor.blue, UIColor.red, UIColor.orange]
+        let data = BarChartData(dataSets: [dataSet])
+        data.barWidth = 0.4
+        barChart.data = data
         
-        let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
+        barChart.legend.enabled = false
+        barChart.chartDescription?.text = ""
+        barChart.xAxis.axisMinimum = 0.0
+        barChart.xAxis.drawLabelsEnabled = false
+        barChart.leftAxis.axisMinimum = 0
+        barChart.rightAxis.enabled = false
+        barChart.tag = 100
+
+        //All other additions to this function will go here
         
-        let generator = ChartAxisGeneratorMultiplier(2)
-        let labelsGenerator = ChartAxisLabelsGeneratorFunc {scalar in
-            return ChartAxisLabel(text: "\(scalar)", settings: labelSettings)
-        }
-        let xGenerator = ChartAxisGeneratorMultiplier(2)
-        
-        let xModel = ChartAxisModel(firstModelValue: 0, lastModelValue: 20, axisTitleLabels: [ChartAxisLabel(text: "Axis title", settings: labelSettings)], axisValuesGenerator: xGenerator, labelsGenerator: labelsGenerator)
-        let yModel = ChartAxisModel(firstModelValue: 0, lastModelValue: 20, axisTitleLabels: [ChartAxisLabel(text: "Axis title", settings: labelSettings.defaultVertical())], axisValuesGenerator: generator, labelsGenerator: labelsGenerator)
-        
-        let barViewGenerator = {(chartPointModel: ChartPointLayerModel, layer: ChartPointsViewsLayer, chart: Chart) -> UIView? in
-            let bottomLeft = layer.modelLocToScreenLoc(x: 0, y: 0)
-            
-            let barWidth: CGFloat = 30
-            
-            let settings = ChartBarViewSettings(animDuration: 0.5)
-            
-            let (p1, p2): (CGPoint, CGPoint) = {
-                return (CGPoint(x: chartPointModel.screenLoc.x, y: bottomLeft.y), CGPoint(x: chartPointModel.screenLoc.x, y: chartPointModel.screenLoc.y))
-            }()
-            return ChartPointViewBar(p1: p1, p2: p2, width: barWidth, bgColor: UIColor.blue.withAlphaComponent(0.6), settings: settings)
-        }
-        
-        let frame = ExamplesDefaults.chartFrame(viewChart.bounds)
-        let chartFrame = chart?.frame ?? CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: frame.size.height - sideSelectorHeight)
-        
-        let chartSettings = ExamplesDefaults.chartSettingsWithPanZoom
-        
-        let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: chartSettings, chartFrame: chartFrame, xModel: xModel, yModel: yModel)
-        let (xAxisLayer, yAxisLayer, innerFrame) = (coordsSpace.xAxisLayer, coordsSpace.yAxisLayer, coordsSpace.chartInnerFrame)
-        
-        let chartPointsLayer = ChartPointsViewsLayer(xAxis: xAxisLayer.axis, yAxis: yAxisLayer.axis, chartPoints: chartPoints, viewGenerator: barViewGenerator)
-        
-        let settings = ChartGuideLinesDottedLayerSettings(linesColor: UIColor.black, linesWidth: ExamplesDefaults.guidelinesWidth)
-        let guidelinesLayer = ChartGuideLinesDottedLayer(xAxisLayer: xAxisLayer, yAxisLayer: yAxisLayer, settings: settings)
-        
-        return Chart(
-            frame: chartFrame,
-            innerFrame: innerFrame,
-            settings: chartSettings,
-            layers: [
-                xAxisLayer,
-                yAxisLayer,
-                guidelinesLayer,
-                chartPointsLayer
-            ]
-        )
-    }
-    
-    fileprivate func showChart(horizontal: Bool) {
-        self.chart?.clearView()
-        
-        let chart = barsChart(horizontal: horizontal)
-        viewChart.addSubview(chart.view)
-        self.chart = chart
+        //This must stay at end of function
+        barChart.notifyDataSetChanged()
+        self.viewChart.addSubview(barChart)
     }
     
     override func viewDidLoad() {
-        showChart(horizontal: false)
+        //showChart(horizontal: false)
         viewTop1.layer.cornerRadius = 3
         viewTop2.layer.cornerRadius = 3
         viewTop3.layer.cornerRadius = 3
         viewTop1.layer.masksToBounds = true
         viewTop2.layer.masksToBounds = true
         viewTop3.layer.masksToBounds = true
+        
+        let requestAPI = RequestAPIModel()
+        requestAPI.getRevenue(shopID: 3, type: 0) { (status, array) in
+            self.drawChart(array: array)
+        }
     }
     
-    
+    //MARK: onclick
     @IBAction func onClickMenu(_ sender: Any) {
         openLeft()
     }
+    
+    @IBAction func onClickOtherShop(_ sender: Any) {
+        // kick vao đây hiển thị danh sách các cửa hàng chi nhánh.
+        let requestAPI = RequestAPIModel()
+        requestAPI.getShops { (status, arrayShop) in
+            let otherVC = OtherShops.init(nibName: "OtherShops", bundle: nil)
+            otherVC.arrayShop = arrayShop
+            otherVC.delegate = self
+            self.present(otherVC, animated: true, completion: nil)
+        }
+        
+    }
+    @IBAction func onClickDate(_ sender: Any) {
+        let sheetUI = UIAlertController.init(title: "Tình hình doanh thu", message: "Chọn thời gian thống kê", preferredStyle: .actionSheet)
+        let day = UIAlertAction.init(title: "Hôm nay", style: .default) { (action) in
+            if let subview = self.viewChart.viewWithTag(100) {
+                subview.removeFromSuperview()
+            }
+            
+            let requestAPI = RequestAPIModel()
+            requestAPI.getRevenue(shopID: self.id, type: 0) { (status, array) in
+                self.drawChart(array: array)
+            }
+        }
+        let week = UIAlertAction.init(title: "Tuần nay", style: .default) { (action) in
+            if let subview = self.viewChart.viewWithTag(100) {
+                subview.removeFromSuperview()
+            }
+            
+            let requestAPI = RequestAPIModel()
+            requestAPI.getRevenue(shopID: self.id, type: 1) { (status, array) in
+                self.drawChart(array: array)
+            }
+        }
+        let month = UIAlertAction.init(title: "Tháng nay", style: .default) { (action) in
+            if let subview = self.viewChart.viewWithTag(100) {
+                subview.removeFromSuperview()
+            }
+            
+            let requestAPI = RequestAPIModel()
+            requestAPI.getRevenue(shopID: self.id, type: 2) { (status, array) in
+                self.drawChart(array: array)
+            }
+        }
+        sheetUI.addAction(day)
+        sheetUI.addAction(week)
+        sheetUI.addAction(month)
+        self.present(sheetUI, animated: true, completion: nil)
+    }
+}
+
+extension BusinessSituationViewController: OtherShopDelegate {
+    func selectShop(id: Int) {
+        if let subview = self.viewChart.viewWithTag(100) {
+            subview.removeFromSuperview()
+        }
+        
+        let requestAPI = RequestAPIModel()
+        requestAPI.getRevenue(shopID: id, type: 0) { (status, array) in
+            self.drawChart(array: array)
+        }
+    }
+    
     
 }
 

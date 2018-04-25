@@ -21,6 +21,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var contraintViewInputX: NSLayoutConstraint!
     
+    var requestAPI: RequestAPIModel!
+    
 //    var viewWait: ViewWaiting!
 ////    các biến view model
 //    var userModel: UserModel!
@@ -103,7 +105,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         self.view.addGestureRecognizer(tap)
         
 //        userModel = UserModel()
-//        requestAPI = RequestAPIModel()
+        requestAPI = RequestAPIModel()
     }
     
     //MARK: private func
@@ -191,40 +193,40 @@ class LogInViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         textfieldUser.resignFirstResponder()
         textfieldPass.resignFirstResponder()
         
-        let main = self.storyboard?.instantiateViewController(withIdentifier: "BusinessSituationViewController")
-        let left = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
-        let navigation = UINavigationController.init(rootViewController: main!)
-        let slideMenu = SlideMenuController(mainViewController: navigation, leftMenuViewController: left!)
-        slideMenu.mainContainerView.backgroundColor = .white
-        slideMenu.opacityView.backgroundColor = .white
-        self.show(slideMenu, sender: nil)
+//        let main = self.storyboard?.instantiateViewController(withIdentifier: "BusinessSituationViewController")
+//        let left = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
+//        let navigation = UINavigationController.init(rootViewController: main!)
+//        let slideMenu = SlideMenuController(mainViewController: navigation, leftMenuViewController: left!)
+//        slideMenu.mainContainerView.backgroundColor = .white
+//        slideMenu.opacityView.backgroundColor = .white
+//        self.show(slideMenu, sender: nil)
         
 //        self.viewWaitingModel.startAnimatonWaiting()
 //        gửi yêu cầu đăng nhập
-//        requestAPI.requestLogin(companyCode: textfieldStore.text!, username: textfieldUser.text!, password: textfieldPass.text!) { (value, error) in
-//            if (value as? Int) == 404 {
-//                self.showDisInternet()
-//            }
-//            if (value as? Int) == ConnectStatus.sucess.rawValue {
-//                //set lai userName va NameStore trong UserDefault
-//                let dic = ["Name_Store":self.textfieldStore.text, "User_Name":self.textfieldUser.text, "Pass":self.textfieldPass.text]
-//                UserDefaults.standard.setValue(dic, forKeyPath: "User_Information")
-//                UserDefaults.standard.synchronize()
-//                //set lại thông tin cơ bản về người dùng
-//                //chuyen sang man hinh home.
-//                let main = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
-//                let left = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
-//                let navigation = UINavigationController.init(rootViewController: main!)
-//                let slideMenu = SlideMenuController(mainViewController: navigation, leftMenuViewController: left!)
-//                slideMenu.mainContainerView.backgroundColor = .white
-//                slideMenu.opacityView.backgroundColor = .white
-//                self.viewWaitingModel.endAnimationWaiting()
-//                self.show(slideMenu, sender: nil)
-//            } else {
-//                print("invadiate infor")
-//                self.viewWaitingModel.endAnimationWaiting()
-//            }
-//        }
+        requestAPI.requestLogin(companyCode: textfieldStore.text!, username: textfieldUser.text!, password: textfieldPass.text!) { (value, error) in
+            if (value as? Int) == 404 {
+                self.showDisInternet()
+            }
+            if (value as? Int) == 200 {
+                //set lai userName va NameStore trong UserDefault
+                let dic = ["Name_Store":self.textfieldStore.text, "User_Name":self.textfieldUser.text, "Pass":self.textfieldPass.text]
+                UserDefaults.standard.setValue(dic, forKeyPath: "User_Information")
+                UserDefaults.standard.synchronize()
+                //set lại thông tin cơ bản về người dùng
+                //chuyen sang man hinh home.
+                let main = self.storyboard?.instantiateViewController(withIdentifier: "BusinessSituationViewController")
+                let left = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
+                let navigation = UINavigationController.init(rootViewController: main!)
+                let slideMenu = SlideMenuController(mainViewController: navigation, leftMenuViewController: left!)
+                slideMenu.mainContainerView.backgroundColor = .white
+                slideMenu.opacityView.backgroundColor = .white
+                //self.viewWaitingModel.endAnimationWaiting()
+                self.show(slideMenu, sender: nil)
+            } else {
+                print("invadiate infor")
+                //self.viewWaitingModel.endAnimationWaiting()
+            }
+        }
     }
     
     /// sự kiện khi click vào button giới thiệu
