@@ -10,6 +10,7 @@ var getAllRevenue = require('./api_get_all_revenue');
 var getRevenueDay = require('./api_revenue_day');
 var getRevenueWeek = require('./api_revenue_week');
 var getRevenueMonth = require('./api_revenue_month');
+var topRevenue = require('./api_top_revenue');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -344,4 +345,5 @@ router.get('/get_revenue_week', getRevenueWeek);
 //lấy doanh thu thang này tại 1 cửa hàng bất kì
 router.get('/get_revenue_month', getRevenueMonth);
 
+router.get('/get_top_revenue', topRevenue);
 module.exports = router;
