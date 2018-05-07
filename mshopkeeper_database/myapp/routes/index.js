@@ -11,6 +11,8 @@ var getRevenueDay = require('./api_revenue_day');
 var getRevenueWeek = require('./api_revenue_week');
 var getRevenueMonth = require('./api_revenue_month');
 var topRevenue = require('./api_top_revenue');
+
+var topProduct = require('./api_top_product');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -346,4 +348,12 @@ router.get('/get_revenue_week', getRevenueWeek);
 router.get('/get_revenue_month', getRevenueMonth);
 
 router.get('/get_top_revenue', topRevenue);
+
+router.get('/get_top_product_day', topProduct.topProductInDay);
+router.get('/get_top_product_week', topProduct.topProductInWeek);
+router.get('/get_top_product_month', topProduct.topProductInMonth);
+router.get('/get_all_top_product_day', topProduct.allTopProductInDay);
+router.get('/get_all_top_product_week', topProduct.allTopProductInWeek);
+router.get('/get_all_top_product_month', topProduct.allTopProductInMonth);
+
 module.exports = router;

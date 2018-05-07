@@ -188,10 +188,7 @@ class RequestAPIModel {
     }
     
     func getRevenue(shopID: Int, type: Int, complete: @escaping (Int, [Int]) -> Void)  {
-//        let date = Date()
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "yyyy.MM.dd"
-//        let strDate = formatter.string(from: date)
+
         var url_string: String = ""
         switch type {
         case 0:
@@ -225,6 +222,40 @@ class RequestAPIModel {
         }
     }
     
+    func getTopRevenueShopInDay(complete: @escaping ([Dictionary<String, Any>]) -> Void) {
+        let token = UserDefaults.standard.value(forKey: "token") as! String
+        let httpHeader: HTTPHeaders! = ["authorization": token, "Content-Type":"application/x-www-form-urlencoded"]
+        let url = CommonURL.GRT_TOP_REVENUE_SHOP_DAY
+        Alamofire.request(url, method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: httpHeader)
+            .responseJSON { (response) in
+                if response.response?.statusCode == 200 {
+                    do {
+                        let dic = try JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as! [Dictionary<String, Any>]
+                        complete(dic)
+                    } catch {
+                        print("")
+                    }
+                }
+        }
+    }
+    
+    func getTopProductShopInDay(complete: @escaping ([Dictionary<String, Any>]) -> Void) {
+        let token = UserDefaults.standard.value(forKey: "token") as! String
+        let httpHeader: HTTPHeaders! = ["authorization": token, "Content-Type":"application/x-www-form-urlencoded"]
+        let url = CommonURL.GRT_TOP_REVENUE_SHOP_DAY
+        Alamofire.request(url, method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: httpHeader)
+            .responseJSON { (response) in
+                if response.response?.statusCode == 200 {
+                    do {
+                        let dic = try JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as! [Dictionary<String, Any>]
+                        complete(dic)
+                    } catch {
+                        print("")
+                    }
+                }
+        }
+    }
+
 }
 
 protocol DisConnectInternet {

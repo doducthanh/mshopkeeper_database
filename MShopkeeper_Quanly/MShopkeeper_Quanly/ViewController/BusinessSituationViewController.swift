@@ -19,7 +19,16 @@ class BusinessSituationViewController: UIViewController {
     @IBOutlet var viewTop2: UIView!
     @IBOutlet var viewTop3: UIView!
     
+    @IBOutlet var lbNameShop1: UILabel!
+    @IBOutlet var lbNameShop2: UILabel!
+    @IBOutlet var lbNameShop3: UILabel!
+    @IBOutlet var lbValueShop1: UILabel!
+    @IBOutlet var lbValueShop2: UILabel!
+    @IBOutlet var lbValueShop3: UILabel!
+    
     var id = 3
+    
+    var arrayRevenue: [Dictionary<String, Any>] = []
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -71,11 +80,31 @@ class BusinessSituationViewController: UIViewController {
         requestAPI.getRevenue(shopID: 3, type: 0) { (status, array) in
             self.drawChart(array: array)
         }
+//         lấy về danh sách top doanh thu
+        requestAPI.getTopRevenueShopInDay { (array) in
+            self.arrayRevenue = array
+            if array.count >= 3 {
+                self.lbNameShop1.text = (array[array.count - 1]["shopName"] as! String)
+                self.lbNameShop2.text = (array[array.count - 2]["shopName"] as! String)
+                self.lbNameShop3.text = (array[array.count - 3]["shopName"] as! String)
+                self.lbValueShop1.text = (array[array.count - 1]["doanhthu"] as! Int).description
+                self.lbValueShop2.text = (array[array.count - 2]["doanhthu"] as! Int).description
+                self.lbValueShop3.text = (array[array.count - 3]["doanhthu"] as! Int).description
+            }
+            
+        }
     }
     
     //MARK: onclick
     @IBAction func onClickMenu(_ sender: Any) {
         openLeft()
+    }
+    
+    @IBAction func onClickMoreRevenue(_ sender: Any) {
+        let viewTopRevenue = ViewTopRevenue.init(nibName: "ViewTopRevenue", bundle: nil)
+        viewTopRevenue.array = self.arrayRevenue
+        self.addChildViewController(viewTopRevenue)
+        self.view.addSubview(viewTopRevenue.view)
     }
     
     @IBAction func onClickOtherShop(_ sender: Any) {

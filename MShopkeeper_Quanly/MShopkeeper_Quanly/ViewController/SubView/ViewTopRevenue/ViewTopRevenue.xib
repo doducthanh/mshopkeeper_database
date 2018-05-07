@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewTopRevenue" customModule="MShopkeeper_Quanly" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewBackground" destination="5hG-GL-6hR" id="V6K-UD-aMC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hG-GL-6hR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7LQ-YK-lLu">
+                    <rect key="frame" x="30" y="120" width="314" height="426"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="H60-fj-kYH"/>
+                        <outlet property="delegate" destination="-1" id="PSo-7l-9Rj"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5hG-GL-6hR" secondAttribute="trailing" id="86d-h0-ncy"/>
+                <constraint firstItem="7LQ-YK-lLu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="NDf-KY-eiA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5hG-GL-6hR" secondAttribute="bottom" id="VZb-K5-rtK"/>
+                <constraint firstItem="5hG-GL-6hR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="g1c-7l-rCv"/>
+                <constraint firstItem="5hG-GL-6hR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jzu-bp-GKc"/>
+                <constraint firstItem="7LQ-YK-lLu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="oeL-Ey-9dv"/>
+                <constraint firstItem="7LQ-YK-lLu" firstAttribute="centerY" secondItem="5hG-GL-6hR" secondAttribute="centerY" id="vfv-hg-wdF"/>
+                <constraint firstItem="7LQ-YK-lLu" firstAttribute="centerX" secondItem="5hG-GL-6hR" secondAttribute="centerX" id="zTg-m7-9DR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

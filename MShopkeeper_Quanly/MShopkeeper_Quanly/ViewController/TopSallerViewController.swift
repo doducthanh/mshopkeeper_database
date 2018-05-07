@@ -12,10 +12,20 @@ class TopSallerViewController: UIViewController {
 
     @IBOutlet var tableTopItem: UITableView!
     @IBOutlet var tableTopSearch: UITableView!
+    
+    var arrayProduct: [Dictionary<String, Any>] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let requestAPI = RequestAPIModel()
+        requestAPI.getTopProductShopInDay { (array) in
+            self.arrayProduct = array
+            DispatchQueue.main.async {
+                self.tableTopItem.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,8 +57,8 @@ extension TopSallerViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.register(UINib.init(nibName: "TopItemTableViewCell", bundle: nil), forCellReuseIdentifier: "mycell")
         let cell = tableView.dequeueReusableCell(withIdentifier: "mycell") as! TopItemTableViewCell
         cell.img.text = String(indexPath.row)
-        cell.lbName.text = "ao so mi"
-        cell.lbCount.text = String(indexPath.row + 10)
+        cell.lbName.text = (self.arrayProduct[indexPath.row]["modelName"] as! String) + "-" + (self.arrayProduct[indexPath.row]["color"] as! String) + "-" + (self.arrayProduct[indexPath.row]["size"] as! String)
+        cell.lbCount.text = (self.arrayProduct[indexPath.row]["count"] as! Int).description
         return cell
     }
     
