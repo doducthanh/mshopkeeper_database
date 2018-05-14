@@ -46,12 +46,12 @@ extension OtherShops: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let shopid = arrayShop[indexPath.row].shopID
-        delegate.selectShop(id: shopid)
+        delegate.selectShop(id: shopid, shop: arrayShop[indexPath.row])
         self.dismiss(animated: true, completion: nil)
     }
 
 }
 
 protocol OtherShopDelegate {
-    func selectShop(id: Int)
+    func selectShop(id: Int, shop: Shop)
 }

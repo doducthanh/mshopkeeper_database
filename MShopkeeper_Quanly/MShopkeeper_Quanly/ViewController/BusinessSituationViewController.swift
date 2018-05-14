@@ -14,6 +14,11 @@ class BusinessSituationViewController: UIViewController {
 
     var chartView: Chart!
     var chartLine: LineChart!
+    
+    @IBOutlet var lbNameShop: UILabel!
+    @IBOutlet var lbAddress: UILabel!
+    @IBOutlet var btDate: UIButton!
+    
     @IBOutlet var viewChart: UIView!
     @IBOutlet var viewTop1: UIView!
     @IBOutlet var viewTop2: UIView!
@@ -26,8 +31,9 @@ class BusinessSituationViewController: UIViewController {
     @IBOutlet var lbValueShop2: UILabel!
     @IBOutlet var lbValueShop3: UILabel!
     
+    @IBOutlet var btMore: UIButton!
     var id = 3
-    
+    var arrayShop: [Shop] =  [Shop]()
     var arrayRevenue: [Dictionary<String, Any>] = []
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,6 +45,9 @@ class BusinessSituationViewController: UIViewController {
     let sideSelectorHeight: CGFloat = 80
     
     fileprivate func drawChart(array: [Int]) {
+        if let subview = self.viewChart.viewWithTag(100) {
+            subview.removeFromSuperview()
+        }
         let barChart = BarChartView.init(frame: CGRect.init(x: 10, y: 10, width: viewChart.frame.width - 20, height: viewChart.frame.height - 60))
         var arrayEntry = [BarChartDataEntry]()
         for index in 0..<array.count {
@@ -69,20 +78,21 @@ class BusinessSituationViewController: UIViewController {
     
     override func viewDidLoad() {
         //showChart(horizontal: false)
-        viewTop1.layer.cornerRadius = 3
-        viewTop2.layer.cornerRadius = 3
-        viewTop3.layer.cornerRadius = 3
-        viewTop1.layer.masksToBounds = true
-        viewTop2.layer.masksToBounds = true
-        viewTop3.layer.masksToBounds = true
+//        viewTop1.layer.cornerRadius = 3
+//        viewTop2.layer.cornerRadius = 3
+//        viewTop3.layer.cornerRadius = 3
+//        viewTop1.layer.masksToBounds = true
+//        viewTop2.layer.masksToBounds = true
+//        viewTop3.layer.masksToBounds = true
         
         let requestAPI = RequestAPIModel()
         requestAPI.getRevenue(shopID: 3, type: 0) { (status, array) in
             self.drawChart(array: array)
         }
 //         lấy về danh sách top doanh thu
-        requestAPI.getTopRevenueShopInDay { (array) in
+        requestAPI.getTopRevenueShop(type: 0) { (array) in
             self.arrayRevenue = array
+            
             if array.count >= 3 {
                 self.lbNameShop1.text = (array[array.count - 1]["shopName"] as! String)
                 self.lbNameShop2.text = (array[array.count - 2]["shopName"] as! String)
@@ -90,8 +100,20 @@ class BusinessSituationViewController: UIViewController {
                 self.lbValueShop1.text = (array[array.count - 1]["doanhthu"] as! Int).description
                 self.lbValueShop2.text = (array[array.count - 2]["doanhthu"] as! Int).description
                 self.lbValueShop3.text = (array[array.count - 3]["doanhthu"] as! Int).description
+                self.btMore.isHidden = false
             }
-            
+            if array.count == 2 {
+                self.lbNameShop1.text = (array[array.count - 1]["shopName"] as! String)
+                self.lbNameShop2.text = (array[array.count - 2]["shopName"] as! String)
+                self.lbValueShop1.text = (array[array.count - 1]["doanhthu"] as! Int).description
+                self.lbValueShop2.text = (array[array.count - 2]["doanhthu"] as! Int).description
+                self.btMore.isHidden = true
+            }
+            if array.count == 1 {
+                self.lbNameShop1.text = (array[array.count - 1]["shopName"] as! String)
+                self.lbValueShop1.text = (array[array.count - 1]["doanhthu"] as! Int).description
+                self.btMore.isHidden = true
+            }
         }
     }
     
@@ -113,18 +135,23 @@ class BusinessSituationViewController: UIViewController {
         requestAPI.getShops { (status, arrayShop) in
             let otherVC = OtherShops.init(nibName: "OtherShops", bundle: nil)
             otherVC.arrayShop = arrayShop
+            self.arrayShop = arrayShop
             otherVC.delegate = self
             self.present(otherVC, animated: true, completion: nil)
         }
         
     }
+    
+    /// hàm set sự kiện khi chọn thời gian
+    ///
+    /// - Parameter sender:
     @IBAction func onClickDate(_ sender: Any) {
         let sheetUI = UIAlertController.init(title: "Tình hình doanh thu", message: "Chọn thời gian thống kê", preferredStyle: .actionSheet)
         let day = UIAlertAction.init(title: "Hôm nay", style: .default) { (action) in
             if let subview = self.viewChart.viewWithTag(100) {
                 subview.removeFromSuperview()
             }
-            
+            self.btDate.setTitle("Hôm nay", for: .normal)
             let requestAPI = RequestAPIModel()
             requestAPI.getRevenue(shopID: self.id, type: 0) { (status, array) in
                 self.drawChart(array: array)
@@ -134,20 +161,68 @@ class BusinessSituationViewController: UIViewController {
             if let subview = self.viewChart.viewWithTag(100) {
                 subview.removeFromSuperview()
             }
-            
+            self.btDate.setTitle("Tuần này", for: .normal)
             let requestAPI = RequestAPIModel()
             requestAPI.getRevenue(shopID: self.id, type: 1) { (status, array) in
                 self.drawChart(array: array)
+            }
+            requestAPI.getTopRevenueShop(type: 1) { (array) in
+                self.arrayRevenue = array
+                if array.count >= 3 {
+                    self.lbNameShop1.text = (array[array.count - 1]["shopName"] as! String)
+                    self.lbNameShop2.text = (array[array.count - 2]["shopName"] as! String)
+                    self.lbNameShop3.text = (array[array.count - 3]["shopName"] as! String)
+                    self.lbValueShop1.text = (array[array.count - 1]["doanhthu"] as! Int).description
+                    self.lbValueShop2.text = (array[array.count - 2]["doanhthu"] as! Int).description
+                    self.lbValueShop3.text = (array[array.count - 3]["doanhthu"] as! Int).description
+                    self.btMore.isHidden = false
+                }
+                if array.count == 2 {
+                    self.lbNameShop1.text = (array[array.count - 1]["shopName"] as! String)
+                    self.lbNameShop2.text = (array[array.count - 2]["shopName"] as! String)
+                    self.lbValueShop1.text = (array[array.count - 1]["doanhthu"] as! Int).description
+                    self.lbValueShop2.text = (array[array.count - 2]["doanhthu"] as! Int).description
+                    self.btMore.isHidden = true
+                }
+                if array.count == 1 {
+                    self.lbNameShop1.text = (array[array.count - 1]["shopName"] as! String)
+                    self.lbValueShop1.text = (array[array.count - 1]["doanhthu"] as! Int).description
+                    self.btMore.isHidden = true
+                }
             }
         }
         let month = UIAlertAction.init(title: "Tháng nay", style: .default) { (action) in
             if let subview = self.viewChart.viewWithTag(100) {
                 subview.removeFromSuperview()
             }
-            
+            self.btDate.setTitle("Tháng này", for: .normal)
             let requestAPI = RequestAPIModel()
             requestAPI.getRevenue(shopID: self.id, type: 2) { (status, array) in
                 self.drawChart(array: array)
+            }
+            requestAPI.getTopRevenueShop(type: 2) { (array) in
+                self.arrayRevenue = array
+                if array.count >= 3 {
+                    self.lbNameShop1.text = (array[array.count - 1]["shopName"] as! String)
+                    self.lbNameShop2.text = (array[array.count - 2]["shopName"] as! String)
+                    self.lbNameShop3.text = (array[array.count - 3]["shopName"] as! String)
+                    self.lbValueShop1.text = (array[array.count - 1]["doanhthu"] as! Int).description
+                    self.lbValueShop2.text = (array[array.count - 2]["doanhthu"] as! Int).description
+                    self.lbValueShop3.text = (array[array.count - 3]["doanhthu"] as! Int).description
+                    self.btMore.isHidden = false
+                }
+                if array.count == 2 {
+                    self.lbNameShop1.text = (array[array.count - 1]["shopName"] as! String)
+                    self.lbNameShop2.text = (array[array.count - 2]["shopName"] as! String)
+                    self.lbValueShop1.text = (array[array.count - 1]["doanhthu"] as! Int).description
+                    self.lbValueShop2.text = (array[array.count - 2]["doanhthu"] as! Int).description
+                    self.btMore.isHidden = true
+                }
+                if array.count == 1 {
+                    self.lbNameShop1.text = (array[array.count - 1]["shopName"] as! String)
+                    self.lbValueShop1.text = (array[array.count - 1]["doanhthu"] as! Int).description
+                    self.btMore.isHidden = true
+                }
             }
         }
         sheetUI.addAction(day)
@@ -158,14 +233,19 @@ class BusinessSituationViewController: UIViewController {
 }
 
 extension BusinessSituationViewController: OtherShopDelegate {
-    func selectShop(id: Int) {
+    func selectShop(id: Int, shop: Shop) {
         if let subview = self.viewChart.viewWithTag(100) {
             subview.removeFromSuperview()
-        }
-        
-        let requestAPI = RequestAPIModel()
-        requestAPI.getRevenue(shopID: id, type: 0) { (status, array) in
-            self.drawChart(array: array)
+            self.id = id
+            self.lbNameShop.text = shop.shopName
+            self.lbAddress.text = shop.address
+            //        lấy thông tin doanh số ứng với id cửa hàng.
+            let requestAPI = RequestAPIModel()
+            requestAPI.getRevenue(shopID: id, type: 0) { (status, array) in
+                DispatchQueue.main.async {
+                    self.drawChart(array: array)
+                }
+            }
         }
     }
     

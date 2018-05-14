@@ -222,10 +222,19 @@ class RequestAPIModel {
         }
     }
     
-    func getTopRevenueShopInDay(complete: @escaping ([Dictionary<String, Any>]) -> Void) {
+    func getTopRevenueShop(type: Int, complete: @escaping ([Dictionary<String, Any>]) -> Void) {
         let token = UserDefaults.standard.value(forKey: "token") as! String
         let httpHeader: HTTPHeaders! = ["authorization": token, "Content-Type":"application/x-www-form-urlencoded"]
-        let url = CommonURL.GRT_TOP_REVENUE_SHOP_DAY
+        var url = ""
+        if type == 0 {
+            url = CommonURL.GRT_TOP_REVENUE_SHOP_DAY
+        }
+        if type == 1 {
+            url = CommonURL.GRT_TOP_REVENUE_SHOP_WEEK
+        }
+        if type == 2 {
+            url = CommonURL.GRT_TOP_REVENUE_SHOP_MONTH
+        }
         Alamofire.request(url, method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: httpHeader)
             .responseJSON { (response) in
                 if response.response?.statusCode == 200 {
@@ -239,10 +248,20 @@ class RequestAPIModel {
         }
     }
     
-    func getTopProductShopInDay(complete: @escaping ([Dictionary<String, Any>]) -> Void) {
-        let token = UserDefaults.standard.value(forKey: "token") as! String
-        let httpHeader: HTTPHeaders! = ["authorization": token, "Content-Type":"application/x-www-form-urlencoded"]
-        let url = CommonURL.GRT_TOP_REVENUE_SHOP_DAY
+    
+    func getTopProductShop(type: Int, shopID: Int, complete: @escaping ([Dictionary<String, Any>]) -> Void) {
+        let httpHeader: HTTPHeaders! = ["shopid": shopID.description, "Content-Type":"application/x-www-form-urlencoded"]
+        var url = ""
+        if type == 0 {
+           url = CommonURL.GET_TOP_PRODUCT_SHOP_DAY
+        }
+        if type == 1 {
+            url = CommonURL.GET_TOP_PRODUCT_SHOP_WEEk
+        }
+        if type == 2 {
+            url = CommonURL.GET_TOP_PRODUCT_SHOP_MONTH
+        }
+        
         Alamofire.request(url, method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: httpHeader)
             .responseJSON { (response) in
                 if response.response?.statusCode == 200 {

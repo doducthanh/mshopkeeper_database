@@ -19,4 +19,6 @@ class CommonVariable: NSObject{
     static var isDisConnect = false
     static var isSelectShopCurrent = true
     static var numberRowAddress = 0
+    static var shopOfficial: Shop!
+    static var arrayShopDepend: [Shop]!
 }
