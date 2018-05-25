@@ -86,6 +86,7 @@ let allTopProductInWeek = function (req, res) {
                             + " GROUP BY SKUCode + ORDER BY COUNT(*)) as table2 "
 
               + " WHERE model.modelID = table2.modelID";
+  console.log(sql);
   mysql.query(mysql.format(sql), function (err, result) {
     if (!err) {
       res.status(200).json(result);

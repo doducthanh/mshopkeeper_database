@@ -38,9 +38,11 @@ extension OtherShops: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell.init(style: .default, reuseIdentifier: "mycell")
-        cell.imageView?.image = UIImage.init(named: "icon")
+        let cell = UITableViewCell.init(style: .subtitle, reuseIdentifier: "mycell")
+        cell.imageView?.topAnchor.constraint(equalTo: cell.topAnchor, constant: 15).isActive = true
+        cell.imageView?.image = UIImage.init(named: "icon_saler")
         cell.textLabel?.text = arrayShop[indexPath.row].shopName
+        cell.detailTextLabel?.text = arrayShop[indexPath.row].address
         return cell
     }
     
@@ -48,6 +50,10 @@ extension OtherShops: UITableViewDelegate, UITableViewDataSource {
         let shopid = arrayShop[indexPath.row].shopID
         delegate.selectShop(id: shopid, shop: arrayShop[indexPath.row])
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
 
 }

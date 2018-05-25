@@ -347,7 +347,9 @@ router.get('/get_revenue_week', getRevenueWeek);
 //lấy doanh thu thang này tại 1 cửa hàng bất kì
 router.get('/get_revenue_month', getRevenueMonth);
 
-router.get('/get_top_revenue', topRevenue);
+router.get('/get_top_revenue_day', topRevenue.topRevenueInDay);
+router.get('/get_top_revenue_week', topRevenue.topRevenueInWeek);
+router.get('/get_top_revenue_month', topRevenue.topRevenueInMonth);
 
 router.get('/get_top_product_day', topProduct.topProductInDay);
 router.get('/get_top_product_week', topProduct.topProductInWeek);

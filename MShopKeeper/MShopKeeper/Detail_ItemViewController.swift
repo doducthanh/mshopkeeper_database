@@ -117,13 +117,13 @@ class Detail_ItemViewController: UIViewController {
         buttonMode.drawButtons(number: arrayColor.count, viewSub: viewColors, array: arrayColor, tag: 0) { (count) in
             contraintHeightViewColor.constant = CGFloat(20 + count*(heighButton + 20))
             contranitTopViewMauSac.constant = 35
-            contraintHeightScrollView.constant = 620 + viewSize.frame.height + viewColors.frame.height
+            contraintHeightScrollView.constant = 620 + viewSize.frame.height + viewColors.frame.height + 20
         }
         //vẽ group button size
         buttonMode.drawButtons(number: arraySize.count, viewSub: viewSize, array: arraySize, tag: 1) { (count) in
             contraintHeightViewSize.constant = CGFloat(35 + count*(heighButton + 15))
             contraintTopViewSize.constant = contraintHeightViewColor.constant + 70
-            contraintHeightScrollView.constant = 620 + viewSize.frame.height + viewColors.frame.height
+            contraintHeightScrollView.constant = 620 + viewSize.frame.height + viewColors.frame.height + 20
         }
         buttonMode.setAlphaButton(tag: 1)
     }

@@ -32,15 +32,15 @@ class MenuTableViewCell: UITableViewCell {
                 self.addSubview(line)
                 self.separatorInset = UIEdgeInsetsMake(0, 0, 1, 0)
                 self.img?.image = UIImage.init(named: "ic_menu_share")
-                self.labelText?.text = "share app"
+                self.labelText?.text = "Chia sẻ ứng dụng"
             }
             if row == 3 {
                 self.img?.image = UIImage.init(named: "ic_menu_rate")
-                self.labelText?.text = "rate app"
+                self.labelText?.text = "Đánh giá ứng dụng"
             }
             if row == 4 {
                 self.img?.image = UIImage.init(named: "ic_menu_about")
-                self.labelText?.text = "information app"
+                self.labelText?.text = "Thông tin ứng dụng"
             }
             if row == 5 {
                 let line = UIView.init()
@@ -49,12 +49,12 @@ class MenuTableViewCell: UITableViewCell {
                 self.addSubview(line)
                 self.separatorInset = UIEdgeInsetsMake(0, 0, 1, 0)
                 self.img?.image = UIImage.init(named: "ic_menu_change_password")
-                self.labelText?.text = "change password"
+                self.labelText?.text = "Đổi mật khẩu"
                 
             }
             if row == 6 {
                 self.img?.image = UIImage.init(named: "ic_menu_logout")
-                self.labelText?.text = "log out"
+                self.labelText?.text = "Đăng xuất"
             }
         }
     }

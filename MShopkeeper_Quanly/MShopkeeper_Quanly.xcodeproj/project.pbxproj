@@ -22,6 +22,7 @@
 		841528AE209F483E00FA797B /* ViewTopRevenue.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841528AC209F483E00FA797B /* ViewTopRevenue.xib */; };
 		841528B1209F49AA00FA797B /* TopRevenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841528AF209F49AA00FA797B /* TopRevenueTableViewCell.swift */; };
 		841528B2209F49AA00FA797B /* TopRevenueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841528B0209F49AA00FA797B /* TopRevenueTableViewCell.xib */; };
+		84172A9B20B6EAFC004041BC /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84172A9820B6EAFC004041BC /* MyColors.swift */; };
 		842EE39B2084CE3000FEDAE0 /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EE39A2084CE2F00FEDAE0 /* ExamplesDefaults.swift */; };
 		842EE39D2084CEF900FEDAE0 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EE39C2084CEF900FEDAE0 /* Env.swift */; };
 		846AA597208CD2210050A153 /* ViewRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AA596208CD2210050A153 /* ViewRadius.swift */; };
@@ -208,6 +209,7 @@
 		841528AC209F483E00FA797B /* ViewTopRevenue.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewTopRevenue.xib; sourceTree = "<group>"; };
 		841528AF209F49AA00FA797B /* TopRevenueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRevenueTableViewCell.swift; sourceTree = "<group>"; };
 		841528B0209F49AA00FA797B /* TopRevenueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopRevenueTableViewCell.xib; sourceTree = "<group>"; };
+		84172A9820B6EAFC004041BC /* MyColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 		842EE39A2084CE2F00FEDAE0 /* ExamplesDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
 		842EE39C2084CEF900FEDAE0 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		846AA596208CD2210050A153 /* ViewRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRadius.swift; sourceTree = "<group>"; };
@@ -645,6 +647,7 @@
 		84D8FA0D207E3D5800F69B41 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				84172A9820B6EAFC004041BC /* MyColors.swift */,
 				84EB0983208C820100F4AF75 /* CommonVariable.swift */,
 				84EB0984208C820100F4AF75 /* Constant.swift */,
 				84EB0975208C80EC00F4AF75 /* CommonURL.swift */,
@@ -958,6 +961,7 @@
 				848BE69F207857AB000CC06F /* MShopkeeper_Quanly.xcdatamodeld in Sources */,
 				84E04FA9207A5C4300E9373E /* LogInViewController.swift in Sources */,
 				84EB097F208C816B00F4AF75 /* Account.swift in Sources */,
+				84172A9B20B6EAFC004041BC /* MyColors.swift in Sources */,
 				842EE39D2084CEF900FEDAE0 /* Env.swift in Sources */,
 				846AA597208CD2210050A153 /* ViewRadius.swift in Sources */,
 				848BE6B620786176000CC06F /* SlideMenuController.swift in Sources */,
