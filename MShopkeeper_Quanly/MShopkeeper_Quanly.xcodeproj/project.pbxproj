@@ -26,6 +26,7 @@
 		842EE39B2084CE3000FEDAE0 /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EE39A2084CE2F00FEDAE0 /* ExamplesDefaults.swift */; };
 		842EE39D2084CEF900FEDAE0 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EE39C2084CEF900FEDAE0 /* Env.swift */; };
 		846AA597208CD2210050A153 /* ViewRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AA596208CD2210050A153 /* ViewRadius.swift */; };
+		8471C84A20B81BC300A2EAE0 /* TopRevenuesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471C84920B81BC300A2EAE0 /* TopRevenuesTableViewCell.swift */; };
 		8472AC9D208C3E04000BA6D4 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8472AC9A208C3DFA000BA6D4 /* Charts.framework */; };
 		848BE697207857AB000CC06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE696207857AB000CC06F /* AppDelegate.swift */; };
 		848BE699207857AB000CC06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BE698207857AB000CC06F /* ViewController.swift */; };
@@ -213,6 +214,7 @@
 		842EE39A2084CE2F00FEDAE0 /* ExamplesDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
 		842EE39C2084CEF900FEDAE0 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		846AA596208CD2210050A153 /* ViewRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRadius.swift; sourceTree = "<group>"; };
+		8471C84920B81BC300A2EAE0 /* TopRevenuesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRevenuesTableViewCell.swift; sourceTree = "<group>"; };
 		8472AC94208C3DFA000BA6D4 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-3.0.4/Charts.xcodeproj"; sourceTree = "<group>"; };
 		848BE693207857AB000CC06F /* MShopkeeper_Quanly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MShopkeeper_Quanly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848BE696207857AB000CC06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 			children = (
 				841528AB209F483E00FA797B /* ViewTopRevenue.swift */,
 				841528AC209F483E00FA797B /* ViewTopRevenue.xib */,
+				8471C84920B81BC300A2EAE0 /* TopRevenuesTableViewCell.swift */,
 			);
 			path = ViewTopRevenue;
 			sourceTree = "<group>";
@@ -986,6 +989,7 @@
 				77DFB9BF207C9B4400C108AD /* TopSallerViewController.swift in Sources */,
 				7743D572207C5F6E00B4B629 /* InforProductViewController.swift in Sources */,
 				84EB0976208C80EC00F4AF75 /* CommonURL.swift in Sources */,
+				8471C84A20B81BC300A2EAE0 /* TopRevenuesTableViewCell.swift in Sources */,
 				770E294B207B533A00626697 /* MenuViewController.swift in Sources */,
 				84EB097D208C816B00F4AF75 /* Supplier.swift in Sources */,
 			);

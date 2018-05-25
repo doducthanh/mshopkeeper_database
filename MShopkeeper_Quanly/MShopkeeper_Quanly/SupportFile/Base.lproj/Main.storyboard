@@ -738,6 +738,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pqc-Fu-qml">
+                                <rect key="frame" x="10" y="459" width="355" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TopRevenuesTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mycell" id="cmj-D7-byk" customClass="TopRevenuesTableViewCell" customModule="MShopkeeper_Quanly" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="355" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cmj-D7-byk" id="Vjk-Fi-1qM">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnF-dJ-Qor">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="44"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Q8-rD-Xf1">
+                                                    <rect key="frame" x="304.5" y="0.0" width="44.5" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="pgq-0X-abN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.4039215686" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="8Q8-rD-Xf1" secondAttribute="bottom" id="03J-oQ-6Et"/>
+                                                <constraint firstAttribute="bottom" secondItem="VnF-dJ-Qor" secondAttribute="bottom" id="SRk-uh-UpD"/>
+                                                <constraint firstItem="VnF-dJ-Qor" firstAttribute="leading" secondItem="Vjk-Fi-1qM" secondAttribute="leading" id="hvu-Vx-9Wa"/>
+                                                <constraint firstItem="VnF-dJ-Qor" firstAttribute="top" secondItem="Vjk-Fi-1qM" secondAttribute="top" id="oFc-oK-xqX"/>
+                                                <constraint firstItem="8Q8-rD-Xf1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VnF-dJ-Qor" secondAttribute="trailing" id="sTT-NI-aGt"/>
+                                                <constraint firstAttribute="trailing" secondItem="8Q8-rD-Xf1" secondAttribute="trailing" constant="6" id="uSb-80-Caf"/>
+                                                <constraint firstItem="8Q8-rD-Xf1" firstAttribute="top" secondItem="Vjk-Fi-1qM" secondAttribute="top" id="yT6-0v-ooh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbNameShop" destination="VnF-dJ-Qor" id="PBE-kA-IHa"/>
+                                            <outlet property="lbRevenue" destination="8Q8-rD-Xf1" id="2d4-jo-SX2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WKW-0n-aJ7" id="Z8g-oV-jQr"/>
+                                    <outlet property="delegate" destination="WKW-0n-aJ7" id="eei-8L-lg8"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -771,6 +820,7 @@
                         <outlet property="btDate" destination="ri8-id-kt1" id="Aky-Zg-7nB"/>
                         <outlet property="lbAddress" destination="ds7-NF-sjK" id="8es-E7-Ube"/>
                         <outlet property="lbNameShop" destination="Z84-Co-Ono" id="H8r-L3-2e8"/>
+                        <outlet property="mytable" destination="pqc-Fu-qml" id="icT-lh-67w"/>
                         <outlet property="viewChart" destination="mo2-4t-Rmf" id="D5f-dW-7cm"/>
                         <segue destination="KMc-ly-8br" kind="push" id="bt2-E4-kJv"/>
                     </connections>

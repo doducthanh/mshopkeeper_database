@@ -20,7 +20,9 @@ class BusinessSituationViewController: UIViewController {
     @IBOutlet var btDate: UIButton!
     
     @IBOutlet var viewChart: UIView!
-
+    @IBOutlet var viewPieChart: UIView!
+    @IBOutlet var mytable: UITableView!
+    
     var id = 3
     var arrayShop: [Shop] =  [Shop]()
     var arrayRevenue: [Dictionary<String, Any>] = []
@@ -68,6 +70,8 @@ class BusinessSituationViewController: UIViewController {
         self.viewChart.addSubview(barChart)
     }
     
+    
+    
     override func viewDidLoad() {
         self.navigationController?.navigationBar.barTintColor = MyColors.BLUE
         
@@ -83,9 +87,12 @@ class BusinessSituationViewController: UIViewController {
         let requestAPI = RequestAPIModel()
         requestAPI.getTopRevenueShop(type: index) { (array) in
             self.arrayRevenue = array
-            
+            DispatchQueue.main.async {
+                self.mytable.reloadData()
+            }
         }
     }
+    
     //MARK: onclick
     @IBAction func onClickMenu(_ sender: Any) {
         openLeft()
@@ -160,6 +167,7 @@ class BusinessSituationViewController: UIViewController {
         sheetUI.addAction(month)
         self.present(sheetUI, animated: true, completion: nil)
     }
+    
 }
 
 extension BusinessSituationViewController: OtherShopDelegate {
@@ -178,7 +186,20 @@ extension BusinessSituationViewController: OtherShopDelegate {
             }
         }
     }
+}
+
+extension BusinessSituationViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.arrayRevenue.count
+    }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mycell") as! TopRevenuesTableViewCell
+        cell.diction = self.arrayRevenue[self.arrayRevenue.count - indexPath.row - 1]
+        return cell
+    }
 }
 

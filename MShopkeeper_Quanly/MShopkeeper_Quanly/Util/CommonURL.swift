@@ -27,9 +27,9 @@ class CommonURL {
     public static let GET_REVENUE_DAY = "http://localhost:3000/get_revenue_day"
     public static let GET_REVENUE_WEEK = "http://localhost:3000/get_revenue_week"
     public static let GET_REVENUE_MONTH = "http://localhost:3000/get_revenue_month"
-    public static let GRT_TOP_REVENUE_SHOP_DAY = "http://localhost:3000/get_top_revenue"
-    public static let GRT_TOP_REVENUE_SHOP_WEEK = "http://localhost:3000/get_top_revenue_week"
-    public static let GRT_TOP_REVENUE_SHOP_MONTH = "http://localhost:3000/get_top_revenue_month"
+    public static let GET_TOP_REVENUE_SHOP_DAY = "http://localhost:3000/get_top_revenue_day"
+    public static let GET_TOP_REVENUE_SHOP_WEEK = "http://localhost:3000/get_top_revenue_week"
+    public static let GET_TOP_REVENUE_SHOP_MONTH = "http://localhost:3000/get_top_revenue_month"
 
     public static let GET_ALL_TOP_PRODUCT_SHOP_WEEk = "http://localhost:3000/get_all_top_product_week"
     public static let GET_ALL_TOP_PRODUCT_SHOP_MONTH = "http://localhost:3000/get_all_top_product_month"
