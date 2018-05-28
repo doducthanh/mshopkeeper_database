@@ -15,7 +15,7 @@ class TopRevenuesTableViewCell: UITableViewCell {
     var diction: Dictionary<String, Any>! {
         didSet{
             self.lbNameShop.text = (self.diction["shopName"] as! String) + "-" + (self.diction["addressShop"] as! String)
-            self.lbRevenue.text = (self.diction["doanhthu"] as! Int).description
+            self.lbRevenue.text = (self.diction["doanhthu"] as! Int).description + "K"
         }
     }
     

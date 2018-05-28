@@ -250,17 +250,36 @@ class RequestAPIModel {
     
     
     func getTopProductShop(type: Int, shopID: Int, complete: @escaping ([Dictionary<String, Any>]) -> Void) {
-        let httpHeader: HTTPHeaders! = ["shopid": shopID.description, "Content-Type":"application/x-www-form-urlencoded"]
+        let token = UserDefaults.standard.value(forKey: "token") as! String
+        let httpHeader: HTTPHeaders! = ["authorization": token, "shopid": shopID.description, "Content-Type":"application/x-www-form-urlencoded"]
         var url = ""
         if type == 0 {
-            url = CommonURL.GET_ALL_TOP_PRODUCT_SHOP_DAY
+            url = CommonURL.GET_TOP_PRODUCT_DAY
         }
         if type == 1 {
-            url = CommonURL.GET_ALL_TOP_PRODUCT_SHOP_WEEk
+            url = CommonURL.GET_TOP_PRODUCT_WEEK
         }
         if type == 2 {
-            url = CommonURL.GET_ALL_TOP_PRODUCT_SHOP_MONTH
+            url = CommonURL.GET_TOP_PRODUCT_MONTH
         }
+        
+        Alamofire.request(url, method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: httpHeader)
+            .responseJSON { (response) in
+                if response.response?.statusCode == 200 {
+                    do {
+                        let dic = try JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as! [Dictionary<String, Any>]
+                        complete(dic)
+                    } catch {
+                        print("")
+                    }
+                }
+        }
+    }
+    
+    func getTopSearch(type: Int, shopID: Int, complete: @escaping ([Dictionary<String, Any>]) -> Void) {
+        let token = UserDefaults.standard.value(forKey: "token") as! String
+        let httpHeader: HTTPHeaders! = ["authorization": token, "shopid": shopID.description, "Content-Type":"application/x-www-form-urlencoded"]
+        let url = CommonURL.GET_TOP_SEARCH
         
         Alamofire.request(url, method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: httpHeader)
             .responseJSON { (response) in

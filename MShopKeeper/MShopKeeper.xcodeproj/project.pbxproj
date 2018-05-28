@@ -241,6 +241,8 @@
 		847227652077620900F19E32 /* icon_saler.png in Resources */ = {isa = PBXBuildFile; fileRef = 847227642077620800F19E32 /* icon_saler.png */; };
 		84722767207762A700F19E32 /* icon_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 84722766207762A600F19E32 /* icon_message.png */; };
 		847227692077691100F19E32 /* item1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 847227682077690F00F19E32 /* item1.jpg */; };
+		84CE525E20BAFB6F003F250C /* PromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE525C20BAFB6F003F250C /* PromotionCollectionViewCell.swift */; };
+		84CE525F20BAFB6F003F250C /* PromotionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CE525D20BAFB6F003F250C /* PromotionCollectionViewCell.xib */; };
 		F1AA43AA990A2FE809FAA401 /* Pods_MShopKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC49FFD73EA07BD2BF71FD6 /* Pods_MShopKeeper.framework */; };
 /* End PBXBuildFile section */
 
@@ -510,6 +512,8 @@
 		847227642077620800F19E32 /* icon_saler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_saler.png; sourceTree = "<group>"; };
 		84722766207762A600F19E32 /* icon_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_message.png; sourceTree = "<group>"; };
 		847227682077690F00F19E32 /* item1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = item1.jpg; sourceTree = "<group>"; };
+		84CE525C20BAFB6F003F250C /* PromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		84CE525D20BAFB6F003F250C /* PromotionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionCollectionViewCell.xib; sourceTree = "<group>"; };
 		DD313B0095FFC52BD3A6550F /* Pods-MShopKeeperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MShopKeeperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MShopKeeperUITests/Pods-MShopKeeperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E2DFB463A2FCAB628A139CFD /* Pods-MShopKeeperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MShopKeeperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MShopKeeperUITests/Pods-MShopKeeperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FCC49FFD73EA07BD2BF71FD6 /* Pods_MShopKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MShopKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -606,6 +610,8 @@
 				7704C349202B049B00227ADC /* ViewSort */,
 				77F4270320285222006C06CE /* ViewCatalogItem */,
 				77F4270220285212006C06CE /* ViewOutOfStock */,
+				84CE525C20BAFB6F003F250C /* PromotionCollectionViewCell.swift */,
+				84CE525D20BAFB6F003F250C /* PromotionCollectionViewCell.xib */,
 			);
 			name = SubView;
 			sourceTree = "<group>";
@@ -1243,6 +1249,7 @@
 				7750DD5120108D540065A397 /* abc_ic_star_black_16dp.png in Resources */,
 				7750DD8620108D540065A397 /* ic_action_back.png in Resources */,
 				841604F8207754A400004576 /* ic_female.png in Resources */,
+				84CE525F20BAFB6F003F250C /* PromotionCollectionViewCell.xib in Resources */,
 				7750DD9B20108D540065A397 /* ic_force_version_1.png in Resources */,
 				7750DD9220108D540065A397 /* ic_cancel_grey600_36dp.png in Resources */,
 				7750DD6420108D540065A397 /* abc_scrubber_track_mtrl_alpha.9.png in Resources */,
@@ -1519,6 +1526,7 @@
 				77BD53E620523E3C0085445D /* ButtonMode.swift in Sources */,
 				7747CAE0205F931900188821 /* Model.swift in Sources */,
 				77EA054A205BBE4F0001FEF7 /* MatchKeyLocalizable.swift in Sources */,
+				84CE525E20BAFB6F003F250C /* PromotionCollectionViewCell.swift in Sources */,
 				7713E7A4201B0B15006708A5 /* HomeViewController.swift in Sources */,
 				77D72E10206CE3A800417B0F /* Reachability.swift in Sources */,
 				77BD53DB205217ED0085445D /* Stock.swift in Sources */,

@@ -18,6 +18,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var imgSale: UIImageView!
     @IBOutlet weak var viewBackground: UIView!
+    @IBOutlet var lbPromotionPrice: UILabel!
     var arrayModel: [Model]!
     
     var item: Item! = Item()
@@ -37,14 +38,17 @@ class HomeCollectionViewCell: UICollectionViewCell {
             } else {
                 self.img.kf.setImage(with: resource)  
             }
-//            if model.isPromtion {
-//                self.imgSale.isHidden = false
-//            } else {
-//                self.imgSale.isHidden = true
-//            }
-            
             self.labelItem.text = model.modelName
             self.labelPrice.text = String(model.unitPrice) + Constant.Currency_Unit
+            if model.isPromtion {
+                self.lbPromotionPrice.text = model.PromotionPrice.description + "K"
+                let attribute = NSMutableAttributedString.init(string: (model.unitPrice.description + "K"))
+                attribute.addAttribute(NSAttributedStringKey.strikethroughStyle, value: 2, range: NSMakeRange(0, attribute.length))
+                self.labelPrice.attributedText = attribute
+            } else {
+                self.lbPromotionPrice.text = ""
+                self.labelPrice.attributedText = nil
+            }
         }
     }
     

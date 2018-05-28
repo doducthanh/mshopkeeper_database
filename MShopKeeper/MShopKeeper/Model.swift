@@ -24,4 +24,6 @@ class Model {
     var percentPromtion = 0.0
     var saleCount = 0
     var dataImage: Data?
+    var PromotionPrice = 0
+    
 }

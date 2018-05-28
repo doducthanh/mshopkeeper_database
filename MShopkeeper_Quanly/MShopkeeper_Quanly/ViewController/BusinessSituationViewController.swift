@@ -76,6 +76,7 @@ class BusinessSituationViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = MyColors.BLUE
         
         let requestAPI = RequestAPIModel()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         requestAPI.getRevenue(shopID: 3, type: 0) { (status, array) in
             self.drawChart(array: array)
         }
