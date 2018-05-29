@@ -35,6 +35,6 @@ class CommonURL {
     public static let GET_TOP_PRODUCT_MONTH = "http://localhost:3000/get_top_product_month"
     public static let GET_TOP_PRODUCT_DAY = "http://localhost:3000/get_top_product_day"
     
-    public static let GET_TOP_SEARCH = "localhost:3000/get_top_search"
+    public static let GET_TOP_SEARCH = "http://localhost:3000/get_top_search"
     
 }

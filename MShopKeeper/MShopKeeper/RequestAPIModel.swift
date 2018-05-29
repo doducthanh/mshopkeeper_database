@@ -172,6 +172,7 @@ class RequestAPIModel {
                         model.percentPromtion = dic["percenPromotion"] as! Double
                         model.dateOfEntry = dic["dateOfEntry"] as! String
                         model.unitPrice = dic["unitPrice"] as! Int
+                        model.PromotionPrice = dic["PromotionPrice"] as! Int
                         arrayModel.append(model)
                     }
                     DispatchQueue.main.async {
@@ -295,6 +296,7 @@ class RequestAPIModel {
                         } else {
                             item.isPromotion = true
                         }
+                        item.location = json["location"] as! String
                         arrayItems.append(item)
                     }
                     DispatchQueue.main.async {

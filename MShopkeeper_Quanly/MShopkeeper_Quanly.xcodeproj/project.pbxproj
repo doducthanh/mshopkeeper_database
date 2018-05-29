@@ -23,6 +23,7 @@
 		841528B1209F49AA00FA797B /* TopRevenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841528AF209F49AA00FA797B /* TopRevenueTableViewCell.swift */; };
 		841528B2209F49AA00FA797B /* TopRevenueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841528B0209F49AA00FA797B /* TopRevenueTableViewCell.xib */; };
 		84172A9B20B6EAFC004041BC /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84172A9820B6EAFC004041BC /* MyColors.swift */; };
+		841A7FB120BDB4A300CE69BE /* ic_revenue.png in Resources */ = {isa = PBXBuildFile; fileRef = 841A7FAE20BDB4A300CE69BE /* ic_revenue.png */; };
 		842EE39B2084CE3000FEDAE0 /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EE39A2084CE2F00FEDAE0 /* ExamplesDefaults.swift */; };
 		842EE39D2084CEF900FEDAE0 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EE39C2084CEF900FEDAE0 /* Env.swift */; };
 		846AA597208CD2210050A153 /* ViewRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AA596208CD2210050A153 /* ViewRadius.swift */; };
@@ -211,6 +212,7 @@
 		841528AF209F49AA00FA797B /* TopRevenueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRevenueTableViewCell.swift; sourceTree = "<group>"; };
 		841528B0209F49AA00FA797B /* TopRevenueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopRevenueTableViewCell.xib; sourceTree = "<group>"; };
 		84172A9820B6EAFC004041BC /* MyColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
+		841A7FAE20BDB4A300CE69BE /* ic_revenue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_revenue.png; sourceTree = "<group>"; };
 		842EE39A2084CE2F00FEDAE0 /* ExamplesDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
 		842EE39C2084CEF900FEDAE0 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		846AA596208CD2210050A153 /* ViewRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRadius.swift; sourceTree = "<group>"; };
@@ -510,6 +512,7 @@
 		848BE7A62078628E000CC06F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				841A7FAE20BDB4A300CE69BE /* ic_revenue.png */,
 				84D8FA13207E411D00F69B41 /* ic_filter.png */,
 				84E41144207BA42A00178F68 /* ic_trends.png */,
 				770E2948207B50F300626697 /* ic_back.png */,
@@ -789,6 +792,7 @@
 				848BE76920786278000CC06F /* ic_action_back.png in Resources */,
 				848BE78720786278000CC06F /* ic_menu_share.png in Resources */,
 				848BE73220786278000CC06F /* ic_bg_license_2_01.png in Resources */,
+				841A7FB120BDB4A300CE69BE /* ic_revenue.png in Resources */,
 				848BE76B20786278000CC06F /* ic_launcher.png in Resources */,
 				84EB096D208C6C4600F4AF75 /* OtherShops.xib in Resources */,
 				848BE6A1207857AB000CC06F /* Assets.xcassets in Resources */,

@@ -41,8 +41,10 @@ class TopSallerViewController: UIViewController {
             }
         }
         
-        requestAPI.getTopSearch(type: 0, shopID: 3) { (array) in
+        let requestAPI2 = RequestAPIModel()
+        requestAPI2.getTopSearch(type: 0, shopID: 3) { (array) in
             self.arraySearch = array
+            print(self.arraySearch)
             DispatchQueue.main.async {
                 self.tableTopSearch.reloadData()
             }
@@ -123,22 +125,27 @@ extension TopSallerViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib.init(nibName: "TopItemTableViewCell", bundle: nil), forCellReuseIdentifier: "mycell")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mycell") as! TopItemTableViewCell
-        cell.img.text = String(indexPath.row + 1)
         if tableView.tag == 0 {
+            tableView.register(UINib.init(nibName: "TopItemTableViewCell", bundle: nil), forCellReuseIdentifier: "mycell")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "mycell") as! TopItemTableViewCell
+            cell.img.text = String(indexPath.row + 1)
             if arrayProduct.count > 0 {
                 cell.lbName.text = (self.arrayProduct[indexPath.row]["modelName"] as! String)
                 cell.lbCount.text = (self.arrayProduct[indexPath.row]["count"] as! Int).description
             }
+            
+            return cell
         } else {
+            tableView.register(UINib.init(nibName: "TopItemTableViewCell", bundle: nil), forCellReuseIdentifier: "mycell")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "mycell") as! TopItemTableViewCell
+            cell.img.text = String(indexPath.row + 1)
             if arraySearch.count > 0 {
                 cell.lbName.text = (self.arraySearch[indexPath.row]["modelName"] as! String)
                 cell.lbCount.text = (self.arraySearch[indexPath.row]["totalSearch"] as! Int).description
             }
+            
+            return cell
         }
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -148,7 +155,13 @@ extension TopSallerViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension TopSallerViewController: OtherShopDelegate {
     func selectShop(id: Int, shop: Shop) {
-        
+        let requestAPI = RequestAPIModel()
+        requestAPI.getTopProductShop(type: 0, shopID: id) { (array) in
+            self.arrayProduct = array
+            DispatchQueue.main.async {
+                self.tableTopItem.reloadData()
+            }
+        }
     }
 }
 

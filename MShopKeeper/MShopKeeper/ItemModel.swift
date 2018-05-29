@@ -69,6 +69,15 @@ class ItemModel {
         return ""
     }
     
+    func getLocation(color: String, size: String) -> String {
+        for item in arrayItem {
+            if item.color == color && item.size == size {
+                return item.location
+            }
+        }
+        return ""
+    }
+    
     /// hàm trả về số lượng sản phẩm còn lại trong của hàng hiên tại
     ///
     /// - Returns: tuple (tên của hàng, số lượng)
@@ -154,7 +163,7 @@ class ItemModel {
                 return view
             }
             for index in 0..<arr.count {
-                let frame: CGRect = CGRect.init(x: 0, y: 50 + index * 40, width: Int(frame.width), height: 40)
+                let frame: CGRect = CGRect.init(x: 0, y: 30 + index * 40, width: Int(frame.width), height: 40)
                 let lbAddress = ViewAddress.init(frame: frame)
                 lbAddress.initView(address: arr[index].0, count: arr[index].1)
                 view.addSubview(lbAddress)

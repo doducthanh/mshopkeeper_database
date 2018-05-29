@@ -28,6 +28,7 @@ class Item {
     var shopID = 0
     var stockID = 0
     var barCode = ""
+    var location = ""
     init() {
         
     }

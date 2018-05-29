@@ -65,6 +65,7 @@ class Detail_ItemViewController: UIViewController {
     
     @IBOutlet weak var lbSKU: UILabel!
     @IBOutlet weak var lbPrice: UILabel!
+    @IBOutlet var lbLocation: UILabel!
     //MARK: Cycle view
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,13 +117,13 @@ class Detail_ItemViewController: UIViewController {
         //vẽ group button color
         buttonMode.drawButtons(number: arrayColor.count, viewSub: viewColors, array: arrayColor, tag: 0) { (count) in
             contraintHeightViewColor.constant = CGFloat(20 + count*(heighButton + 20))
-            contranitTopViewMauSac.constant = 35
+            contranitTopViewMauSac.constant = 0
             contraintHeightScrollView.constant = 620 + viewSize.frame.height + viewColors.frame.height + 20
         }
         //vẽ group button size
         buttonMode.drawButtons(number: arraySize.count, viewSub: viewSize, array: arraySize, tag: 1) { (count) in
             contraintHeightViewSize.constant = CGFloat(35 + count*(heighButton + 15))
-            contraintTopViewSize.constant = contraintHeightViewColor.constant + 70
+            contraintTopViewSize.constant = contraintHeightViewColor.constant + 70 - 35
             contraintHeightScrollView.constant = 620 + viewSize.frame.height + viewColors.frame.height + 20
         }
         buttonMode.setAlphaButton(tag: 1)
@@ -162,14 +163,14 @@ class Detail_ItemViewController: UIViewController {
         
         //update config for buttons
         if segment.selectedSegmentIndex == 1 {
-            contraintTopViewSize.constant = 35
-            contranitTopViewMauSac.constant = contraintHeightViewSize.constant + 70
+            contraintTopViewSize.constant = 0
+            contranitTopViewMauSac.constant = contraintHeightViewSize.constant + 70 - 35
             buttonMode.setAlphaButton(tag: 0)
         }
         //update config for buttons
         if segment.selectedSegmentIndex == 0 {
-            contraintTopViewSize.constant = contraintHeightViewColor.constant + 70
-            contranitTopViewMauSac.constant = 35
+            contraintTopViewSize.constant = contraintHeightViewColor.constant + 70 - 35
+            contranitTopViewMauSac.constant = 0
             buttonMode.setAlphaButton(tag: 1)
         }
     }
@@ -239,12 +240,13 @@ extension Detail_ItemViewController: ButtonModeProtocol {
         HomeViewController.viewHeader.lbTitle.text! = (UserDefaults.standard.value(forKey: "modelName") as! String) + "-" + color + "-" + size
         lbPrice.text = itemMode.getPrice(color: color, size: size)
         lbSKU.text = itemMode.getSKUCode(color: color, size: size)
+        lbLocation.text = itemMode.getLocation(color: color, size: size)
 //        thực hiện thêm view địa chỉ vào màn hình và set lại contraint
         
         
         let height = CGFloat(620 + Int(viewSize.frame.height) + Int(viewColors.frame.height))
         let array = itemMode.getArrayItemSelect(color: color, size: size)
-        let frame = CGRect.init(x: 30, y: Int(height + 10), width: Int(self.view.frame.width - 60), height: 10 + array.count * 40)
+        let frame = CGRect.init(x: 20, y: Int(height + 10), width: Int(self.view.frame.width - 60), height: 10 + array.count * 40)
         
         if self.viewAddress != nil {
             self.viewAddress.removeFromSuperview()

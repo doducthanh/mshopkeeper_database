@@ -27,19 +27,15 @@ class HomeCollectionViewCell: UICollectionViewCell {
     /// vẽ cell khi có giá trị
     var model: Model! {
         didSet{
-            //let model = arrayModel[index]
+
             let resource = ImageResource.init(downloadURL: URL.init(string: model.pictureLink)!, cacheKey: model.pictureLink)
-//            self.img.kf.setImage(with: resource, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cache, url) in
-//                self.img.image = image!
-//
-//            }
             if model.dataImage != nil && CommonVariable.isDisConnect {
                 self.img.image = UIImage.init(data: model.dataImage!)
             } else {
                 self.img.kf.setImage(with: resource)  
             }
             self.labelItem.text = model.modelName
-            self.labelPrice.text = String(model.unitPrice) + Constant.Currency_Unit
+            
             if model.isPromtion {
                 self.lbPromotionPrice.text = model.PromotionPrice.description + "K"
                 let attribute = NSMutableAttributedString.init(string: (model.unitPrice.description + "K"))
@@ -48,6 +44,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
             } else {
                 self.lbPromotionPrice.text = ""
                 self.labelPrice.attributedText = nil
+                self.labelPrice.text = String(model.unitPrice) + Constant.Currency_Unit
             }
         }
     }

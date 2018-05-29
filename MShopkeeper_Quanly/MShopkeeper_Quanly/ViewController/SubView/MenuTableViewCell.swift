@@ -16,7 +16,7 @@ class MenuTableViewCell: UITableViewCell {
     var row: Int! {
         didSet{
             if row == 0 {
-                self.img?.image = UIImage.init(named: "ic_menu_share")
+                self.img?.image = UIImage.init(named: "ic_revenue")
                 self.labelText?.text = "Tình hình kinh doanh"
             }
             if row == 1 {
