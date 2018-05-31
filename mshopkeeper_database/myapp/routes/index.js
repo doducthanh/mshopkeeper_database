@@ -216,12 +216,17 @@ router.get('/search_barcode', function (req, res) {
 //API search model theo key
 router.post('/search_model', function (req, res) {
   var token = req.headers.authorization;
-  var keyWord = req.body.keyword;
+  var keyword = req.body.keyword;
+  console.log(keyword);
   try {
     var json = jwt.verify(token, 'secretkey');
     json = json['row'];
-    var query = mysql.format("select * from model where shopID = 3 and modelName like '%"+keyWord+"%'");
-    //console.log(query);
+    var query = "SELECT * from model where modelID IN "
+                                    +" (SELECT item.modelID"
+                                    +" FROM item, model"
+                                    +" WHERE item.shopID = "+json['shopID']+" and item.SKUCode like '%"+keyword+"%'"
+                                      		+" or model.modelName like '"+keyword+"%')";
+    console.log(query);
     mysql.query(query, function (error, row) {
       if (!error) {
         res.status(200).json(row);
