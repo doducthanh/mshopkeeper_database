@@ -237,12 +237,20 @@ extension Detail_ItemViewController: ButtonModeProtocol {
         itemMode.arrayItem = self.arrayItem
         itemMode.color = color
         itemMode.size = size
+        
+//        them tim kiem
+        let requestAPI = RequestAPIModel()
+        let token = UserDefaults.standard.value(forKey: "token") as! String
+        let queue = DispatchQueue(label: "insert searhc")
+        queue.async {
+            requestAPI.insertSearch(token: token, SKUCode: itemMode.getSKUCode(color: self.color, size: self.size))
+        }
+        
         HomeViewController.viewHeader.lbTitle.text! = (UserDefaults.standard.value(forKey: "modelName") as! String) + "-" + color + "-" + size
         lbPrice.text = itemMode.getPrice(color: color, size: size)
         lbSKU.text = itemMode.getSKUCode(color: color, size: size)
         lbLocation.text = itemMode.getLocation(color: color, size: size)
 //        thực hiện thêm view địa chỉ vào màn hình và set lại contraint
-        
         
         let height = CGFloat(620 + Int(viewSize.frame.height) + Int(viewColors.frame.height))
         let array = itemMode.getArrayItemSelect(color: color, size: size)

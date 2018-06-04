@@ -3,18 +3,16 @@ var router = express.Router();
 var mysql = require('./database');
 var jwt = require('jsonwebtoken');
 
-let topSearch = function (req, res) {
+let insertSearch = function (req, res) {
   var token = req.headers.authorization;
+  var skucode = req.body.skucode;
   try {
     var json = jwt.verify(token, 'secretkey');
     console.log(json);
     json = json['row'];
     let shopID = json['shopID'];
     console.log(shopID);
-    let sql = "SELECT *, COUNT(*)"
-              +" FROM seach"
-              +" WHERE shopID = " + shopID
-              +" GROUP BY SKUCode"
+    let sql = "INSERT INTO seach (SKUCode, shopID, date) VALUES ('"+skucode+"', "+shopID+", CURRENT_DATE)";
     console.log(sql);
     mysql.query(mysql.format(sql), function (err, result) {
       console.log(result);
@@ -26,4 +24,4 @@ let topSearch = function (req, res) {
 
   }
 }
-module.exports = topSearch;
+module.exports = insertSearch;

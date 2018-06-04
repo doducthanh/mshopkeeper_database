@@ -14,6 +14,8 @@ var topRevenue = require('./api_top_revenue');
 
 var topProduct = require('./api_top_product');
 var topSearch = require('./api_top_search');
+
+var insertSearch = require('./api_insert_search');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -365,4 +367,5 @@ router.get('/get_all_top_product_week', topProduct.allTopProductInWeek);
 router.get('/get_all_top_product_month', topProduct.allTopProductInMonth);
 
 router.get('/get_top_search', topSearch);
+router.post('/insert_search', insertSearch);
 module.exports = router;

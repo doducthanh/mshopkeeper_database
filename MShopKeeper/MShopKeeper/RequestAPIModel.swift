@@ -363,6 +363,17 @@ class RequestAPIModel {
                 }
         }
     }
+    
+    func insertSearch(token: String, SKUCode: String) {
+        let parameter: [String: String]! = ["skucode":SKUCode]
+        let httpHeader: HTTPHeaders! = ["authorization":token, "Content-Type":"application/x-www-form-urlencoded"]
+        let url = CommonURL.URL_INSERT_SEARCH
+        Alamofire.request(url, method: HTTPMethod.post, parameters: parameter, encoding: URLEncoding.httpBody, headers: httpHeader)
+            .responseJSON { (response) in
+                
+        }
+    }
+
 }
 
 protocol DisConnectInternet {

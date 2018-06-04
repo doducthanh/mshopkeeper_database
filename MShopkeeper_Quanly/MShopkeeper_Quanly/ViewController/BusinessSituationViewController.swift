@@ -66,6 +66,7 @@ class BusinessSituationViewController: UIViewController {
         barChart.xAxis.labelCount = 30
         barChart.xAxis.granularity = 2
         barChart.tag = 100
+        barChart.animate(xAxisDuration: 1, yAxisDuration: 1)
         //barChart.notifyDataSetChanged()
         self.viewChart.addSubview(barChart)
     }
