@@ -11,7 +11,7 @@ let topSearch = function (req, res) {
     json = json['row'];
     let shopID = json['shopID'];
     console.log(shopID);
-    let sql = "SELECT *, COUNT(*)"
+    let sql = "SELECT *, COUNT(*) as count"
               +" FROM seach"
               +" WHERE shopID = " + shopID
               +" GROUP BY SKUCode"

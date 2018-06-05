@@ -140,8 +140,8 @@ extension TopSallerViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "mycell") as! TopItemTableViewCell
             cell.img.text = String(indexPath.row + 1)
             if arraySearch.count > 0 {
-                cell.lbName.text = (self.arraySearch[indexPath.row]["modelName"] as! String)
-                cell.lbCount.text = (self.arraySearch[indexPath.row]["totalSearch"] as! Int).description
+                cell.lbName.text = (self.arraySearch[indexPath.row]["SKUCode"] as! String)
+                cell.lbCount.text = (self.arraySearch[indexPath.row]["count"] as! Int).description
             }
             
             return cell
