@@ -20,7 +20,8 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        lbFullName.text = UserDefaults.standard.value(forKey: "fullName") as! String!
+        lbNameShop.text = (UserDefaults.standard.value(forKey: "userName") as! String) + ".mshopkeeper.vn"
         // Do any additional setup after loading the view.
     }
 

@@ -20,7 +20,7 @@ class MenuTableViewCell: UITableViewCell {
                 self.labelText?.text = "Tình hình kinh doanh"
             }
             if row == 1 {
-                self.img?.image = UIImage.init(named: "ic_menu_share")
+                self.img?.image = UIImage.init(named: "ic_trend_search")
                 self.labelText?.text = "Xu hướng tìm kiếm sản phẩm"
                 
             }

@@ -176,6 +176,7 @@
 		84EB0982208C816B00F4AF75 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB097C208C816B00F4AF75 /* Model.swift */; };
 		84EB0985208C820100F4AF75 /* CommonVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB0983208C820100F4AF75 /* CommonVariable.swift */; };
 		84EB0986208C820100F4AF75 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB0984208C820100F4AF75 /* Constant.swift */; };
+		84F685FD20CA4329003D1E72 /* ic_trend_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F685FA20CA4328003D1E72 /* ic_trend_search.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -368,6 +369,7 @@
 		84EB097C208C816B00F4AF75 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		84EB0983208C820100F4AF75 /* CommonVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonVariable.swift; sourceTree = "<group>"; };
 		84EB0984208C820100F4AF75 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		84F685FA20CA4328003D1E72 /* ic_trend_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_trend_search.png; sourceTree = "<group>"; };
 		A25ABE2C0661B7952043260D /* Pods_MShopkeeper_Quanly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MShopkeeper_Quanly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06221F43DFACA063B55F4CA /* Pods-MShopkeeper_Quanly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MShopkeeper_Quanly.release.xcconfig"; path = "Pods/Target Support Files/Pods-MShopkeeper_Quanly/Pods-MShopkeeper_Quanly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -512,6 +514,7 @@
 		848BE7A62078628E000CC06F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				84F685FA20CA4328003D1E72 /* ic_trend_search.png */,
 				841A7FAE20BDB4A300CE69BE /* ic_revenue.png */,
 				84D8FA13207E411D00F69B41 /* ic_filter.png */,
 				84E41144207BA42A00178F68 /* ic_trends.png */,
@@ -835,6 +838,7 @@
 				848BE78020786278000CC06F /* common_google_signin_btn_icon_dark_normal.9.png in Resources */,
 				848BE78F20786278000CC06F /* ic_menu_change_password.png in Resources */,
 				848BE74520786278000CC06F /* ic_keyboard_voice_white.png in Resources */,
+				84F685FD20CA4329003D1E72 /* ic_trend_search.png in Resources */,
 				848BE74020786278000CC06F /* item1.jpg in Resources */,
 				848BE78920786278000CC06F /* ic_btn_slidemenu.png in Resources */,
 				848BE74820786278000CC06F /* ic_search_vector.png in Resources */,
